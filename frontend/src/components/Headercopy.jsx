@@ -8,6 +8,7 @@ import { Reviews } from './Reviews';
 const Header = () => {
   const [isBottomBarVisible, setBottomBarVisible] = useState(false);
   const [isServiceBarVisible, setServiceBarVisible] = useState(false);
+
   const [isHeaderVisible, setHeaderVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
 
@@ -45,16 +46,16 @@ const Header = () => {
   // Example: Get user role from context or state
   // const userRole = "admin"; // Replace with actual logic to get user role
 
+  // ${isHeaderVisible
+  //   ? "transform translate-y-0"
+  //   : "transform -translate-y-full"
+  // }
   return (
     <div>
       <nav
-        className={`bg-white p-4 fixed top-0 left-0 w-full z-10 transition-transform duration-300 ${
-          isHeaderVisible
-            ? "transform translate-y-0"
-            : "transform -translate-y-full"
-        }`}
+        className={`bg-white p-4 fixed top-0 left-0 w-full z-10 transition-transform duration-300`}
       >
-        <div className="container mx-auto flex justify-between items-center filter drop-shadow-lg">
+        <div className="container mx-auto flex justify-between items-center">
           <div>
             <img src={mlogo} alt="Manasvi Logo" className="h-6 md:h-10" />
           </div>
@@ -84,7 +85,7 @@ const Header = () => {
                 <FaAngleDown className="inline-block ml-1" />
               </button>
               {isServiceBarVisible && (
-                <div className="absolute -left-20 text-center leading-none mt-2 w-56 bg-[#3c4785] text-black rounded-lg shadow-lg transition-opacity duration-300">
+                <div className="absolute -left-20 text-center leading-none mt-2 w-56 bg-white text-black rounded-lg shadow-lg transition-opacity duration-300">
                   <NavLink
                     to="/services/web"
                     onClick={toggleServiceBar}
@@ -211,9 +212,8 @@ const Header = () => {
 
       {/* Bottom Bar for Mobile */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen backdrop-filter backdrop-blur-2xl  bg-[#040615] bg-opacity-80 z-20 transition-transform duration-500 transform ${
-          isBottomBarVisible ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 w-full h-screen backdrop-filter backdrop-blur-2xl  bg-[#040615] bg-opacity-80 z-20 transition-transform duration-500 transform ${isBottomBarVisible ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="container mx-auto p-4 flex flex-col space-y-4">
           <div className="w-full h-20px  flex items-center justify-between">
@@ -359,11 +359,11 @@ const Header = () => {
           )} */}
           {userRole === "admin" ? (
             <NavLink
-            to="/admin/welcome"
-            className={({ isActive }) =>
-              isActive ? "text-white font-bold underline" : "text-white"
-            }
-            onClick={toggleBottomBar}
+              to="/admin/welcome"
+              className={({ isActive }) =>
+                isActive ? "text-white font-bold underline" : "text-white"
+              }
+              onClick={toggleBottomBar}
             >
               Admin
             </NavLink>
@@ -377,7 +377,7 @@ const Header = () => {
             >
               Login
             </NavLink>
-          )}  
+          )}
         </div>
       </div>
     </div>

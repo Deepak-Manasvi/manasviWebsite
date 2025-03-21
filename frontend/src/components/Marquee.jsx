@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 import Marquee from 'react-fast-marquee';
 
@@ -70,7 +68,7 @@ const technologyLogos = [
 const MarqueeSection = () => {
   return (
     <section className="sec-pad-10 bg-gradient-to-r from-[#f8d6f3] via-[#210136]  to-[#632cf8]">
-      <div className="container">
+      <div>
         <div className="row align-items-center">
           <div className="w-full">
             <Marquee gradient={false} speed={60}>
@@ -79,7 +77,7 @@ const MarqueeSection = () => {
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-16 mx-4 bg-[#06054b] p-4 rounded-full"
+                    className="h-18 mx-4 bg-[#06054b] p-4 rounded-full"
                   />
                 </div>
               ))}

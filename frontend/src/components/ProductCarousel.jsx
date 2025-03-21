@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -16,7 +14,7 @@ const ProductCarousel = () => {
     const fetchProducts = async () => {
       try {
         const response = await axios.get('/api/projects/all');
-        console.log(response, "productcarausal");
+        console.log(response.data, "productcarausal");
 
         // Check if response data is an array before setting state
         if (Array.isArray(response.data)) {

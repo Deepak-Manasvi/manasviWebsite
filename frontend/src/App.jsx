@@ -15,7 +15,7 @@ const App = () => {
     <div>
       {!isAdminRoute && (
         <>
-          <Header />
+          {/* <Header /> */}
           <Headercopy />
         </>
       )}

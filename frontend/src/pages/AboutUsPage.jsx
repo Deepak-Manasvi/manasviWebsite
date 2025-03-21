@@ -544,8 +544,8 @@ const AboutUsPage = () => {
           </div>
         </div>
       </div>
-      <OurTeam />
-      <Marquee />
+      {/* <OurTeam /> */}
+      {/* <Marquee /> */}
     </div>
   );
 };

@@ -77,7 +77,7 @@ const TeamSection = () => {
         </div>
       </section>
       <OurTeam />
-      <Marquee />
+      {/* <Marquee /> */}
     </div>
   );
 };
