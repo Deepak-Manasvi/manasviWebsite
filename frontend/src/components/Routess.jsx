@@ -30,6 +30,10 @@ import Banner from "./Banner";
 import Welcome from "./Admin/Welcome";
 import Reviews from "./Reviews";
 
+import BusinessBlog from "../components/BusinessBlog.jsx";
+import MarketingBlog from "../components/MarketingBlog.jsx";
+import MarketingService from "../components/MarketingService.jsx";
+
 import Indoremap from "./Indoremap";
 
 import ProtectedAdminRoute from "../components/Admin/ProtectedAdminRoute"; // Import the protected route component
@@ -72,6 +76,9 @@ function Routess() {
         <Route path="/map" element={<Map />} />
         <Route path="/indoremap" element={<Indoremap />} />
 
+        <Route path="/business-blog" element={<BusinessBlog />} />
+        <Route path="/marketing-blog" element={<MarketingBlog />} />
+        <Route path="/marketing-service" element={<MarketingService />} />
         {/* <Route path="/banner" element={<Banner />} /> */}
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
