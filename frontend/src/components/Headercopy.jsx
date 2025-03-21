@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import mlogo from "../assets/Images/manasvilogo.png";
@@ -156,7 +157,7 @@ const Header = () => {
               }
             >
               Career
-            </NavLink>
+            </NavLink> 
             <NavLink
               to="/contact"
               className={({ isActive }) =>

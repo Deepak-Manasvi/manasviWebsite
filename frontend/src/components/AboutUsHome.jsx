@@ -4,6 +4,7 @@ import OurTeam from "./OurTeam";
 import Marquee from "./Marquee";
 
 const AboutUsPage = () => {
+  // eslint-disable-next-line no-unused-vars
   const [showMission, setShowMission] = useState(true);
 
   return (

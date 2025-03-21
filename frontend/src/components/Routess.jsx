@@ -33,6 +33,7 @@ import Reviews from "./Reviews";
 import Indoremap from "./Indoremap";
 
 import ProtectedAdminRoute from "../components/Admin/ProtectedAdminRoute"; // Import the protected route component
+import CareersComponent from "./Careers";
 
 function Routess() {
   return (
@@ -66,10 +67,11 @@ function Routess() {
         <Route path="/feature" element={<FeatureSection />} />
         <Route path="/Hero" element={<HeroSeHome />} />
         <Route path="/contactr" element={<ContactR />} />
+        <Route path="/career" element={<CareersComponent />} />
         <Route path="/slider" element={<Slider />} />
         <Route path="/map" element={<Map />} />
         <Route path="/indoremap" element={<Indoremap />} />
-        
+
         {/* <Route path="/banner" element={<Banner />} /> */}
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
