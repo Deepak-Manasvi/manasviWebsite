@@ -134,14 +134,6 @@ const Header = () => {
               )}
             </div>
             <NavLink
-              to="https://manasviportfolio.online/"
-              className={({ isActive }) =>
-                isActive ? "text-black font-bold underline" : "text-black"
-              }
-            >
-              Portfolio
-            </NavLink>
-            <NavLink
               to="/products"
               className={({ isActive }) =>
                 isActive ? "text-black font-bold underline" : "text-black"
@@ -150,24 +142,40 @@ const Header = () => {
               Products
             </NavLink>
             <NavLink
-              to="/team"
+              to="https://manasviportfolio.online/"
               className={({ isActive }) =>
                 isActive ? "text-black font-bold underline" : "text-black"
               }
             >
-              Team
+              Portfolio
             </NavLink>
             <NavLink
+              to="/career"
+              className={({ isActive }) =>
+                isActive ? "text-black font-bold underline" : "text-black"
+              }
+            >
+              Career
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? "text-black font-bold underline" : "text-black"
+              }
+            >
+              Contact Us
+            </NavLink>
+            {/* <NavLink
               to="/reviews"
               className={({ isActive }) =>
                 isActive ? "text-black font-bold underline" : "text-black"
               }
             >
               Reviews
-            </NavLink>
+            </NavLink> */}
           </div>
           <div className="hidden md:block space-x-4">
-            <a href="tel:+8319056741" className="text-black">
+            {/* <a href="tel:+8319056741" className="text-black">
               📞 8319056741
             </a>
             <NavLink
@@ -179,7 +187,7 @@ const Header = () => {
               <button className="text-black focus:outline-none py-1 px-4 border border-gray-400 rounded-2xl">
                 Contact Us
               </button>
-            </NavLink>
+            </NavLink> */}
             {userRole === "admin" ? (
               <NavLink
                 to="/admin/welcome"

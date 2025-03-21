@@ -4,6 +4,7 @@ import Routess from "./components/Routess";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Headercopy from "./components/Headercopy";
+import './App.css'
 
 const App = () => {
   const location = useLocation();
