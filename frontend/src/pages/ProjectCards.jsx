@@ -8,9 +8,8 @@ const ProjectCards = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("/api/projects/all");
+        const response = await axios.get("http://localhost:4500/api/projects/all");
         setProjects(response.data);
-        console.log(response,"projectCards");
       } catch (error) {
         console.error("Error fetching projects:", error);
       }
@@ -52,7 +51,7 @@ const ProjectCards = () => {
                   <p className="text-gray-700 text-base">{project.description}</p>
                 </div>
                 <div className="mt-4 flex space-x-2">
-                {
+                  {
                     project.link ? (
                       <Link to={project.link} target="_blank" rel="noopener noreferrer" className="badge badge-outline">Demo</Link>
                     )
@@ -60,9 +59,6 @@ const ProjectCards = () => {
                         <Link to={''} className="badge badge-outline">Soon</Link>
                       )
                   }
-                  {/* <button className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-700">
-                    Details
-                  </button> */}
                 </div>
               </div>
             </div>

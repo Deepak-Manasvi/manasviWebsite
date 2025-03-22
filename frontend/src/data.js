@@ -1,53 +1,55 @@
-import card1 from './assets/card1.svg'
+import card1 from './assets/service/webDevelopment.jpg'
+import card2 from './assets/service/digitalMarketing.jpg'
+import card3 from './assets/service/appDevelopment.jpg'
+import card4 from './assets/service/softwareDevelopment.jpg'
+
 export const serviceData = [
-    {
-      id: 1,
-      tag: "Demand & OTB Planning",
-      title: "Accurate OTB Forecasting with Assistance from Proprietary AI",
-      points: [
-        "Utilize Automated Machine OTB forecasting to meet market demands accurately.",
-        "Create independent OTB plans for various product categories.",
-      ],
-      image: card1,
-    },
-    {
-      id: 2,
-      tag: "Inventory Optimization",
-      title: "Maximize Inventory Efficiency with Smart AI-Driven Insights",
-      points: [
-        "Reduce excess inventory and improve turnover rates.",
-        "Get real-time demand insights to avoid stockouts.",
-      ],
-      image: card1,
-    },
-    {
-      id: 3,
-      tag: "Price Optimization",
-      title: "Dynamic Pricing Strategies for Higher Profit Margins",
-      points: [
-        "Use AI-driven pricing models to stay competitive.",
-        "Analyze historical data for best pricing decisions.",
-      ],
-      image: card1,
-    },
-    {
-      id: 4,
-      tag: "Customer Insights",
-      title: "Data-Driven Customer Insights for Better Engagement",
-      points: [
-        "Analyze buying patterns and predict future trends.",
-        "Personalize marketing strategies for higher conversion.",
-      ],
-      image: card1,
-    },
-    {
-      id: 5,
-      tag: "Customer Insights",
-      title: "Data-Driven Customer Insights for Better Engagement",
-      points: [
-        "Analyze buying patterns and predict future trends.",
-        "Personalize marketing strategies for higher conversion.",
-      ],
-      image: card1,
-    },
-  ];
+  {
+    id: 1,
+    tag: "Web Development",
+    title: "Build Scalable and Responsive Websites for Your Business",
+    points: [
+      "Create custom websites tailored to your brand and audience.",
+      "Ensure seamless user experience across all devices.",
+      "Integrate modern technologies like React, Angular, or Vue.js.",
+      "Optimize websites for speed, security, and SEO.",
+    ],
+    image: card1,
+  },
+  {
+    id: 2,
+    tag: "Digital Marketing",
+    title: "Boost Your Online Presence with Data-Driven Strategies",
+    points: [
+      "Run targeted campaigns on Google, Facebook, and Instagram.",
+      "Optimize SEO to rank higher on search engines.",
+      "Analyze customer behavior to refine marketing strategies.",
+      "Increase ROI with performance-driven ad campaigns.",
+    ],
+    image: card2,
+  },
+  {
+    id: 3,
+    tag: "App Development",
+    title: "Develop High-Performance Mobile Apps for iOS and Android",
+    points: [
+      "Design intuitive and user-friendly mobile applications.",
+      "Leverage native or cross-platform frameworks like Flutter or React Native.",
+      "Ensure robust backend integration for seamless functionality.",
+      "Deliver apps with cutting-edge features and scalability.",
+    ],
+    image: card3,
+  },
+  {
+    id: 4,
+    tag: "Software Development",
+    title: "Create Custom Software Solutions for Your Business Needs",
+    points: [
+      "Develop scalable and secure software applications.",
+      "Automate business processes to improve efficiency.",
+      "Use agile methodologies for faster delivery.",
+      "Provide ongoing support and maintenance for software systems.",
+    ],
+    image: card4,
+  }
+];

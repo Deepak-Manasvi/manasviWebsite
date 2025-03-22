@@ -38,6 +38,7 @@ import Indoremap from "./Indoremap";
 
 import ProtectedAdminRoute from "../components/Admin/ProtectedAdminRoute"; // Import the protected route component
 import CareersComponent from "./Careers";
+import Portfolio from "../components/Portfolio.jsx";
 
 function Routess() {
   return (
@@ -76,6 +77,7 @@ function Routess() {
         <Route path="/map" element={<Map />} />
         <Route path="/indoremap" element={<Indoremap />} />
 
+        <Route path="/portfolio" element={<Portfolio/>}/>
         <Route path="/business-blog" element={<BusinessBlog />} />
         <Route path="/marketing-blog" element={<MarketingBlog />} />
         <Route path="/marketing-service" element={<MarketingService />} />

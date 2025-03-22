@@ -143,7 +143,8 @@ const Header = () => {
               Products
             </NavLink>
             <NavLink
-              to="https://manasviportfolio.online/"
+              // to="https://manasviportfolio.online/"
+              to="/portfolio"
               className={({ isActive }) =>
                 isActive ? "text-black font-bold underline" : "text-black"
               }
