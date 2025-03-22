@@ -54,7 +54,7 @@ const Header = () => {
   return (
     <div>
       <nav
-        className={`bg-white p-4 fixed top-0 left-0 w-full z-10 transition-transform duration-300`}
+        className={`bg-white p-4 fixed top-0 left-0 w-full z-30 h-16 transition-transform duration-300`}
       >
         <div className="container mx-auto flex justify-between items-center">
           <div>
