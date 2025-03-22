@@ -57,7 +57,7 @@ const ContactR = () => {
     <div className="bg-gray-200 py-6">
       <div className="font-[sans-serif] max-w-6xl mx-auto relative rounded-lg py-6">
         <div className="grid lg:grid-cols-3 items-center">
-          <div className="grid sm:grid-cols-2 gap-4 z-20 relative lg:left-16 max-lg:px-4">
+          <div className="grid sm:grid-cols-2 gap-4 relative lg:left-16 max-lg:px-4">
             <div className="flex flex-col items-center justify-center rounded-lg w-full h-44 p-4 text-center bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)]">
               <SlLocationPin className="w-7 text-3xl fill-blue-600" />
               <h4 className="text-gray-800 text-base font-bold mt-4">
@@ -128,7 +128,7 @@ const ContactR = () => {
             </div>
           </div>
 
-          <div className="lg:col-span-2 bg-[#091E55] rounded-lg sm:p-10 p-4 z-10 max-lg:-order-1 max-lg:mb-8">
+          <div className="lg:col-span-2 bg-[#091E55] rounded-lg sm:p-10 p-4 max-lg:-order-1 max-lg:mb-8">
             <h2 className="text-3xl text-white text-center font-bold mb-6">
               Contact us
             </h2>

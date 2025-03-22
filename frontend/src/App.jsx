@@ -1,3 +1,4 @@
+/* eslint-disable no-constant-binary-expression */
 import React from "react";
 import { useLocation } from "react-router-dom";
 import Routess from "./components/Routess";
