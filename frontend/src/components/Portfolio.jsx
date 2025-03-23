@@ -6,6 +6,7 @@ import image3 from "../assets/images/image3.png";
 import image4 from "../assets/images/image4.png";
 import image5 from "../assets/images/image5.png";
 import image6 from "../assets/images/image6.png";
+import backgroundImage from '../assets/Images/Footer.jpg';
 
 export default function Portfolio() {
     const navigate = useNavigate();
@@ -20,6 +21,28 @@ export default function Portfolio() {
     ];
     return (
         <div>
+            <div
+                className="h-[40vh] p-4 flex justify-center items-center"
+                style={{ backgroundImage: `url(${backgroundImage})` }}
+            >
+                <div className="container mx-auto text-center">
+                    <h1 className="text-4xl lg:text-5xl text-white font-extrabold">
+                        Portfolio
+                    </h1>
+                    <nav className="mt-4">
+                        <a href="/" className="text-white hover:text-gray-200">
+                            Home
+                        </a>
+                        <span className="text-white mx-2">→</span>
+                        <a
+                            href="/portfolio"
+                            className="text-white font-bold underline hover:text-gray-200"
+                        >
+                            Portfolio
+                        </a>
+                    </nav>
+                </div>
+            </div>
             {/* Portfolio Section */}
             <section className="text-center py-12 px-4 mt-20">
                 <h2 className="text-3xl sm:text-4xl font-bold text-black">Portfolio</h2>

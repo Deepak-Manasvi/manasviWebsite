@@ -29,7 +29,6 @@ function Contact() {
         </div>
       </div>
       <ContactR/>
-      
     </div>
   )
 }

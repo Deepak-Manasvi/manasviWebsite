@@ -61,9 +61,8 @@ const WebServices = () => {
               </span>
             </div>
             <div
-              className={`overflow-hidden transition-all duration-700 ${
-                showMore ? "max-h-screen" : "max-h-40"
-              }`}
+              className={`overflow-hidden transition-all duration-700 ${showMore ? "max-h-screen" : "max-h-40"
+                }`}
             >
               <p className="text-gray-700 mb-4">
                 Our web development services encompass a wide range of
@@ -108,7 +107,7 @@ const WebServices = () => {
           />
         </div>
       </div>
-      <ServicesPage />
+      {/* <ServicesPage /> */}
     </div>
   );
 };

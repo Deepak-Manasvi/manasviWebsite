@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { FaUsers, FaLightbulb, FaHandshake } from "react-icons/fa";
 import { RiTeamLine } from "react-icons/ri";
 import userImage from "../assets/Images/user.jpg";
+import backgroundImage from '../assets/Images/Footer.jpg';
 
 const CareersComponent = () => {
-
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState();
-  
 
   // Mock data for open positions
   const jobs = [
@@ -192,7 +191,29 @@ const CareersComponent = () => {
   };
 
   return (
-    <div className="">
+    <div>
+      <div
+        className="h-[40vh] p-4 flex justify-center items-center"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <div className="container mx-auto text-center">
+          <h1 className="text-4xl lg:text-5xl text-white font-extrabold">
+            Career
+          </h1>
+          <nav className="mt-4">
+            <a href="/" className="text-white hover:text-gray-200">
+              Home
+            </a>
+            <span className="text-white mx-2">→</span>
+            <a
+              href="/carrer"
+              className="text-white font-bold underline hover:text-gray-200"
+            >
+              Career
+            </a>
+          </nav>
+        </div>
+      </div>
       {/* Hero Section */}
       <section className=" bg-[#f0f0fe] text-black py-20">
         <div className="mx-auto px-4 mt-20">
@@ -550,11 +571,10 @@ const CareersComponent = () => {
               {categories.map((category) => (
                 <button
                   key={category}
-                  className={`px-8 py-3 font-medium gap-2 border border-solid-black  hover:bg-gray-200 ${
-                    activeTab === category
-                      ? "bg-gray-800 text-white"
-                      : "bg-white text-gray-700"
-                  }`}
+                  className={`px-8 py-3 font-medium gap-2 border border-solid-black  hover:bg-gray-200 ${activeTab === category
+                    ? "bg-gray-800 text-white"
+                    : "bg-white text-gray-700"
+                    }`}
                   onClick={() => setActiveTab(category)}
                 >
                   {category}
