@@ -311,7 +311,7 @@ const AboutUsPage = () => {
         </div>
       </div>
       <div className=" mx-auto space-y-10">
-        <div className="px-10 mb-20">
+        {/* <div className="px-10 mb-20">
           <p className="font-bold text-5xl text-gray-800  mt-3 break-words">
             Simplifying Supply Chain{" "}
             <span className="hidden sm:inline lg:hidden">
@@ -325,7 +325,7 @@ const AboutUsPage = () => {
             </span>
             and Operations
           </p>
-        </div>
+        </div> */}
 
         {/* vision and mission */}
         <div className="bg-white shadow-lg">
