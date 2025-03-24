@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import Headercopy from "./components/Headercopy";
 import './App.css'
 
+
 const App = () => {
   const location = useLocation();
 

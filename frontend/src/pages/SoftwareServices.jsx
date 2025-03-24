@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 const SoftwareServices = () => {
   const [showMore, setShowMore] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };

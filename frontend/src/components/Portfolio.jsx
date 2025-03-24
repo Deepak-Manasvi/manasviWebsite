@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useEffect} from 'react'
 import { useNavigate } from "react-router-dom";
 import image1 from "../assets/images/image1.png";
 import image2 from "../assets/images/image2.png";
@@ -10,6 +10,10 @@ import backgroundImage from '../assets/Images/Footer.jpg';
 
 export default function Portfolio() {
     const navigate = useNavigate();
+
+     useEffect(() => {
+       window.scrollTo(0, 0);
+     }, []);
 
     const projects = [
         { id: 1, title: "Brand design & identity for Sezane", category: "Branding", company: "Sezane", image: image1 },

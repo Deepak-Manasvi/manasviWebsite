@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import ProjectCards from "./ProjectCards";
 
@@ -8,6 +8,9 @@ const ProductPage = () => {
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
+   useEffect(() => {
+     window.scrollTo(0, 0);
+   }, []);
 
   return (
     <div className="min-h-screen bg-cover bg-center">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { FaUsers, FaLightbulb, FaHandshake } from "react-icons/fa";
 import { RiTeamLine } from "react-icons/ri";
 import userImage from "../assets/Images/user.jpg";
@@ -8,6 +8,10 @@ const CareersComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState();
+
+   useEffect(() => {
+     window.scrollTo(0, 0);
+   }, []);
 
   // Mock data for open positions
   const jobs = [

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState,useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import OurTeam from "../components/OurTeam";
 import Marquee from "./../components/Marquee";
@@ -10,6 +11,10 @@ import vision from '../assets/vision.svg'
 const AboutUsPage = () => {
   const [showMission, setShowMission] = useState(true);
 
+   useEffect(() => {
+     window.scrollTo(0, 0);
+   }, []);
+  
   return (
     <div className="min-h-screen bg-cover bg-center bg-black">
       <div

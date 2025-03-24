@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { SlLocationPin } from "react-icons/sl";
 import { LuPhoneCall } from "react-icons/lu";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
@@ -22,6 +22,10 @@ const ContactR = () => {
     message: "",
   });
 
+   useEffect(() => {
+     window.scrollTo(0, 0);
+   }, []);
+  
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 

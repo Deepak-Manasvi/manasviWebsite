@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect } from 'react'
 import Footer from './Footer'
 import ContactForm from './ContactForm'
 import ProductCarousel from './ProductCarousel'
@@ -18,6 +18,9 @@ import TeamSection from './TeamSection'
 import Banner from './Banner'
 
 function Home() {
+   useEffect(() => {
+     window.scrollTo(0, 0);
+   }, []);
   return (
     <div>
       <FrontPage />

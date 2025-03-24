@@ -40,6 +40,7 @@ const Header = () => {
   const [userRole, setUserRole] = useState("user");
 
   useEffect(() => {
+    
     setUserRole(role);
     setIsLoggedIn(!!token);
   }, [role, token]);
