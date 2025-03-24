@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useTransform, motion, useScroll } from 'framer-motion';
 import { useRef } from 'react';
 import { IoIosArrowDropright } from "react-icons/io";

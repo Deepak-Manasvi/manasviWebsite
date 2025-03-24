@@ -21,6 +21,11 @@ const Header = () => {
     setServiceBarVisible(!isServiceBarVisible);
   };
 
+  // Function to close the service bar
+  const closeServiceBar = () => {
+    setServiceBarVisible(false);
+  };
+
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
     setHeaderVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
@@ -40,7 +45,6 @@ const Header = () => {
   const [userRole, setUserRole] = useState("user");
 
   useEffect(() => {
-    
     setUserRole(role);
     setIsLoggedIn(!!token);
   }, [role, token]);
@@ -67,6 +71,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive ? "text-black font-bold underline" : "text-black"
               }
+              onClick={closeServiceBar}
             >
               Home
             </NavLink>
@@ -75,13 +80,16 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive ? "text-black font-bold underline" : "text-black"
               }
+              onClick={closeServiceBar}
             >
               About Us
             </NavLink>
-            <div className="relative group">
+            <div className="relative group cursor-pointer">
               <button
                 onClick={toggleServiceBar}
-                className="text-black focus:outline-none"
+                 className={({ isActive }) =>
+                isActive ? "text-black font-bold underline" : "text-black"
+              }
               >
                 Services
                 <FaAngleDown className="inline-block ml-1" />
@@ -140,6 +148,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive ? "text-black font-bold underline" : "text-black"
               }
+              onClick={closeServiceBar}
             >
               Products
             </NavLink>
@@ -149,6 +158,7 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive ? "text-black font-bold underline" : "text-black"
               }
+              onClick={closeServiceBar}
             >
               Portfolio
             </NavLink>
@@ -157,14 +167,16 @@ const Header = () => {
               className={({ isActive }) =>
                 isActive ? "text-black font-bold underline" : "text-black"
               }
+              onClick={closeServiceBar}
             >
               Career
-            </NavLink> 
+            </NavLink>
             <NavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive ? "text-black font-bold underline" : "text-black"
               }
+              onClick={closeServiceBar}
             >
               Contact Us
             </NavLink>
@@ -204,7 +216,10 @@ const Header = () => {
               </NavLink>
             ) : (
               <NavLink>
-                <Link to="/login" className="text-black focus:outline-none py-1 px-4 border border-gray-400 rounded-2xl">
+                <Link
+                  to="/login"
+                  className="text-black focus:outline-none py-1 px-4 border border-gray-400 rounded-2xl"
+                >
                   Login
                 </Link>
               </NavLink>
@@ -213,7 +228,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={toggleBottomBar}
-              className="text-white focus:outline-none"
+              className="text-black focus:outline-none"
             >
               ☰
             </button>
@@ -223,8 +238,9 @@ const Header = () => {
 
       {/* Bottom Bar for Mobile */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen backdrop-filter backdrop-blur-2xl  bg-[#040615] bg-opacity-80 z-20 transition-transform duration-500 transform ${isBottomBarVisible ? "translate-x-0" : "translate-x-full"
-          }`}
+        className={`fixed top-0 left-0 w-full h-screen backdrop-filter backdrop-blur-2xl  bg-[#040615] bg-opacity-80 z-20 transition-transform duration-500 transform ${
+          isBottomBarVisible ? "translate-x-0" : "translate-x-full"
+        }`}
       >
         <div className="container mx-auto p-4 flex flex-col space-y-4">
           <div className="w-full h-20px  flex items-center justify-between">
