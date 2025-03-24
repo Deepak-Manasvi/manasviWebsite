@@ -36,32 +36,28 @@ const AppServices = () => {
   ];
   const cards = [
     {
-      "title": "Highly Adaptable to Ever-Evolving Markets",
-      "descriptions": [
-        "Our cloud-based software adapts to the ever-evolving needs of the retail market, staying flexible for diverse business requirements.",
-        "We create retail solutions that evolve with changing demands, keeping your business competitive.",
-        "Our platform is designed to grow with you, offering custom options to match your unique needs."
-      ]
+      title: "Custom Mobile App Development",
+      description: "Tailor-made apps built to meet your unique business needs, ensuring seamless performance on both Android and iOS.",
     },
     {
-      title: "Customizable Solutions",
-      description: "We create retail solutions that evolve with changing demands, keeping your business competitiveWe create retail solutions that evolve with changing demands, keeping your business competitive.",
+      title: "Cross-Platform Solutions",
+      description: "Develop robust apps using frameworks like React Native and Flutter to deploy on multiple platforms with a single codebase.",
     },
     {
-      title: "Scalable for Growth",
-      description: "Our platform is designed to grow with you, offering custom options to match your unique needs.",
+      title: "UI/UX Design",
+      description: "Engaging and intuitive designs that provide users with a seamless experience across all devices.",
     },
     {
-      title: "Real-Time Analytics",
-      description: "Track your business performance with real-time data insights and analytics.",
+      title: "Enterprise App Development",
+      description: "Scalable and secure app solutions designed for large enterprises to streamline operations and boost productivity.",
     },
     {
-      title: "Seamless Integration",
-      description: "Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.",
+      title: "App Maintenance & Support",
+      description: "Ongoing updates, bug fixes, and performance enhancements to keep your app running at its best.",
     },
     {
-      title: "AI-Powered Recommendations",
-      description: "Leverage AI to optimize demand planning and improve decision-making.",
+      title: "App Prototyping & Consultation",
+      description: "Expert consultation and prototyping services to transform your ideas into effective mobile applications.",
     },
   ];
 
@@ -86,14 +82,13 @@ const AppServices = () => {
       </div>
       <div className="w-full overflow-x-hidden ">
         <div className="flex flex-col md:flex-row bg-white py-30 rounded-lg shadow-lg">
-          <div className="flex-1 text-left space-y-4 ml-10 mt-20">
-            <h3 className="text-xl font-semibold text-[#a6adb9]">Sales Order Management</h3>
+          <div className="flex-1 text-left space-y-4 ml-10 mr-10 mt-10">
+            <h3 className="text-xl font-semibold text-[#a6adb9]">🚀 App Development Services </h3>
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
-              Accurate OTB Forecasting with Automated Planning
+              Transform Your Ideas into Powerful Mobile Apps
             </h1>
             <h2 className="text-lg text-gray-700">
-              Improve forecasting of Open To Buy Plans with consideration of changing seasons,
-              sales patterns, closing inventory, and other anticipated changes.
+              At Manasvi Technology, we craft high-performance Android, iOS, and cross-platform apps that are user-friendly, scalable, and feature-rich. Whether you need a business app, e-commerce solution, or custom mobile application, we turn your vision into reality.
             </h2>
             <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
               Request a demo
@@ -101,7 +96,7 @@ const AppServices = () => {
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
             <img
-              src="https://www.supplymint.com/_next/static/images/InventMainGraph-13f0677a8dcac6bc209b7d922011c012.svg"
+              src="https://www.supplymint.com/_next/static/images/ProcMainGraph-203a27af214a302f90caeee2fb7be222.svg"
               alt="Demand Planning"
               className="w-full max-w-md"
             />
@@ -129,7 +124,7 @@ const AppServices = () => {
         {/* Designed For Modern Teams */}
         <div className="bg-gray-100 py-20 overflow-x-auto text-center px-6">
           <h1 className="text-3xl sm:text-5xl font-bold text-gray-900">
-            Designed For Modern Teams
+            📱 Our App Development Services
           </h1>
           <p className="text-xl font-semibold text-[#a6adb9] mx-auto mt-20 mb-20">
             Empowering Collaboration, Streamlining Operations, and Maximizing Productivity
@@ -158,17 +153,22 @@ const AppServices = () => {
           {/* Section 1 */}
           <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="Create Weekly and Monthly Open To Buy Plans" />
+              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/ProcGraphSixth-04cc0d5769d3c7604fbc64f9c5b88a1f.svg" alt="Create Weekly and Monthly Open To Buy Plans" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
-              <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Create Weekly and Monthly Open To Buy Plans
+              <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
+                💡 Why Choose Manasvi Technology?
               </h1>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-10 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Automatically generate customized Open-to-Buy (OTB) forecasts to align inventory with market demands.
+                    At Manasvi Technology, we deliver innovative, user-friendly app development solutions using the latest technologies to ensure robust performance and engaging design.</p>
+                </li>
+                <li className="flex items-start gap-4">
+                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <p className="text-gray-700">
+                    Our streamlined process and commitment to quality guarantee projects are completed on time and within budget, making us your trusted partner for digital growth.
                   </p>
                 </li>
               </ul>
@@ -176,46 +176,45 @@ const AppServices = () => {
           </div>
 
           {/* Section 2 */}
-          <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
+          <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-6 lg:px-20 mt-30">
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Create Category and Sub Category-Wise Buying Plans
+                Our Seamless App Development Process 🔄
               </h1>
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Build comprehensive OTB plans for different product categories and subcategories.
+                    At Manasvi Technology, we transform your ideas into engaging mobile apps through a streamlined process—from consultation and design to development, testing, and launch—ensuring high performance and timely delivery.
                   </p>
                 </li>
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="Category-Wise Buying Plan" />
+              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/ProcGraphEighth-63d7f43d0cbf799a84527f9f496e77a5.svg" alt="Category-Wise Buying Plan" />
             </div>
           </div>
 
           {/* Section 3 */}
-          <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
+          <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-30">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="AI Forecasts" />
+              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/ProcGraphSeventh-498338e3e601665c88f642bac24b3203.svg" alt="AI Forecasts" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Get Precise Forecasts with AI
+                🌟 Industries We Serve
               </h1>
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Leverage AI to assess key variables like seasonal trends, historical sales, and market fluctuations.
+                    We empower diverse industries—from e-commerce and healthcare to education and finance—with innovative, scalable app solutions that drive success.
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Synchronize OTB forecasts seamlessly with ERP and Warehouse Management Systems.
-                  </p>
+                    Vendor Interaction: Easily collaborate with verified vendors for sample approvals, pricing negotiations, and quotation requests all within a single platform.</p>
                 </li>
               </ul>
             </div>
@@ -225,19 +224,26 @@ const AppServices = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Discover Gaps in Sales Forecast
+                📞 Get Your App !
               </h1>
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Compare actual sales with predicted and budgeted sales.
+                    Our expert team transforms your vision into a secure, scalable mobile app.
+                  </p>
+                </li>
+                <li className="flex items-start gap-4">
+                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <p className="text-gray-700">
+                    We leverage the latest technologies to deliver high performance and engaging design.
+                    Contact us now to start your journey toward digital success!
                   </p>
                 </li>
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph4-8a597e5926409c22296f97a77915c01e.svg" alt="Sales Forecast" />
+              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/ProcGraphForth-29b6c3d21ef20c3f5cafbde3fe009690.svg" alt="Sales Forecast" />
             </div>
           </div>
         </div>

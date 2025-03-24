@@ -36,32 +36,40 @@ const WebServices = () => {
   ];
   const cards = [
     {
-      "title": "Highly Adaptable to Ever-Evolving Markets",
-      "descriptions": [
-        "Our cloud-based software adapts to the ever-evolving needs of the retail market, staying flexible for diverse business requirements.",
-        "We create retail solutions that evolve with changing demands, keeping your business competitive.",
-        "Our platform is designed to grow with you, offering custom options to match your unique needs."
-      ]
+      title: "Custom Website Development",
+      description: "We create fully customized websites tailored to your business goals, ensuring a seamless user experience.",
     },
     {
-      title: "Customizable Solutions",
-      description: "We create retail solutions that evolve with changing demands, keeping your business competitiveWe create retail solutions that evolve with changing demands, keeping your business competitive.",
+      title: "E-Commerce Solutions",
+      description: "Boost your online sales with feature-rich, secure, and user-friendly e-commerce websites.",
     },
     {
-      title: "Scalable for Growth",
-      description: "Our platform is designed to grow with you, offering custom options to match your unique needs.",
+      title: "Responsive Web Design",
+      description: "Our websites adapt to any screen size, providing an optimal experience across all devices.",
     },
     {
-      title: "Real-Time Analytics",
-      description: "Track your business performance with real-time data insights and analytics.",
+      title: "Web Application Development",
+      description: "We build dynamic and interactive web applications that streamline operations and improve efficiency.",
     },
     {
-      title: "Seamless Integration",
-      description: "Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.",
+      title: "CMS Development",
+      description: "Easily manage your content with powerful CMS platforms like WordPress, Shopify, and custom-built solutions.",
     },
     {
-      title: "AI-Powered Recommendations",
-      description: "Leverage AI to optimize demand planning and improve decision-making.",
+      title: "SEO-Optimized Websites",
+      description: "Get found on search engines with our SEO-friendly development strategies.",
+    },
+    {
+      title: "Website Maintenance & Support",
+      description: "We provide ongoing maintenance to keep your website secure, updated, and performing at its best.",
+    },
+    {
+      title: "AI-Powered Web Solutions",
+      description: "We integrate AI and machine learning capabilities to enhance automation and decision-making.",
+    },
+    {
+      title: "Cloud-Based Web Solutions",
+      description: "We develop scalable cloud-based web applications that ensure data security and easy access.",
     },
   ];
 
@@ -85,14 +93,14 @@ const WebServices = () => {
         </div>
       </div>
       <div className="w-full overflow-x-hidden ">
-        <div className="flex flex-col md:flex-row bg-white py-30 rounded-lg shadow-lg">
-          <div className="flex-1 text-left space-y-4 ml-10 mt-20">
-            <h3 className="text-xl font-semibold text-[#a6adb9]">Inventory Planning</h3>
+        <div className="flex flex-col md:flex-row bg-white py-20 rounded-lg shadow-lg">
+          <div className="flex-1 text-left space-y-4 ml-10 mt-30">
+            <h3 className="text-xl font-semibold text-[#a6adb9]">Web Development Services | Manasvi Technology</h3>
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
-              Optimised inventory across all sites with seamless ERP and WMS integration
+              Build, Innovate, and Scale with Manasvi Technology
             </h1>
             <h2 className="text-lg text-gray-700">
-              Ensure right quantity & timely availability of inventory across all your sites with seamless ERP and WMS integration
+              At Manasvi Technology, we specialize in crafting high-performance, scalable, and visually stunning websites that help businesses thrive in the digital world. Whether you're a startup, an enterprise, or an individual, our expert team delivers tailored web solutions to meet your unique needs.
             </h2>
             <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
               Request a demo
@@ -100,7 +108,7 @@ const WebServices = () => {
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
             <img
-              src="https://www.supplymint.com/_next/static/images/InventMainGraph-13f0677a8dcac6bc209b7d922011c012.svg"
+              src="https://www.supplymint.com/_next/static/images/DemandMainGraph-f822902f33ac4afebebede3c21622f15.svg"
               alt="Demand Planning"
               className="w-full max-w-md"
             />
@@ -128,7 +136,7 @@ const WebServices = () => {
         {/* Designed For Modern Teams */}
         <div className="bg-gray-100 py-20 overflow-x-auto text-center px-6">
           <h1 className="text-3xl sm:text-5xl font-bold text-gray-900">
-            Designed For Modern Teams
+            Our Web Development Services
           </h1>
           <p className="text-xl font-semibold text-[#a6adb9] mx-auto mt-20 mb-20">
             Empowering Collaboration, Streamlining Operations, and Maximizing Productivity
@@ -160,20 +168,27 @@ const WebServices = () => {
               <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="Create Weekly and Monthly Open To Buy Plans" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
-              <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Accurate Inventory Transfer Orders
-
+              <h1 className="text-2xl md:text-5xl font-bold text-gray-800">
+                Why Choose Manasvi Technology?
               </h1>
-              <ul className="mt-10 space-y-3">
+              <ul className="mt-7 space-y-2">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Automated Powered Predictions: Use advanced machine learning algorithms to understand the inventory needs for all sites by analyzing patterns like sales, inventory levels, seasonal events, festivals, warehouse turnaround times, and reorder thresholds.</p>
+                    At Manasvi Technology, we combine innovation, expertise, and modern technology to deliver high-quality web solutions. Our team focuses on performance, security, and user experience to create websites that drive business growth.
+                  </p>
                 </li>
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Automated Powered Predictions: Use advanced machine learning algorithms to understand the inventory needs for all sites by analyzing patterns like sales, inventory levels, seasonal events, festivals, warehouse turnaround times, and reorder thresholds.</p>
+                    We prioritize SEO-friendly, mobile-responsive, and scalable web solutions to ensure long-term success. With a commitment to on-time delivery and ongoing support, we help businesses stay ahead in the digital world.
+                  </p>
+                </li>
+                <li className="flex items-start gap-4">
+                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <p className="text-gray-700">
+                    Whether you need a custom website, e-commerce platform, or web application, we provide cost-effective, future-proof solutions tailored to your needs. 🚀
+                  </p>
                 </li>
               </ul>
             </div>
@@ -183,13 +198,13 @@ const WebServices = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Create Category and Sub Category-Wise Buying Plans
+                Our Web Development Process
               </h1>
-              <ul className="mt-10 space-y-3">
+              <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Build comprehensive OTB plans for different product categories and subcategories.
+                    At Manasvi Technology, we follow a streamlined process from planning and prototyping to development, testing, and deployment. We ensure your website is fast, secure, and scalable, delivering a seamless user experience. After launch, we provide ongoing support and maintenance to keep your website performing at its best. 🚀
                   </p>
                 </li>
               </ul>
@@ -206,19 +221,19 @@ const WebServices = () => {
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Get Precise Forecasts with AI
+                Industries We Serve
               </h1>
-              <ul className="mt-10 space-y-3">
+              <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Leverage AI to assess key variables like seasonal trends, historical sales, and market fluctuations.
+                    At Manasvi Technology, we cater to a wide range of industries, providing custom web solutions tailored to specific business needs. From corporate websites and e-commerce platforms to real estate portals and healthcare systems, we develop high-performance websites that drive engagement and growth.
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Synchronize OTB forecasts seamlessly with ERP and Warehouse Management Systems.
+                    Our expertise extends to education, finance, travel, and entertainment, ensuring businesses of all sizes get scalable, secure, and user-friendly digital solutions. No matter your industry, we create websites that enhance brand presence, streamline operations, and boost customer interactions. 🚀
                   </p>
                 </li>
               </ul>
@@ -229,13 +244,43 @@ const WebServices = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Discover Gaps in Sales Forecast
+                Technologies We Use 🚀
               </h1>
-              <ul className="mt-10 space-y-3">
+              <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Compare actual sales with predicted and budgeted sales.
+                    At Manasvi Technology, we utilize the latest technologies to build fast, secure, and scalable web solutions.
+                  </p>
+                </li>
+                <li className="flex items-start gap-4">
+                  {/* <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" /> */}
+                  <p className="text-gray-700">
+                    🖥 Frontend: React.js ⚛️ | Vue.js 🔥 | Angular 🅰️ | Next.js 🚀 | Tailwind CSS 🎨
+                  </p>
+                </li>
+                <li className="flex items-start gap-4">
+                  {/* <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" /> */}
+                  <p className="text-gray-700">
+                    ⚙️ Backend: Node.js 🟢 | Express.js 🚄 | PHP 🐘 | Python 🐍 | Laravel 🎯
+                  </p>
+                </li>
+                <li className="flex items-start gap-4">
+                  {/* <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" /> */}
+                  <p className="text-gray-700">
+                    📊 Databases: MongoDB 🍃 | MySQL 🐬 | PostgreSQL 🏛
+                  </p>
+                </li>
+                <li className="flex items-start gap-4">
+                  {/* <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" /> */}
+                  <p className="text-gray-700">
+                    ☁️ Cloud & Hosting: AWS ☁️ | Firebase 🔥 | DigitalOcean 🌊
+                  </p>
+                </li>
+                <li className="flex items-start gap-4">
+                  {/* <img className="h-6 w-6 mt-1" src="" alt="dot" /> */}
+                  <p className="text-gray-700">
+                    🔒 Security: SSL 🔑 | Firewalls 🔥 | Data Encryption 🛡
                   </p>
                 </li>
               </ul>

@@ -36,32 +36,28 @@ const SoftwareServices = () => {
   ];
   const cards = [
     {
-      "title": "Highly Adaptable to Ever-Evolving Markets",
-      "descriptions": [
-        "Our cloud-based software adapts to the ever-evolving needs of the retail market, staying flexible for diverse business requirements.",
-        "We create retail solutions that evolve with changing demands, keeping your business competitive.",
-        "Our platform is designed to grow with you, offering custom options to match your unique needs."
-      ]
+      title: "Custom Software Development",
+      description: "Tailor-made solutions designed to streamline operations and meet your unique business requirements.",
     },
     {
-      title: "Customizable Solutions",
-      description: "We create retail solutions that evolve with changing demands, keeping your business competitiveWe create retail solutions that evolve with changing demands, keeping your business competitive.",
+      title: "Enterprise Application Development",
+      description: "Robust and scalable software built for large organizations to drive efficiency and growth.",
     },
     {
-      title: "Scalable for Growth",
-      description: "Our platform is designed to grow with you, offering custom options to match your unique needs.",
+      title: "SaaS Solutions",
+      description: "Cloud-based applications that offer flexibility, scalability, and seamless integration for your business.",
     },
     {
-      title: "Real-Time Analytics",
-      description: "Track your business performance with real-time data insights and analytics.",
+      title: "UI/UX Design",
+      description: "Intuitive and engaging interfaces crafted to enhance user experience and boost productivity.",
     },
     {
-      title: "Seamless Integration",
-      description: "Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.Easily integrate with existing tools and software to streamline operations.",
+      title: "Software Integration & Migration",
+      description: "Seamlessly integrate new solutions with existing systems and upgrade legacy software with minimal disruption.",
     },
     {
-      title: "AI-Powered Recommendations",
-      description: "Leverage AI to optimize demand planning and improve decision-making.",
+      title: "Maintenance & Support",
+      description: "Ongoing updates, security enhancements, and technical support to ensure your software runs flawlessly.",
     },
   ];
 
@@ -90,15 +86,14 @@ const SoftwareServices = () => {
         </div>
       </div>
       <div className="w-full overflow-x-hidden ">
-        <div className="flex flex-col md:flex-row bg-white py-20 rounded-lg shadow-lg">
-          <div className="flex-1 text-left space-y-4 ml-10 mt-30">
-            <h3 className="text-xl font-semibold text-[#a6adb9]">Demand Planning</h3>
+        <div className="flex flex-col md:flex-row bg-white py-30 rounded-lg shadow-lg">
+          <div className="flex-1 text-left space-y-4 ml-10 mt-20">
+            <h3 className="text-xl font-semibold text-[#a6adb9]">Software Development Services</h3>
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
-              Accurate OTB Forecasting with Automated Planning
+              Transform Your Business with Innovative Software Development Solutions
             </h1>
             <h2 className="text-lg text-gray-700">
-              Improve forecasting of Open To Buy Plans with consideration of changing seasons,
-              sales patterns, closing inventory, and other anticipated changes.
+              At Manasvi Technology, we create robust and scalable software solutions tailored to your business needs. Our experienced team leverages cutting-edge technology and agile methodologies to deliver custom applications that drive efficiency and growth.
             </h2>
             <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
               Request a demo
@@ -106,7 +101,7 @@ const SoftwareServices = () => {
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
             <img
-              src="https://www.supplymint.com/_next/static/images/DemandMainGraph-f822902f33ac4afebebede3c21622f15.svg"
+              src="https://www.supplymint.com/_next/static/images/InventMainGraph-13f0677a8dcac6bc209b7d922011c012.svg"
               alt="Demand Planning"
               className="w-full max-w-md"
             />
@@ -129,12 +124,11 @@ const SoftwareServices = () => {
             View All Clients
           </button>
         </div>
-
-
+        
         {/* Designed For Modern Teams */}
         <div className="bg-gray-100 py-20 overflow-x-auto text-center px-6">
           <h1 className="text-3xl sm:text-5xl font-bold text-gray-900">
-            Designed For Modern Teams
+            Explore Our Software Development Services
           </h1>
           <p className="text-xl font-semibold text-[#a6adb9] mx-auto mt-20 mb-20">
             Empowering Collaboration, Streamlining Operations, and Maximizing Productivity
@@ -167,13 +161,13 @@ const SoftwareServices = () => {
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Create Weekly and Monthly Open To Buy Plans
+                Our Expertise in Software Innovation
               </h1>
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Automatically generate customized Open-to-Buy (OTB) forecasts to align inventory with market demands.
+                    At Manasvi Technology, our skilled team excels in delivering custom software solutions, SaaS applications, and seamless integrations that drive operational efficiency and business growth.
                   </p>
                 </li>
               </ul>
@@ -184,13 +178,19 @@ const SoftwareServices = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Create Category and Sub Category-Wise Buying Plans
+                Why Partner with Manasvi Technology?
               </h1>
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Build comprehensive OTB plans for different product categories and subcategories.
+                    At Manasvi Technology, we combine innovative approaches with technical expertise to deliver custom software solutions that help your business thrive.
+                  </p>
+                </li>
+                <li className="flex items-start gap-4">
+                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <p className="text-gray-700">
+                    We work closely with you to understand your unique needs, ensuring timely, scalable, and efficient solutions that drive success.
                   </p>
                 </li>
               </ul>
@@ -207,19 +207,25 @@ const SoftwareServices = () => {
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Get Precise Forecasts with AI
+                Our Agile Development Process
               </h1>
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Leverage AI to assess key variables like seasonal trends, historical sales, and market fluctuations.
+                    We begin by understanding your unique goals and crafting a tailored strategy to ensure your vision comes to life.
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Synchronize OTB forecasts seamlessly with ERP and Warehouse Management Systems.
+                    Next, our design and development phases use agile methodologies for iterative improvements and rapid delivery.
+                  </p>
+                </li>
+                <li className="flex items-start gap-4">
+                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <p className="text-gray-700">
+                    Finally, rigorous testing, deployment, and ongoing support guarantee a seamless, scalable solution that drives success.
                   </p>
                 </li>
               </ul>
@@ -230,13 +236,19 @@ const SoftwareServices = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Discover Gaps in Sales Forecast
+                Our Cutting-Edge Technology
               </h1>
-              <ul className="mt-4 space-y-3">
+              <ul className="mt-8 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    Compare actual sales with predicted and budgeted sales.
+                    At Manasvi Technology, we harness the latest tools and frameworks to build innovative, secure, and scalable software solutions. Our team stays ahead of industry trends to ensure your applications are future-ready.
+                  </p>
+                </li>
+                <li className="flex items-start gap-4">
+                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <p className="text-gray-700">
+                    By leveraging advanced technologies like cloud computing, AI, and agile methodologies, we optimize our development process to drive efficiency and business growth.
                   </p>
                 </li>
               </ul>
