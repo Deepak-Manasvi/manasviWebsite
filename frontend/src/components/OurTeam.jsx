@@ -8,18 +8,19 @@ import axios from "axios";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import { Phone } from "lucide-react";
 
-import TeamMember1 from "../assets/image/TeamMember1.png";
-import TeamMember2 from "../assets/image/TeamMember2.png";
-import TeamMember3 from "../assets/image/TeamMember3.png";
-import TeamMember4 from "../assets/image/TeamMember4.png";
-import TeamMember5 from "../assets/image/TeamMember5.png";
+import TeamMember1 from "../assets/image/shailja.png";
+import TeamMember2 from "../assets/image/vishal.png";
+import TeamMember3 from "../assets/image/shraddha.png";
+import TeamMember4 from "../assets/image/anil.jpg";
+import TeamMember5 from "../assets/image/shruti.png";
+
 
 const experts = [
-  { name: "Natalie Carter", role: "Customer Success Agent", image: TeamMember1 },
-  { name: "Lucy Gray", role: "Customer Success Lead", image: TeamMember2 },
-  { name: "Olivia Martinez", role: "Payments Support", image: TeamMember3 },
-  { name: "Richard Mills", role: "Payments Support", image: TeamMember4 },
-  { name: "Sophie Chamberlain", role: "Specialized Support", image: TeamMember5 },
+  { name: "Natalie Carter", role: "Developer", image: TeamMember1 },
+  { name: "Vishal Yadav", role: "MERN Developer", image: TeamMember2 },
+  { name: "Shailja Tomer", role: "Developer", image: TeamMember1 },
+  { name: "Anil Patidar", role: "Python Developer", image: TeamMember4 },
+  { name: "Shruti Kamboj", role: "MERN Developer", image: TeamMember5 },
   { name: "Shraddha Palotra", role: "MERN Developer", image: TeamMember3 },
 ];
 

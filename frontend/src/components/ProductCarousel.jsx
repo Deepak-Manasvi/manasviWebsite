@@ -176,10 +176,10 @@ const ProductCarousel = () => {
                 </div>
 
                 <div className="p-4">
-                  <div className="flex justify-between text-md text-gray-600 mt-2">
+                  {/* <div className="flex justify-between text-md text-gray-600 mt-2">
                     <p>Blog</p>
                     <p>21/03/2025</p>
-                  </div>
+                  </div> */}
 
                   <h3 className="text-lg font-semibold text-gray-800 mt-2 text-start p-5">
                     {resource.title}

@@ -1,7 +1,7 @@
-import card1 from './assets/service/webDevelopment.jpg'
-import card2 from './assets/service/digitalMarketing.jpg'
-import card3 from './assets/service/appDevelopment.jpg'
-import card4 from './assets/service/softwareDevelopment.jpg'
+import card1 from './assets/service/service1.png'
+import card2 from './assets/service/service2.png'
+import card3 from './assets/service/service4.png'
+import card4 from './assets/service/service5.png'
 
 export const serviceData = [
   {

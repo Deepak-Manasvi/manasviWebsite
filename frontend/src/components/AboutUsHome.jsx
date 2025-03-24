@@ -4,11 +4,15 @@ import { useNavigate } from "react-router-dom";
 import backgroundImage from "../assets/Images/backimg2.png";
 import OurTeam from "./OurTeam";
 import Marquee from "./Marquee";
+import about1 from '../assets/image/about1.png'
+import about2 from '../assets/image/about2.png'
+import about3 from '../assets/image/about3.png'
+import about4 from '../assets/image/about4.png'
 
 const AboutUsPage = () => {
   const navigate = useNavigate();
-  const imageUrl =
-    "https://images.unsplash.com/photo-1649877508777-1554357604eb?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+  // const imageUrl =
+  //   "https://images.unsplash.com/photo-1649877508777-1554357604eb?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 
   return (
     <div
@@ -21,36 +25,67 @@ const AboutUsPage = () => {
       <div className="container mx-auto flex  items-center">
         {/* Left side - Image grid */}
 
-        <div className="relative  h-[35vw] w-1/2 p-8 ]">
+        {/* <div className="relative  h-[35vw] w-1/2 p-8 ]">
           <div className="absolute top-0 w-[15vw] left-[15vw] z-20 ">
             <img
-              src={imageUrl}
+              src={about1}
               alt="Team collaboration"
               className="rounded-lg shadow-md w-full  object-cover"
             />
           </div>
           <div className="absolute top-[5vw] z-30 right-[8vw] mt-8 w-[15vw]">
             <img
-              src={imageUrl}
+              src={about2}
               alt="Team collaboration"
               className="rounded-lg shadow-md w-full  object-cover"
             />
           </div>
           <div className="absolute bottom-[8vw] w-[15vw] left-[8vw] mt-8 z-10">
             <img
-              src={imageUrl}
+              src={about3}
               alt="Team collaboration"
               className="rounded-lg shadow-md w-full  object-cover"
             />
           </div>
           <div className="absolute bottom-0 w-[15vw] right-[11vw] mt-8 z-40">
             <img
-              src={imageUrl}
+              src={about4}
               alt="Team collaboration"
               className="rounded-lg shadow-md w-full  object-cover"
             />
           </div>
-        </div>
+        </div> */}
+
+<div className="relative h-[35vw] w-1/2 p-8">
+  <div className="absolute top-0 w-[15vw] h-[15vw] left-[15vw] z-20">
+    <img
+      src={about1}
+      alt="Team collaboration"
+      className="rounded-lg shadow-md w-full h-full object-cover"
+    />
+  </div>
+  <div className="absolute top-[5vw] z-30 right-[8vw] mt-8 w-[15vw] h-[15vw]">
+    <img
+      src={about2}
+      alt="Team collaboration"
+      className="rounded-lg shadow-md w-full h-full object-cover"
+    />
+  </div>
+  <div className="absolute bottom-[8vw] w-[15vw] h-[15vw] left-[8vw] mt-8 z-10">
+    <img
+      src={about3}
+      alt="Team collaboration"
+      className="rounded-lg shadow-md w-full h-full object-cover"
+    />
+  </div>
+  <div className="absolute bottom-0 w-[15vw] h-[15vw] right-[11vw] mt-8 z-40">
+    <img
+      src={about4}
+      alt="Team collaboration"
+      className="rounded-lg shadow-md w-full h-full object-cover"
+    />
+  </div>
+</div>
 
         {/* Right side - About Us content (preview only) */}
         <div className="w-full md:w-1/2 p-4">
@@ -113,3 +148,4 @@ const AboutUsPage = () => {
 };
 
 export default AboutUsPage;
+
