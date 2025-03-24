@@ -31,9 +31,9 @@ const Cards = ({ i, tag, title, points, image, progress, range, targetScale }) =
 
         {/* Image Section */}
         <div className="w-[50%] mt-20">
-          <img src={image} className="w-[100%]" alt=" Image" />
+          <img src={image} className="w-[80vw] h-[50vh] mb-4 rounded-2xl" alt=" Image" />
           <div className="bg-violet-600 mx-auto text-white flex gap-2 font-semibold rounded-full p-2 w-fit">
-            <button>Know More</button>
+            <button className='p-1'>Know More</button>
             <IoIosArrowDropright className="mt-1" size={20} />
           </div>
         </div>
