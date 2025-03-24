@@ -1,7 +1,11 @@
 import React, { useState,useEffect } from "react";
 import { FaUsers, FaLightbulb, FaHandshake } from "react-icons/fa";
 import { RiTeamLine } from "react-icons/ri";
-import userImage from "../assets/Images/user.jpg";
+import TeamMember1 from "../assets/image/shailja.png";
+import TeamMember2 from "../assets/image/vishal.png";
+import TeamMember3 from "../assets/image/shraddha.png";
+import TeamMember4 from "../assets/image/anil.jpg";
+import TeamMember5 from "../assets/image/shruti.png";
 import backgroundImage from '../assets/Images/Footer.jpg';
 
 const CareersComponent = () => {
@@ -143,18 +147,11 @@ const CareersComponent = () => {
 
   // gallery data
   const galleryImages = [
-    { id: 1, src: userImage, alt: "Gallery Image 1" },
-    { id: 2, src: userImage, alt: "Gallery Image 2" },
-    { id: 3, src: userImage, alt: "Gallery Image 3" },
-    { id: 4, src: userImage, alt: "Gallery Image 4" },
-    { id: 5, src: userImage, alt: "Gallery Image 5" },
-    { id: 6, src: userImage, alt: "Gallery Image 6" },
-    { id: 7, src: userImage, alt: "Gallery Image 7" },
-    { id: 8, src: userImage, alt: "Gallery Image 8" },
-    { id: 9, src: userImage, alt: "Gallery Image 9" },
-    { id: 10, src: userImage, alt: "Gallery Image 10" },
-    { id: 11, src: userImage, alt: "Gallery Image 11" },
-    { id: 12, src: userImage, alt: "Gallery Image 12" },
+    { id: 1, src: TeamMember1, alt: "Gallery Image 1" },
+    { id: 2, src: TeamMember2, alt: "Gallery Image 2" },
+    { id: 3, src: TeamMember3, alt: "Gallery Image 3" },
+    { id: 4, src: TeamMember4, alt: "Gallery Image 4" },
+    { id: 5, src: TeamMember5, alt: "Gallery Image 5" },
   ];
 
   const openLightbox = (index) => {
