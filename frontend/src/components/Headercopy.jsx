@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
-import {NavLink } from "react-router-dom";
+import React, { useState, useEffect, useRef } from "react";
+import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import mlogo from "../assets/Images/manasvilogo.png";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { Reviews } from './Reviews';
+import { Reviews } from "./Reviews";
 
 const Header = () => {
   const [isBottomBarVisible, setBottomBarVisible] = useState(false);
@@ -13,6 +13,8 @@ const Header = () => {
 
   const [isHeaderVisible, setHeaderVisible] = useState(true);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+
+  const serviceDropdownRef = useRef(null);
 
   const toggleBottomBar = () => {
     setBottomBarVisible(!isBottomBarVisible);
@@ -26,6 +28,27 @@ const Header = () => {
   const closeServiceBar = () => {
     setServiceBarVisible(false);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        serviceDropdownRef.current &&
+        !serviceDropdownRef.current.contains(event.target)
+      ) {
+        closeServiceBar();
+      }
+    };
+
+    // Add event listener when dropdown is open
+    if (isServiceBarVisible) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    // Cleanup listener
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isServiceBarVisible]);
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
@@ -90,16 +113,22 @@ const Header = () => {
             >
               About Us
             </NavLink>
-            <div className="relative group cursor-pointer">
-              <button
+            <NavLink
+              ref={serviceDropdownRef}
+              className={`relative group cursor-pointer `}
+            >
+              <NavLink
+                to="#" // Prevents navigation, acts as a dropdown trigger
                 onClick={toggleServiceBar}
                 className={({ isActive }) =>
-                  isActive ? "text-black font-bold underline" : "text-black"
+                  window.location.pathname.startsWith("/services")
+                    ? "text-black font-bold underline"
+                    : "text-black"
                 }
               >
                 Services
                 <FaAngleDown className="inline-block ml-1" />
-              </button>
+              </NavLink>
               {isServiceBarVisible && (
                 <div className="absolute -left-20 text-center leading-none mt-2 w-56 bg-white text-black rounded-lg shadow-lg transition-opacity duration-300">
                   <NavLink
@@ -148,7 +177,7 @@ const Header = () => {
                   </NavLink>
                 </div>
               )}
-            </div>
+            </NavLink>
             <NavLink
               to="/products"
               className={({ isActive }) =>
@@ -224,7 +253,7 @@ const Header = () => {
               <NavLink>
                 <Link
                   to="/login"
-                  className="text-black focus:outline-none py-1 px-4 border border-gray-400 rounded-2xl"
+                  className="text-black focus:outline-none py-2 px-5 border border-gray-400 rounded-2xl"
                 >
                   Login
                 </Link>

@@ -19,13 +19,18 @@ const ProductPage = () => {
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl text-white font-bold">Our Products</h1>
-          <nav className="mt-2">
-            <a href="/" className="text-white">
+          <h1 className="text-4xl lg:text-5xl text-white font-extrabold">
+            Our Products
+          </h1>
+          <nav className="mt-4">
+            <a href="/" className="text-white hover:text-gray-200">
               Home
             </a>
             <span className="text-white mx-2">→</span>
-            <a href="/products" className="text-white font-bold underline">
+            <a
+              href="/products"
+              className="text-white font-bold underline hover:text-gray-200"
+            >
               Products
             </a>
           </nav>
@@ -57,7 +62,6 @@ const ProductPage = () => {
                 your market reach or improve internal efficiencies, our tailored
                 solutions are designed to achieve your goals effectively.
               </p>
-              
             </div>
             <button
               onClick={toggleShowMore}

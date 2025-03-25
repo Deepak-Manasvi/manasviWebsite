@@ -1,26 +1,27 @@
 /* eslint-disable no-unused-vars */
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
-import  image1 from "../assets/webServices/web-development.png";
-import  image2 from "../assets/webServices/whyCooseUs.jpg";
-import  image3 from "../assets/webServices/Web-Development-Process.jpg";
-import  image4 from "../assets/webServices/images.jpeg";
-import  image5 from "../assets/webServices/Latest-technologies-for-web-development1.jpg";
+import image1 from "../assets/webServices/web-development.png";
+import image2 from "../assets/webServices/whyCooseUs.jpg";
+import image3 from "../assets/webServices/Web-Development-Process.jpg";
+import image4 from "../assets/webServices/images.jpeg";
+import image5 from "../assets/webServices/Latest-technologies-for-web-development1.jpg";
 import ServicesPage from "../components/ServicesPage";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useLocation } from "react-router-dom";
 
 const WebServices = () => {
   const [showMore, setShowMore] = useState(false);
-
+ 
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
- useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
- }, []);
-  
+  }, []);
+
   const settings = {
     infinite: true,
     speed: 5000,
@@ -46,44 +47,53 @@ const WebServices = () => {
   const cards = [
     {
       title: "Custom Website Development",
-      description: "We create fully customized websites tailored to your business goals, ensuring a seamless user experience.",
+      description:
+        "We create fully customized websites tailored to your business goals, ensuring a seamless user experience.",
     },
     {
       title: "E-Commerce Solutions",
-      description: "Boost your online sales with feature-rich, secure, and user-friendly e-commerce websites.",
+      description:
+        "Boost your online sales with feature-rich, secure, and user-friendly e-commerce websites.",
     },
     {
       title: "Responsive Web Design",
-      description: "Our websites adapt to any screen size, providing an optimal experience across all devices.",
+      description:
+        "Our websites adapt to any screen size, providing an optimal experience across all devices.",
     },
     {
       title: "Web Application Development",
-      description: "We build dynamic and interactive web applications that streamline operations and improve efficiency.",
+      description:
+        "We build dynamic and interactive web applications that streamline operations and improve efficiency.",
     },
     {
       title: "CMS Development",
-      description: "Easily manage your content with powerful CMS platforms like WordPress, Shopify, and custom-built solutions.",
+      description:
+        "Easily manage your content with powerful CMS platforms like WordPress, Shopify, and custom-built solutions.",
     },
     {
       title: "SEO-Optimized Websites",
-      description: "Get found on search engines with our SEO-friendly development strategies.",
+      description:
+        "Get found on search engines with our SEO-friendly development strategies.",
     },
     {
       title: "Website Maintenance & Support",
-      description: "We provide ongoing maintenance to keep your website secure, updated, and performing at its best.",
+      description:
+        "We provide ongoing maintenance to keep your website secure, updated, and performing at its best.",
     },
     {
       title: "AI-Powered Web Solutions",
-      description: "We integrate AI and machine learning capabilities to enhance automation and decision-making.",
+      description:
+        "We integrate AI and machine learning capabilities to enhance automation and decision-making.",
     },
     {
       title: "Cloud-Based Web Solutions",
-      description: "We develop scalable cloud-based web applications that ensure data security and easy access.",
+      description:
+        "We develop scalable cloud-based web applications that ensure data security and easy access.",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-cover bg-center">
+    <div className="min-h-screen bg-cover bg-center" >
       <div
         className="h-[40vh] p-4 flex justify-center items-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -102,42 +112,51 @@ const WebServices = () => {
         </div>
       </div>
       <div className="w-full overflow-x-hidden ">
-      <div className="flex flex-col md:flex-row bg-white py-20 rounded-lg shadow-lg">
-  {/* Text Section */}
-  <div className="md:w-1/2 text-left space-y-4 ml-10 mt-10">
-    <h3 className="text-xl font-semibold text-[#a6adb9]">
-      Web Development Services | Manasvi Technology
-    </h3>
-    <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
-      Build, Innovate, and Scale with Manasvi Technology
-    </h1>
-    <h2 className="text-lg text-gray-700">
-      At Manasvi Technology, we specialize in crafting high-performance, scalable, and visually stunning websites that help businesses thrive in the digital world. Whether you're a startup, an enterprise, or an individual, our expert team delivers tailored web solutions to meet your unique needs.
-    </h2>
-    <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
-      Request a demo
-    </button>
-  </div>
+        <div className="flex flex-col md:flex-row bg-white py-20 rounded-lg shadow-lg">
+          {/* Text Section */}
+          <div className="md:w-1/2 text-left space-y-4 ml-10 mt-10">
+            <h3 className="text-xl font-semibold text-[#a6adb9]">
+              Web Development Services | Manasvi Technology
+            </h3>
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
+              Build, Innovate, and Scale with Manasvi Technology
+            </h1>
+            <h2 className="text-lg text-gray-700">
+              At Manasvi Technology, we specialize in crafting high-performance,
+              scalable, and visually stunning websites that help businesses
+              thrive in the digital world. Whether you're a startup, an
+              enterprise, or an individual, our expert team delivers tailored
+              web solutions to meet your unique needs.
+            </h2>
+            <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
+              Request a demo
+            </button>
+          </div>
 
-  {/* Image Section (Smaller but aligned) */}
-  <div className="md:w-2/4 flex justify-center md:justify-end">
-    <img
-      src={image1}
-      alt="Demand Planning"
-      className="w-[500px] h-auto object-contain"
-    />
-  </div>
-</div>
-
+          {/* Image Section (Smaller but aligned) */}
+          <div className="md:w-2/4 flex justify-center md:justify-end">
+            <img
+              src={image1}
+              alt="Demand Planning"
+              className="w-[500px] h-auto object-contain"
+            />
+          </div>
+        </div>
 
         {/* Client Slider */}
         <div className="bg-black py-4 text-center text-white">
-          <h2 className="text-2xl font-bold mb-10">Trusted by 1k+ businesses</h2>
+          <h2 className="text-2xl font-bold mb-10">
+            Trusted by 1k+ businesses
+          </h2>
           <div className="w-full">
             <Slider {...settings}>
               {clientLogos.map((logo, index) => (
                 <div key={index} className="flex justify-center">
-                  <img src={logo} alt={`Client ${index + 1}`} className="w-50 mx-auto" />
+                  <img
+                    src={logo}
+                    alt={`Client ${index + 1}`}
+                    className="w-50 mx-auto"
+                  />
                 </div>
               ))}
             </Slider>
@@ -147,14 +166,14 @@ const WebServices = () => {
           </button>
         </div>
 
-
         {/* Designed For Modern Teams */}
         <div className="bg-gray-100 py-20 overflow-x-auto text-center px-6">
           <h1 className="text-3xl sm:text-5xl font-bold text-gray-900">
             Our Web Development Services
           </h1>
           <p className="text-xl font-semibold text-[#a6adb9] mx-auto mt-20 mb-20">
-          We provide modern, scalable, and high-performance web development solutions tailored to your needs.
+            We provide modern, scalable, and high-performance web development
+            solutions tailored to your needs.
           </p>
 
           {/* 6 cards */}
@@ -179,7 +198,11 @@ const WebServices = () => {
           {/* Section 1 */}
           <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src={image2} alt="Create Weekly and Monthly Open To Buy Plans" />
+              <img
+                className="w-3/4"
+                src={image2}
+                alt="Create Weekly and Monthly Open To Buy Plans"
+              />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-2xl md:text-5xl font-bold text-gray-800">
@@ -187,21 +210,41 @@ const WebServices = () => {
               </h1>
               <ul className="mt-7 space-y-2">
                 <li className="flex items-start gap-4">
-                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <img
+                    className="h-6 w-6 mt-1"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K"
+                    alt="dot"
+                  />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we combine innovation, expertise, and modern technology to deliver high-quality web solutions. Our team focuses on performance, security, and user experience to create websites that drive business growth.
+                    At Manasvi Technology, we combine innovation, expertise, and
+                    modern technology to deliver high-quality web solutions. Our
+                    team focuses on performance, security, and user experience
+                    to create websites that drive business growth.
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
-                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <img
+                    className="h-6 w-6 mt-1"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K"
+                    alt="dot"
+                  />
                   <p className="text-gray-700">
-                    We prioritize SEO-friendly, mobile-responsive, and scalable web solutions to ensure long-term success. With a commitment to on-time delivery and ongoing support, we help businesses stay ahead in the digital world.
+                    We prioritize SEO-friendly, mobile-responsive, and scalable
+                    web solutions to ensure long-term success. With a commitment
+                    to on-time delivery and ongoing support, we help businesses
+                    stay ahead in the digital world.
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
-                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <img
+                    className="h-6 w-6 mt-1"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K"
+                    alt="dot"
+                  />
                   <p className="text-gray-700">
-                    Whether you need a custom website, e-commerce platform, or web application, we provide cost-effective, future-proof solutions tailored to your needs. 🚀
+                    Whether you need a custom website, e-commerce platform, or
+                    web application, we provide cost-effective, future-proof
+                    solutions tailored to your needs. 🚀
                   </p>
                 </li>
               </ul>
@@ -216,15 +259,28 @@ const WebServices = () => {
               </h1>
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
-                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <img
+                    className="h-6 w-6 mt-1"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K"
+                    alt="dot"
+                  />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we follow a streamlined process from planning and prototyping to development, testing, and deployment. We ensure your website is fast, secure, and scalable, delivering a seamless user experience. After launch, we provide ongoing support and maintenance to keep your website performing at its best. 🚀
+                    At Manasvi Technology, we follow a streamlined process from
+                    planning and prototyping to development, testing, and
+                    deployment. We ensure your website is fast, secure, and
+                    scalable, delivering a seamless user experience. After
+                    launch, we provide ongoing support and maintenance to keep
+                    your website performing at its best. 🚀
                   </p>
                 </li>
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src={image3} alt="Category-Wise Buying Plan" />
+              <img
+                className="w-3/4"
+                src={image3}
+                alt="Category-Wise Buying Plan"
+              />
             </div>
           </div>
 
@@ -239,15 +295,33 @@ const WebServices = () => {
               </h1>
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
-                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <img
+                    className="h-6 w-6 mt-1"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K"
+                    alt="dot"
+                  />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we cater to a wide range of industries, providing custom web solutions tailored to specific business needs. From corporate websites and e-commerce platforms to real estate portals and healthcare systems, we develop high-performance websites that drive engagement and growth.
+                    At Manasvi Technology, we cater to a wide range of
+                    industries, providing custom web solutions tailored to
+                    specific business needs. From corporate websites and
+                    e-commerce platforms to real estate portals and healthcare
+                    systems, we develop high-performance websites that drive
+                    engagement and growth.
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
-                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <img
+                    className="h-6 w-6 mt-1"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K"
+                    alt="dot"
+                  />
                   <p className="text-gray-700">
-                    Our expertise extends to education, finance, travel, and entertainment, ensuring businesses of all sizes get scalable, secure, and user-friendly digital solutions. No matter your industry, we create websites that enhance brand presence, streamline operations, and boost customer interactions. 🚀
+                    Our expertise extends to education, finance, travel, and
+                    entertainment, ensuring businesses of all sizes get
+                    scalable, secure, and user-friendly digital solutions. No
+                    matter your industry, we create websites that enhance brand
+                    presence, streamline operations, and boost customer
+                    interactions. 🚀
                   </p>
                 </li>
               </ul>
@@ -262,21 +336,28 @@ const WebServices = () => {
               </h1>
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
-                  <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
+                  <img
+                    className="h-6 w-6 mt-1"
+                    src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K"
+                    alt="dot"
+                  />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we utilize the latest technologies to build fast, secure, and scalable web solutions.
+                    At Manasvi Technology, we utilize the latest technologies to
+                    build fast, secure, and scalable web solutions.
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
                   {/* <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" /> */}
                   <p className="text-gray-700">
-                    🖥 Frontend: React.js ⚛️ | Vue.js 🔥 | Angular 🅰️ | Next.js 🚀 | Tailwind CSS 🎨
+                    🖥 Frontend: React.js ⚛️ | Vue.js 🔥 | Angular 🅰️ | Next.js
+                    🚀 | Tailwind CSS 🎨
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
                   {/* <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" /> */}
                   <p className="text-gray-700">
-                    ⚙️ Backend: Node.js 🟢 | Express.js 🚄 | PHP 🐘 | Python 🐍 | Laravel 🎯
+                    ⚙️ Backend: Node.js 🟢 | Express.js 🚄 | PHP 🐘 | Python 🐍
+                    | Laravel 🎯
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
@@ -304,7 +385,6 @@ const WebServices = () => {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
