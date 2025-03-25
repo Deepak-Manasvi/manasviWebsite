@@ -1,19 +1,11 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
-<<<<<<< HEAD
-import image1 from "../assets/webServices/web-development.png";
-import image2 from "../assets/webServices/whyCooseUs.jpg";
-import image3 from "../assets/webServices/Web-Development-Process.jpg";
-import image4 from "../assets/webServices/images.jpeg";
-import image5 from "../assets/webServices/Latest-technologies-for-web-development1.jpg";
-=======
 import  image1 from "../assets/webServices/web-development.png";
 import  image2 from "../assets/webServices/whyCooseUs.jpg";
 import  image3 from "../assets/webServices/Web-Development-Process.jpg";
 import  image4 from "../assets/webServices/1100-W-X-600-H-Pixel1-1536x693.jpg";
 import  image5 from "../assets/webServices/Latest-technologies-for-web-development1.jpg";
->>>>>>> 3024db0b4995a8b32ef3db0ecf514ba890c7f9a3
 import ServicesPage from "../components/ServicesPage";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
