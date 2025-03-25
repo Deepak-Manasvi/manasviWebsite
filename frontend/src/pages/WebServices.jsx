@@ -3,7 +3,7 @@ import backgroundImage from "../assets/Images/Footer.jpg";
 import  image1 from "../assets/webServices/web-development.png";
 import  image2 from "../assets/webServices/whyCooseUs.jpg";
 import  image3 from "../assets/webServices/Web-Development-Process.jpg";
-import  image4 from "../assets/webServices/images.jpeg";
+import  image4 from "../assets/webServices/1100-W-X-600-H-Pixel1-1536x693.jpg";
 import  image5 from "../assets/webServices/Latest-technologies-for-web-development1.jpg";
 import ServicesPage from "../components/ServicesPage";
 import Slider from "react-slick";
