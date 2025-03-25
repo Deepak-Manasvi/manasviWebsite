@@ -134,7 +134,7 @@ const Login = () => {
             )}
 
             <div className="text-right">
-              <a href="#" className="text-gray-500 text-xs sm:text-sm">Forgot Password?</a>
+              <a href="/forget-password" className="text-gray-500 text-xs sm:text-sm">Forgot Password?</a>
             </div>
 
             <button

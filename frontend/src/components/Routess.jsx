@@ -38,6 +38,7 @@ import Indoremap from "./Indoremap";
 import ProtectedAdminRoute from "../components/Admin/ProtectedAdminRoute"; 
 import CareersComponent from "./Careers";
 import Portfolio from "../components/Portfolio.jsx";
+import ForgotPassword from "./Admin/Forget_password.jsx";
 
 function Routess() {
   return (
@@ -57,6 +58,7 @@ function Routess() {
           <Route path="/admin/logout" element={<Logout />} />
         </Route>
         <Route path="/" element={<Home />} />
+          <Route path="/forget-password" element={<ForgotPassword />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
