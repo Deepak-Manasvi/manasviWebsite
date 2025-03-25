@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import varshaImage from "../assets/Images/varsha.jpg";
-import rahulImage from "../assets/Images/rahul.jpg";
-import mahiImage from "../assets/Images/mahi.jpg";
-import soumyaImage from "../assets/Images/soumya.jpg";
-import kamalImage from "../assets/Images/kamal.jpg";
+import TeamMember1 from "../assets/image/TeamMember1.png";
+import TeamMember2 from "../assets/image/TeamMember2.png";
+import TeamMember3 from "../assets/image/TeamMember3.png";
+import TeamMember4 from "../assets/image/TeamMember4.png";
+import TeamMember5 from "../assets/image/TeamMember5.png";
 
 const TestimonialCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -14,42 +14,42 @@ const TestimonialCarousel = () => {
       id: 1,
       name: "Monu Electronics",
       designation: "Electronics Retailer",
-      image: varshaImage,
+      image: TeamMember1,
       text: "Partnering with this company has significantly boosted our online sales. Their e-commerce solutions provided seamless inventory management and a user-friendly interface, making our business operations smoother than ever.",
     },
     {
       id: 2,
       name: "Bellissimo Interior Zone",
       designation: "Interior Designer",
-      image: rahulImage,
+      image: TeamMember2,
       text: "Their digital marketing services have given our business a new edge. From social media campaigns to SEO optimization, we've seen a remarkable increase in client inquiries and engagement.",
     },
     {
       id: 3,
       name: "Ro Water Purifier",
       designation: "Water Purification Expert",
-      image: mahiImage,
+      image: TeamMember3,
       text: "The web development team built an outstanding e-commerce platform for us, enabling easy online sales and customer support. Their commitment to quality and service has been exceptional.",
     },
     {
       id: 4,
       name: "Shivansh Associate",
       designation: "Real Estate Consultant",
-      image: kamalImage,
+      image: TeamMember4,
       text: "The CRM solutions provided by this company have streamlined our lead management and improved client communication. Their expertise in automation has truly enhanced our efficiency.",
     },
     {
       id: 5,
       name: "Dr. Smile Tooth Care",
       designation: "Dental Clinic",
-      image: soumyaImage,
+      image: TeamMember5,
       text: "Their website and appointment booking system have greatly improved our patient experience. The seamless integration of technology into our practice has made scheduling and patient management effortless.",
     },
     {
       id: 6,
       name: "Aaradhya Homeopathy",
       designation: "Homeopathic Practitioner",
-      image: mahiImage,
+      image: TeamMember3,
       text: "With their digital marketing and website optimization, we've seen a significant increase in patient inquiries and online consultations. Their team truly understands the needs of healthcare professionals.",
     },
   ];

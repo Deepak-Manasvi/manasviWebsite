@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useState,useEffect } from 'react';
 import backgroundImage from '../assets/Images/Footer.jpg';
 import backgroundImage2 from '../assets/Images/backimg2.png';
 import image from '../assets/digitalMarketing/images.jpeg';
@@ -18,6 +19,9 @@ const DigitalServices = () => {
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const settings = {
     infinite: true,

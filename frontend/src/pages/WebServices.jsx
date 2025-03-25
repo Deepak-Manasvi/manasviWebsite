@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState,useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import  image1 from "../assets/webServices/web-development.png";
 import  image2 from "../assets/webServices/whyCooseUs.jpg";
@@ -16,7 +17,10 @@ const WebServices = () => {
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
-
+ useEffect(() => {
+    window.scrollTo(0, 0);
+ }, []);
+  
   const settings = {
     infinite: true,
     speed: 5000,

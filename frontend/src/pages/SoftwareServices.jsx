@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import ServicesPage from "../components/ServicesPage";
 import image1 from "../assets/softwareDevelopment/What-is-cutting-edge-technology-1024x576 (1).png";
@@ -16,6 +16,9 @@ const SoftwareServices = () => {
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const settings = {
     infinite: true,

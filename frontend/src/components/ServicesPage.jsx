@@ -69,7 +69,7 @@ const ServicesPage = () => {
         </div>
 
         {/* cards  */}
-        <div ref={container}>
+        <div ref={container} className="" >
           {serviceData.map((data, i) => {
             const targetScale = 1 - (serviceData.length - i) * 0.05;
 
@@ -81,6 +81,7 @@ const ServicesPage = () => {
                 progress={scrollYProgress}
                 range={[i * 0.25, 1]}
                 targetScale={targetScale}
+               
               />
             );
           })}
