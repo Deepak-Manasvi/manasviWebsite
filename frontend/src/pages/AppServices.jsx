@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/* eslint-disable no-unused-vars */
+import React, { useState,useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import ServicesPage from "../components/ServicesPage";
 import image from "../assets/appDevelopment/360_F_478083183_6CQZKaiML4lyTBKOx450KCRkU0aExkVH.jpg";
@@ -16,6 +17,10 @@ const AppServices = () => {
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
 
   const settings = {
     infinite: true,

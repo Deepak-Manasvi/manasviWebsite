@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import {NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import mlogo from "../assets/Images/manasvilogo.png";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -39,7 +40,7 @@ const Header = () => {
 
   const role = localStorage.getItem("role");
   const token = localStorage.getItem("token");
-
+  const navigate = useNavigate();
   // Example: User authentication state and role
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userRole, setUserRole] = useState("user");
@@ -59,11 +60,16 @@ const Header = () => {
   return (
     <div>
       <nav
-        className={`bg-white p-4 fixed top-0 left-0 w-full z-30 h-16 transition-transform duration-300`}
+        className={`bg-white p-4 fixed top-0 left-0 w-full z-60 h-16 transition-transform duration-300`}
       >
         <div className="container mx-auto flex justify-between items-center">
           <div>
-            <img src={mlogo} alt="Manasvi Logo" className="h-6 md:h-10" />
+            <img
+              src={mlogo}
+              alt="Manasvi Logo"
+              className="h-6 md:h-10 cursor-pointer"
+              onClick={() => navigate("/")}
+            />
           </div>
           <div className="hidden md:flex space-x-6">
             <NavLink
@@ -87,9 +93,9 @@ const Header = () => {
             <div className="relative group cursor-pointer">
               <button
                 onClick={toggleServiceBar}
-                 className={({ isActive }) =>
-                isActive ? "text-black font-bold underline" : "text-black"
-              }
+                className={({ isActive }) =>
+                  isActive ? "text-black font-bold underline" : "text-black"
+                }
               >
                 Services
                 <FaAngleDown className="inline-block ml-1" />
@@ -238,7 +244,7 @@ const Header = () => {
 
       {/* Bottom Bar for Mobile */}
       <div
-        className={`fixed top-0 left-0 w-full h-screen backdrop-filter backdrop-blur-2xl  bg-[#040615] bg-opacity-80 z-20 transition-transform duration-500 transform ${
+        className={`fixed top-0 left-0 w-full h-screen backdrop-filter backdrop-blur-2xl  bg-[#040615] bg-opacity-80 z-60 transition-transform duration-500 transform ${
           isBottomBarVisible ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -254,9 +260,11 @@ const Header = () => {
           <NavLink
             to="/"
             className={({ isActive }) =>
-              isActive ? "text-white font-bold underline" : "text-white"
+              isActive
+                ? "text-white font-bold underline mt-3"
+                : "text-white mt-2"
             }
-            onClick={toggleBottomBar}
+            onClick={(closeServiceBar, toggleBottomBar)}
           >
             Home
           </NavLink>
@@ -265,7 +273,7 @@ const Header = () => {
             className={({ isActive }) =>
               isActive ? "text-white font-bold underline" : "text-white"
             }
-            onClick={toggleBottomBar}
+            onClick={(closeServiceBar, toggleBottomBar)}
           >
             About Us
           </NavLink>
@@ -330,7 +338,7 @@ const Header = () => {
             className={({ isActive }) =>
               isActive ? "text-white font-bold underline" : "text-white"
             }
-            onClick={toggleBottomBar}
+            onClick={(closeServiceBar, toggleBottomBar)}
           >
             Portfolio
           </NavLink>
@@ -339,7 +347,7 @@ const Header = () => {
             className={({ isActive }) =>
               isActive ? "text-white font-bold underline" : "text-white"
             }
-            onClick={toggleBottomBar}
+            onClick={(closeServiceBar, toggleBottomBar)}
           >
             Products
           </NavLink>
@@ -348,7 +356,7 @@ const Header = () => {
             className={({ isActive }) =>
               isActive ? "text-white font-bold underline" : "text-white"
             }
-            onClick={toggleBottomBar}
+            onClick={(closeServiceBar, toggleBottomBar)}
           >
             Team
           </NavLink>
@@ -357,7 +365,7 @@ const Header = () => {
             className={({ isActive }) =>
               isActive ? "text-white font-bold underline" : "text-white"
             }
-            onClick={toggleBottomBar}
+            onClick={(closeServiceBar, toggleBottomBar)}
           >
             Reviews
           </NavLink>
@@ -366,11 +374,15 @@ const Header = () => {
             className={({ isActive }) =>
               isActive ? "text-white font-bold underline" : "text-white"
             }
-            onClick={toggleBottomBar}
+            onClick={(closeServiceBar, toggleBottomBar)}
           >
             Contact Us
           </NavLink>
-          <a href="tel:+8319056741" className="text-white">
+          <a
+            href="tel:+8319056741"
+            className="text-white"
+            onClick={(closeServiceBar, toggleBottomBar)}
+          >
             8319056741 📞
           </a>
           {/* {userRole === "admin" && (
