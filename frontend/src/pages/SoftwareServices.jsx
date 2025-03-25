@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import ServicesPage from "../components/ServicesPage";
 import image1 from "../assets/softwareDevelopment/What-is-cutting-edge-technology-1024x576 (1).png";
-import image2 from "../assets/softwareDevelopment/download.jpeg";
+import image2 from "../assets/softwareDevelopment/handshake-businessmen_1098-742.avif";
 import image3 from "../assets/softwareDevelopment/agile-development-diagram1-min.webp";
 import image4 from "../assets/softwareDevelopment/analyticsinsight_2024-07_7c0a6298-e8b7-4be4-9c0d-3aadfaedf8f5_Cutting_Edge_Technologies.avif";
 import Slider from "react-slick";
@@ -107,7 +107,7 @@ const SoftwareServices = () => {
               Request a demo
             </button>
           </div>
-          <div className="flex-1 flex justify-center md:justify-end">
+          <div className="flex-1 flex justify-center mr-20 md:justify-end">
             <img
               src="https://www.supplymint.com/_next/static/images/InventMainGraph-13f0677a8dcac6bc209b7d922011c012.svg"
               alt="Demand Planning"

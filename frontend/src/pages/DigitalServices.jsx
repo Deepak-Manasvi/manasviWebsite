@@ -2,11 +2,11 @@
 import React, { useState,useEffect } from 'react';
 import backgroundImage from '../assets/Images/Footer.jpg';
 import backgroundImage2 from '../assets/Images/backimg2.png';
-import image from '../assets/digitalMarketing/images.jpeg';
+import image from '../assets/digitalMarketing/digital-marketing-with-icons-business-people_53876-94833.avif';
 import image2 from '../assets/digitalMarketing/how-to-choose-a-digital-marketing-agency.webp';
 import image3 from '../assets/digitalMarketing/download.jpeg';
-import image4 from '../assets/digitalMarketing/images (1).jpeg';
-import image5 from '../assets/digitalMarketing/images (2).jpeg';
+import image4 from '../assets/digitalMarketing/premium_photo-1661693870771-dbbd8b95b2b1.jpeg';
+import image5 from '../assets/digitalMarketing/1708433841540.jpeg';
 
 import ServicesPage from '../components/ServicesPage';
 import Slider from "react-slick";

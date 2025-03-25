@@ -5,8 +5,8 @@ import ServicesPage from "../components/ServicesPage";
 import image from "../assets/appDevelopment/360_F_478083183_6CQZKaiML4lyTBKOx450KCRkU0aExkVH.jpg";
 import image1 from "../assets/appDevelopment/Best-Mobile-App-Development-Company.webp";
 import image2 from "../assets/appDevelopment/Our_Development_Process-1.png";
-import image3 from "../assets/appDevelopment/download.jpeg";
-import image5 from "../assets/appDevelopment/images.jpeg";
+import image3 from "../assets/appDevelopment/page-thumb-industries-we-service.webp";
+import image5 from "../assets/appDevelopment/google-play-store-apple-app-store-icons9791.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -104,7 +104,7 @@ const AppServices = () => {
               Request a demo
             </button>
           </div>
-          <div className="flex-1 flex justify-center md:justify-end">
+          <div className="flex-1 mr-20 flex justify-center md:justify-end">
             <img
               src={image}
               className="w-full max-w-md"
