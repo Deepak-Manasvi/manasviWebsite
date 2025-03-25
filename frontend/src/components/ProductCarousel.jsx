@@ -7,9 +7,9 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import Blog1 from "../assets/image/Blog1.png";
-import Blog2 from "../assets/image/Blog2.png";
-import Blog3 from "../assets/image/Blog3.png";
+import Blog1 from "../assets/image/ProductTwo.jpeg";
+import Blog2 from "../assets/image/ProductOne.jpeg";
+import Blog3 from "../assets/image/ProductThree.jpeg";
 
 const ProductCarousel = () => {
   const [products, setProducts] = useState([]);
@@ -42,28 +42,28 @@ const ProductCarousel = () => {
     {
       id: 1,
       image: Blog1,
-      title: "Your Website is Your Company's 24/7 Salesperson",
-      category: "Business",
-      content: "This blog discusses how your website acts as a 24/7 salesperson.",
-      route: "/business-blog",
+      title: "Tiffin Management System",
+      category: "Food & Service",
+      content: "Discover how a Tiffin Management System streamlines meal planning and delivery.",
+      route: "/tiffin-management",
     },
     {
       id: 2,
       image: Blog2,
-      title: "Content Marketing: Exploring Diverse Content Formats",
-      category: "Content Marketing",
-      content: "Learn about various content formats for effective marketing.",
-      route: "/marketing-blog",
+      title: "Inventory Management System",
+      category: "Business & Logistics",
+      content: "Understand how an Inventory Management System helps optimize stock levels and reduce losses.",
+      route: "/inventory-management",
     },
     {
       id: 3,
       image: Blog3,
-      title: "The Future of Digital Marketing with AI",
-      category: "Marketing Services",
-      content: "Explore how AI is revolutionizing digital marketing.",
-      route: "/marketing-service",
+      title: "E-Commerce Website",
+      category: "Online Business",
+      content: "Learn how an E-Commerce website enhances digital sales and customer engagement.",
+      route: "/ecommerce-website",
     },
-  ];
+  ];  
 
   return (
     <div className="container mx-auto md:py-24 lg:py-12 text-center min-h-screen">
@@ -73,81 +73,6 @@ const ProductCarousel = () => {
       <h1 className='text-4xl -tracking-normal capitalize font-bold text-black md:mb-12'>
         Let me know <span className="text-[#9595f1]">if you need</span> <br /> any other modifications!
       </h1>
-      {/* <Swiper
-        modules={[Autoplay, Pagination, Navigation]}
-        slidesPerView={1}
-        spaceBetween={10}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1280: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        }}
-        className="mySwiper bg-gray-300 p-10 rounded-lg"
-      >
-        {Array.isArray(products) && products.map((product) => (
-          <SwiperSlide key={product._id}>
-            <div className="group card bg-[#192655] h-96 w-72 shadow-xl mx-auto relative overflow-hidden">
-              <figure className='w-full h-64 py-2'>
-                <img
-                  className="w-[270px] h-full object-cover bg-[#4793AF]"
-                  src={`data:image/jpeg;base64,${product.image}`}
-                  alt={product.name}
-                />
-              </figure>
-              <div className="absolute inset-0 flex flex-col text-center px-6 items-center justify-center bg-[#192655] bg-opacity-90 text-white transition-transform transform translate-y-full group-hover:translate-y-0">
-                <h2 className="card-title text-white">
-                  {product.name}
-                </h2>
-                <p className="line-clamp-10">{product.description}</p>
-                <div className="card-actions justify-between w-full pt-5">
-                  {
-                    product.link ? (
-                      <Link to={product.link} target="_blank" rel="noopener noreferrer" className="badge badge-outline">Demo</Link>
-                    )
-                      : (
-                        <Link to={''} className="badge badge-outline">Soon</Link>
-                      )
-                  }
-                  <Link to={`/products`} className="badge badge-outline">Details</Link>
-                </div>
-              </div>
-              <div className="card-body absolute bottom-0 left-0 w-full bg-opacity-80 text-white transition-transform transform translate-y-0 group-hover:translate-y-full">
-                <h2 className="card-title text-white">
-                  {product.name}
-                </h2>
-                <div className="card-actions justify-between">
-                  {
-                    product.link ? (
-                      <Link to={product.link} target="_blank" rel="noopener noreferrer" className="badge badge-outline">Demo</Link>
-                    )
-                      : (
-                        <Link to={''} className="badge badge-outline">Soon</Link>
-                      )
-                  }
-                  <Link to={`/products`} className="badge badge-outline">Details</Link>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper> */}
       <div className="max-w-7xl mx-auto px-4 py-10">
         <h2 className="text-2xl md:text-6xl font-bold text-center mb-6">
           Our Latest Resources

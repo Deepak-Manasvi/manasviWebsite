@@ -30,13 +30,12 @@ import Banner from "./Banner";
 import Welcome from "./Admin/Welcome";
 import Reviews from "./Reviews";
 
-import BusinessBlog from "../components/BusinessBlog.jsx";
-import MarketingBlog from "../components/MarketingBlog.jsx";
-import MarketingService from "../components/MarketingService.jsx";
+import TiffinManagementBlog from "../components/TiffinManagementBlog.jsx";
+import InventoryManagementBlog from "../components/InventoryManagementBlog.jsx";
+import ECommerceWebsiteBlog from "../components/ECommerceWebsiteBlog.jsx";
 
 import Indoremap from "./Indoremap";
-
-import ProtectedAdminRoute from "../components/Admin/ProtectedAdminRoute"; // Import the protected route component
+import ProtectedAdminRoute from "../components/Admin/ProtectedAdminRoute"; 
 import CareersComponent from "./Careers";
 import Portfolio from "../components/Portfolio.jsx";
 
@@ -78,9 +77,9 @@ function Routess() {
         <Route path="/indoremap" element={<Indoremap />} />
 
         <Route path="/portfolio" element={<Portfolio/>}/>
-        <Route path="/business-blog" element={<BusinessBlog />} />
-        <Route path="/marketing-blog" element={<MarketingBlog />} />
-        <Route path="/marketing-service" element={<MarketingService />} />
+        <Route path="/tiffin-management" element={<TiffinManagementBlog />} />
+        <Route path="/inventory-management" element={<InventoryManagementBlog />} />
+        <Route path="/ecommerce-website" element={<ECommerceWebsiteBlog />} />
         {/* <Route path="/banner" element={<Banner />} /> */}
         <Route path="*" element={<h1>Page not found</h1>} />
       </Routes>
