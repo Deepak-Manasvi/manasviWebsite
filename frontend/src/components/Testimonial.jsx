@@ -22,7 +22,7 @@ const TestimonialCarousel = () => {
       name: "Bellissimo Interior Zone",
       designation: "Interior Designer",
       image: rahulImage,
-      text: "Their digital marketing services have given our business a new edge. From social media campaigns to SEO optimization, we’ve seen a remarkable increase in client inquiries and engagement.",
+      text: "Their digital marketing services have given our business a new edge. From social media campaigns to SEO optimization, we've seen a remarkable increase in client inquiries and engagement.",
     },
     {
       id: 3,
@@ -49,16 +49,16 @@ const TestimonialCarousel = () => {
       id: 6,
       name: "Aaradhya Homeopathy",
       designation: "Homeopathic Practitioner",
-      image: soumyaImage,
+      image: mahiImage,
       text: "With their digital marketing and website optimization, we've seen a significant increase in patient inquiries and online consultations. Their team truly understands the needs of healthcare professionals.",
     },
-  ];  
+  ];
 
   // Auto-rotate functionality with increased speed
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
-    }, 5000); // Reduced from 7000ms to 5000ms for faster rotation
+    }, 5000); 
 
     return () => clearInterval(interval);
   }, [testimonials.length]);
@@ -66,13 +66,14 @@ const TestimonialCarousel = () => {
   // Function to get the center testimonial and rearrange the array
   const getCircularArray = () => {
     const result = [];
+    const totalVisibleItems = 5;
     const length = testimonials.length;
 
     // Calculate positions so that activeIndex is in the center
-    for (let i = 0; i < length; i++) {
+    for (let i = 0; i < totalVisibleItems; i++) {
       // Calculate position in the original array
       const position =
-        (activeIndex - Math.floor(length / 2) + i + length) % length;
+        (activeIndex - Math.floor(totalVisibleItems / 2) + i + length) % length;
       result.push(testimonials[position]);
     }
 
@@ -80,7 +81,7 @@ const TestimonialCarousel = () => {
   };
 
   const circularTestimonials = getCircularArray();
-  const centerIndex = Math.floor(testimonials.length / 2);
+  const centerIndex = Math.floor(circularTestimonials.length / 2);
 
   // Function to calculate the size for each image based on distance from center
   const getImageSize = (index) => {
@@ -88,20 +89,20 @@ const TestimonialCarousel = () => {
 
     // Size classes based on distance from center
     if (distanceFromCenter === 0) {
-      return "w-32 h-32 sm:w-28 sm:h-28 md:w-32 md:h-32"; // Center (largest)
+      return "w-32 h-32 sm:w-28 sm:h-28 md:w-32 md:h-32";
     } else if (distanceFromCenter === 1) {
-      return "w-20 h-20 sm:w-20 sm:h-20 md:w-24 md:h-24"; // Adjacent to center
+      return "w-20 h-20 sm:w-20 sm:h-20 md:w-24 md:h-24";
     } else if (distanceFromCenter === 2) {
-      return "w-16 h-16 sm:w-16 sm:h-16 md:w-18 md:h-18"; // Further out
+      return "w-16 h-16 sm:w-16 sm:h-16 md:w-18 md:h-18"; 
     } else {
-      return "w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14"; // Outermost
+      return "w-12 h-12 sm:w-12 sm:h-12 md:w-14 md:h-14"; 
     }
   };
 
   // Function to calculate opacity based on distance from center
   const getOpacity = (index) => {
     const distanceFromCenter = Math.abs(index - centerIndex);
-    return 1 - distanceFromCenter * 0.2; // 1, 0.8, 0.6, 0.4, 0.2
+    return 1 - distanceFromCenter * 0.2; 
   };
 
   return (
@@ -109,7 +110,7 @@ const TestimonialCarousel = () => {
       <div className="max-w-5xl mx-auto">
         {/* Testimonials Header */}
         <h2 className="text-center text-4xl sm:text-5xl md:text-6xl font-serif mb-6 sm:mb-8 md:mb-12">
-           Ours Happy Clients
+          Ours Happy Clients
         </h2>
 
         {/* Main Testimonial with Quote Marks */}
@@ -146,7 +147,8 @@ const TestimonialCarousel = () => {
                 transform: `translateY(${
                   index === centerIndex ? "-10px" : "0px"
                 })`,
-                zIndex: testimonials.length - Math.abs(index - centerIndex),
+                zIndex:
+                  circularTestimonials.length - Math.abs(index - centerIndex),
               }}
               onClick={() =>
                 setActiveIndex(

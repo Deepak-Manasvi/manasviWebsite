@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import OurTeam from "../components/OurTeam";
