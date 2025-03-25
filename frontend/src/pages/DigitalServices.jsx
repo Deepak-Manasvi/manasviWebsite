@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import backgroundImage from '../assets/Images/Footer.jpg';
 import backgroundImage2 from '../assets/Images/backimg2.png';
+import image from '../assets/digitalMarketing/images.jpeg';
+import image2 from '../assets/digitalMarketing/how-to-choose-a-digital-marketing-agency.webp';
+import image3 from '../assets/digitalMarketing/download.jpeg';
+import image4 from '../assets/digitalMarketing/images (1).jpeg';
+import image5 from '../assets/digitalMarketing/images (2).jpeg';
 
 import ServicesPage from '../components/ServicesPage';
 import Slider from "react-slick";
@@ -76,26 +81,33 @@ const DigitalServices = () => {
         </div>
       </div>
       <div className="w-full overflow-x-hidden ">
-        <div className="flex flex-col md:flex-row bg-white py-30 rounded-lg shadow-lg">
-          <div className="flex-1 text-left space-y-4 ml-10 mt-20">
-            <h3 className="text-xl font-semibold text-[#a6adb9]">Digital Marketing Services 🚀</h3>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
-              Boost Your Brand with Our Expert Digital Marketing Services 🚀
-            </h1>
-            <h2 className="text-lg text-gray-700">
-              At Manasvi Technology, we specialize in data-driven digital marketing strategies that help businesses boost their online presence, brand awareness, and conversions. Whether you're a startup or an established business, our customized marketing solutions ensure that you reach the right audience and maximize your ROI.</h2>
-            <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
-              Request a demo
-            </button>
-          </div>
-          <div className="flex-1 flex justify-center md:justify-end">
-            <img
-              src="https://www.supplymint.com/_next/static/images/InventMainGraph-13f0677a8dcac6bc209b7d922011c012.svg"
-              alt="Demand Planning"
-              className="w-full max-w-md"
-            />
-          </div>
-        </div>
+      <div className="flex flex-col md:flex-row bg-white py-30 rounded-lg shadow-lg">
+  {/* Text Section */}
+  <div className="md:w-1/2 text-left space-y-4 ml-10 mt-20">
+    <h3 className="text-xl font-semibold text-[#a6adb9]">
+      Digital Marketing Services 🚀
+    </h3>
+    <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
+      Boost Your Brand with Our Expert Digital Marketing Services 🚀
+    </h1>
+    <h2 className="text-lg text-gray-700">
+      At Manasvi Technology, we specialize in data-driven digital marketing strategies that help businesses boost their online presence, brand awareness, and conversions. Whether you're a startup or an established business, our customized marketing solutions ensure that you reach the right audience and maximize your ROI.
+    </h2>
+    <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
+      Request a demo
+    </button>
+  </div>
+
+  {/* Image Section (Smaller but aligned) */}
+  <div className="md:w-2/4 flex justify-center md:justify-end">
+    <img
+      src={image}
+      alt="Demand Planning"
+      className="w-[700px] h-auto object-contain"
+    />
+  </div>
+</div>
+
 
         {/* Client Slider */}
         <div className="bg-black py-4 text-center text-white">
@@ -121,8 +133,7 @@ const DigitalServices = () => {
             Our Digital Marketing Services
           </h1>
           <p className="text-xl font-semibold text-[#a6adb9] mx-auto mt-20 mb-20">
-            Empowering Collaboration, Streamlining Operations, and Maximizing Productivity
-            for Today's Agile Workforce.
+          We offer result-driven digital marketing strategies to boost your online presence and grow your business.
           </p>
 
           {/* 6 cards */}
@@ -147,7 +158,7 @@ const DigitalServices = () => {
           {/* Section 1 */}
           <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="Create Weekly and Monthly Open To Buy Plans" />
+              <img className="w-3/4" src={image2} alt="Create Weekly and Monthly Open To Buy Plans" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
@@ -187,14 +198,14 @@ const DigitalServices = () => {
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="Category-Wise Buying Plan" />
+              <img className="w-3/4" src={image3} alt="Category-Wise Buying Plan" />
             </div>
           </div>
 
           {/* Section 3 */}
           <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="AI Forecasts" />
+              <img className="w-3/4" src={image4} alt="AI Forecasts" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
@@ -233,7 +244,7 @@ const DigitalServices = () => {
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph4-8a597e5926409c22296f97a77915c01e.svg" alt="Sales Forecast" />
+              <img className="w-3/4" src={image5} alt="Sales Forecast" />
             </div>
           </div>
         </div>

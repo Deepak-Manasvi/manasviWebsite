@@ -51,7 +51,7 @@ const AboutUsPage = () => {
                 </p>
               </div>
 
-              <div className="flex w-[52%] mx-auto justify-center lg:mr-12">
+              <div className="flex w-[50%] mx-auto justify-center lg:mr-12">
                 <img src={mission} className="" />
               </div>
             </div>
@@ -128,7 +128,7 @@ const AboutUsPage = () => {
                       Deep Dive into  Manasvi Technologies{" "}
                     </h3>
                     <p className="text-gray-600 break-words">
-                      Manasvi Technologies (OPC) Pvt. Ltd. is an Information Technology company based in Bhopal, Madhya Pradesh, India. Established on January 6, 2023, it operates as a One Person Company (OPC) under the leadership of Director Arpit Jain.
+                    Manasvi Technologies (OPC) Pvt. Ltd. is an Information Technology company based in Indore, Madhya Pradesh, India. Established on January 6, 2023, it operates as a One Person Company (OPC) under the leadership of Director Arpit Jain. 
                     </p>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ const AboutUsPage = () => {
                   <div className="bg-white  shadow-lg rounded-lg p-6">
                     <h3 className="font-bold text-3xl mb-4">
                       Scaled Manasavi Technologies to 400+ active users,{" "}
-                      <span className="font-medium">2021</span>
+                      <span className="font-medium">2024</span>
                     </h3>
 
                     <div className="grid lg:grid-cols-2 space-y-2 mt-2 mb-2">
