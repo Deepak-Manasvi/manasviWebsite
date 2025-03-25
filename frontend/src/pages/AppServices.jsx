@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import ServicesPage from "../components/ServicesPage";
+import image from "../assets/appDevelopment/360_F_478083183_6CQZKaiML4lyTBKOx450KCRkU0aExkVH.jpg";
+import image1 from "../assets/appDevelopment/Best-Mobile-App-Development-Company.webp";
+import image2 from "../assets/appDevelopment/Our_Development_Process-1.png";
+import image3 from "../assets/appDevelopment/download.jpeg";
+import image5 from "../assets/appDevelopment/images.jpeg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -96,8 +101,7 @@ const AppServices = () => {
           </div>
           <div className="flex-1 flex justify-center md:justify-end">
             <img
-              src="https://www.supplymint.com/_next/static/images/ProcMainGraph-203a27af214a302f90caeee2fb7be222.svg"
-              alt="Demand Planning"
+              src={image}
               className="w-full max-w-md"
             />
           </div>
@@ -127,8 +131,7 @@ const AppServices = () => {
             📱 Our App Development Services
           </h1>
           <p className="text-xl font-semibold text-[#a6adb9] mx-auto mt-20 mb-20">
-            Empowering Collaboration, Streamlining Operations, and Maximizing Productivity
-            for Today's Agile Workforce.
+          We provide expert app development services to create innovative, high-performance mobile and web applications.
           </p>
 
           {/* 6 cards */}
@@ -153,7 +156,7 @@ const AppServices = () => {
           {/* Section 1 */}
           <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/ProcGraphSixth-04cc0d5769d3c7604fbc64f9c5b88a1f.svg" alt="Create Weekly and Monthly Open To Buy Plans" />
+              <img className="w-3/4" src={image1} alt="Create Weekly and Monthly Open To Buy Plans" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
@@ -191,14 +194,14 @@ const AppServices = () => {
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/ProcGraphEighth-63d7f43d0cbf799a84527f9f496e77a5.svg" alt="Category-Wise Buying Plan" />
+              <img className="w-3/4" src={image2} alt="Category-Wise Buying Plan" />
             </div>
           </div>
 
           {/* Section 3 */}
           <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-30">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/ProcGraphSeventh-498338e3e601665c88f642bac24b3203.svg" alt="AI Forecasts" />
+              <img className="w-3/4" src={image3} alt="AI Forecasts" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
@@ -243,7 +246,7 @@ const AppServices = () => {
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/ProcGraphForth-29b6c3d21ef20c3f5cafbde3fe009690.svg" alt="Sales Forecast" />
+              <img className="w-3/4" src={image5} alt="Sales Forecast" />
             </div>
           </div>
         </div>

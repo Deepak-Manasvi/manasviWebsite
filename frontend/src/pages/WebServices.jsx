@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
+import  image1 from "../assets/webServices/web-development.png";
+import  image2 from "../assets/webServices/whyCooseUs.jpg";
+import  image3 from "../assets/webServices/Web-Development-Process.jpg";
+import  image4 from "../assets/webServices/images.jpeg";
+import  image5 from "../assets/webServices/Latest-technologies-for-web-development1.jpg";
 import ServicesPage from "../components/ServicesPage";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -93,27 +98,33 @@ const WebServices = () => {
         </div>
       </div>
       <div className="w-full overflow-x-hidden ">
-        <div className="flex flex-col md:flex-row bg-white py-20 rounded-lg shadow-lg">
-          <div className="flex-1 text-left space-y-4 ml-10 mt-30">
-            <h3 className="text-xl font-semibold text-[#a6adb9]">Web Development Services | Manasvi Technology</h3>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
-              Build, Innovate, and Scale with Manasvi Technology
-            </h1>
-            <h2 className="text-lg text-gray-700">
-              At Manasvi Technology, we specialize in crafting high-performance, scalable, and visually stunning websites that help businesses thrive in the digital world. Whether you're a startup, an enterprise, or an individual, our expert team delivers tailored web solutions to meet your unique needs.
-            </h2>
-            <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
-              Request a demo
-            </button>
-          </div>
-          <div className="flex-1 flex justify-center md:justify-end">
-            <img
-              src="https://www.supplymint.com/_next/static/images/DemandMainGraph-f822902f33ac4afebebede3c21622f15.svg"
-              alt="Demand Planning"
-              className="w-full max-w-md"
-            />
-          </div>
-        </div>
+      <div className="flex flex-col md:flex-row bg-white py-20 rounded-lg shadow-lg">
+  {/* Text Section */}
+  <div className="md:w-1/2 text-left space-y-4 ml-10 mt-10">
+    <h3 className="text-xl font-semibold text-[#a6adb9]">
+      Web Development Services | Manasvi Technology
+    </h3>
+    <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
+      Build, Innovate, and Scale with Manasvi Technology
+    </h1>
+    <h2 className="text-lg text-gray-700">
+      At Manasvi Technology, we specialize in crafting high-performance, scalable, and visually stunning websites that help businesses thrive in the digital world. Whether you're a startup, an enterprise, or an individual, our expert team delivers tailored web solutions to meet your unique needs.
+    </h2>
+    <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
+      Request a demo
+    </button>
+  </div>
+
+  {/* Image Section (Smaller but aligned) */}
+  <div className="md:w-2/4 flex justify-center md:justify-end">
+    <img
+      src={image1}
+      alt="Demand Planning"
+      className="w-[500px] h-auto object-contain"
+    />
+  </div>
+</div>
+
 
         {/* Client Slider */}
         <div className="bg-black py-4 text-center text-white">
@@ -139,8 +150,7 @@ const WebServices = () => {
             Our Web Development Services
           </h1>
           <p className="text-xl font-semibold text-[#a6adb9] mx-auto mt-20 mb-20">
-            Empowering Collaboration, Streamlining Operations, and Maximizing Productivity
-            for Today's Agile Workforce.
+          We provide modern, scalable, and high-performance web development solutions tailored to your needs.
           </p>
 
           {/* 6 cards */}
@@ -165,7 +175,7 @@ const WebServices = () => {
           {/* Section 1 */}
           <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="Create Weekly and Monthly Open To Buy Plans" />
+              <img className="w-3/4" src={image2} alt="Create Weekly and Monthly Open To Buy Plans" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-2xl md:text-5xl font-bold text-gray-800">
@@ -210,14 +220,14 @@ const WebServices = () => {
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="Category-Wise Buying Plan" />
+              <img className="w-3/4" src={image3} alt="Category-Wise Buying Plan" />
             </div>
           </div>
 
           {/* Section 3 */}
           <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="AI Forecasts" />
+              <img className="w-3/4" src={image4} alt="AI Forecasts" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
@@ -286,7 +296,7 @@ const WebServices = () => {
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph4-8a597e5926409c22296f97a77915c01e.svg" alt="Sales Forecast" />
+              <img className="w-3/4" src={image5} alt="Sales Forecast" />
             </div>
           </div>
         </div>

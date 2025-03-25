@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import ServicesPage from "../components/ServicesPage";
+import image1 from "../assets/softwareDevelopment/What-is-cutting-edge-technology-1024x576 (1).png";
+import image2 from "../assets/softwareDevelopment/download.jpeg";
+import image3 from "../assets/softwareDevelopment/agile-development-diagram1-min.webp";
+import image4 from "../assets/softwareDevelopment/analyticsinsight_2024-07_7c0a6298-e8b7-4be4-9c0d-3aadfaedf8f5_Cutting_Edge_Technologies.avif";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -132,8 +136,7 @@ const SoftwareServices = () => {
             Explore Our Software Development Services
           </h1>
           <p className="text-xl font-semibold text-[#a6adb9] mx-auto mt-20 mb-20">
-            Empowering Collaboration, Streamlining Operations, and Maximizing Productivity
-            for Today's Agile Workforce.
+          We deliver innovative and customized software solutions to meet your business needs.
           </p>
 
           {/* 6 cards */}
@@ -158,7 +161,7 @@ const SoftwareServices = () => {
           {/* Section 1 */}
           <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="Create Weekly and Monthly Open To Buy Plans" />
+              <img className="w-3/4" src={image1} alt="Create Weekly and Monthly Open To Buy Plans" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
@@ -197,14 +200,14 @@ const SoftwareServices = () => {
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="Category-Wise Buying Plan" />
+              <img className="w-3/4" src={image2} alt="Category-Wise Buying Plan" />
             </div>
           </div>
 
           {/* Section 3 */}
           <div className="container mx-auto flex flex-col-reverse md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph1-2d35d7926385336eb8fd78579cdc8b95.svg" alt="AI Forecasts" />
+              <img className="w-3/4" src={image3} alt="AI Forecasts" />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
@@ -255,7 +258,7 @@ const SoftwareServices = () => {
               </ul>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img className="w-3/4" src="https://www.supplymint.com/_next/static/images/DemandGraph4-8a597e5926409c22296f97a77915c01e.svg" alt="Sales Forecast" />
+              <img className="w-3/4" src={image4} />
             </div>
           </div>
         </div>
