@@ -189,7 +189,7 @@ const Header = () => {
                 Admin
               </NavLink>
             ) : (
-              <NavLink to="/login" className="text-black focus:outline-none py-1 px-4 border border-gray-400 rounded-2xl">
+              <NavLink to="/login" className="text-black focus:outline-none py-1 px-4 border  border-gray-400 rounded-2xl">
                 Login
               </NavLink>
             )}
@@ -347,7 +347,7 @@ const Header = () => {
                 Admin
               </NavLink>
             ) : (
-              <NavLink to="/login" className="text-white  inline-block">
+              <NavLink to="/login" className="text-white  inline-block ">
                 Login
               </NavLink>
             )}

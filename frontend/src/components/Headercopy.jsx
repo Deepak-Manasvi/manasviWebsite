@@ -83,18 +83,18 @@ const Header = () => {
   return (
     <div>
       <nav
-        className={`bg-white p-4 fixed top-0 left-0 w-full z-60 h-16 transition-transform duration-300`}
+        className={`bg-white p-4 md:p-2 fixed top-0 left-0 w-full z-60 h-16 transition-transform duration-300`}
       >
-        <div className="container mx-auto flex justify-between items-center">
+        <div className="container mx-auto md:mx-0 flex justify-between items-center ">
           <div>
             <img
               src={mlogo}
               alt="Manasvi Logo"
-              className="h-6 md:h-10 cursor-pointer"
+              className="h-6 md:h-10 cursor-pointer md:mr-2  md:max-w-[250px] "
               onClick={() => navigate("/")}
             />
           </div>
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex  space-x-6 md:space-x-3 md:text-nowrap">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -224,8 +224,8 @@ const Header = () => {
               Reviews
             </NavLink> */}
           </div>
-          
-          <div className="hidden md:block space-x-4">
+
+          <div className="hidden md:block space-x-4 md:ml-2">
             {/* <a href="tel:+8319056741" className="text-black">
               📞 8319056741
             </a>
