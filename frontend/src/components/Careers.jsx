@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { FaUsers, FaLightbulb, FaHandshake } from "react-icons/fa";
 import { RiTeamLine } from "react-icons/ri";
 import TeamMember1 from "../assets/image/shailja.png";
@@ -6,16 +6,16 @@ import TeamMember2 from "../assets/image/vishal.png";
 import TeamMember3 from "../assets/image/shraddha.png";
 import TeamMember4 from "../assets/image/anil.jpg";
 import TeamMember5 from "../assets/image/shruti.png";
-import backgroundImage from '../assets/Images/Footer.jpg';
+import backgroundImage from "../assets/Images/Footer.jpg";
 
 const CareersComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState();
 
-   useEffect(() => {
-     window.scrollTo(0, 0);
-   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   // Mock data for open positions
   const jobs = [
@@ -207,7 +207,7 @@ const CareersComponent = () => {
             </a>
             <span className="text-white mx-2">→</span>
             <a
-              href="/carrer"
+              href="/career"
               className="text-white font-bold underline hover:text-gray-200"
             >
               Career
@@ -216,8 +216,8 @@ const CareersComponent = () => {
         </div>
       </div>
       {/* Hero Section */}
-      <section className=" bg-[#f0f0fe] text-black py-20">
-        <div className="mx-auto px-4 mt-20">
+      <section className=" bg-[#f0f0fe] text-black py-8">
+        <div className="mx-auto px-4 mt-0">
           <h3 className="text-gray-400 text-2xl">career </h3>
           <h1 className="font-bold text-4xl">Let’s Grow Together</h1>
         </div>
@@ -475,7 +475,7 @@ const CareersComponent = () => {
 
         {/* Lightbox/Popup */}
         {isOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center">
+          <div className="fixed inset-0 bg-black bg-opacity-80 z-70 flex items-center justify-center">
             <div className="relative max-w-4xl w-full h-full flex items-center justify-center">
               {/* Close button */}
               <button
@@ -572,10 +572,11 @@ const CareersComponent = () => {
               {categories.map((category) => (
                 <button
                   key={category}
-                  className={`px-8 py-3 font-medium gap-2 border border-solid-black  hover:bg-gray-200 ${activeTab === category
-                    ? "bg-gray-800 text-white"
-                    : "bg-white text-gray-700"
-                    }`}
+                  className={`px-8 py-3 font-medium gap-2 border border-solid-black  hover:bg-gray-200 ${
+                    activeTab === category
+                      ? "bg-gray-800 text-white"
+                      : "bg-white text-gray-700"
+                  }`}
                   onClick={() => setActiveTab(category)}
                 >
                   {category}

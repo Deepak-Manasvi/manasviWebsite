@@ -48,9 +48,9 @@ export default function Portfolio() {
                 </div>
             </div>
             {/* Portfolio Section */}
-            <section className="text-center py-12 px-4 mt-20">
-                <h2 className="text-3xl sm:text-4xl font-bold text-black">Portfolio</h2>
-                <p className="text-gray-500 max-w-xxl font-md mx-auto mt-4">
+            <section className="text-center py-12 px-4 ">
+               
+                <p className="text-gray-500 max-w-xxl font-md mx-auto ">
                     A portfolio's meaning can be defined as a collection of financial
                     assets and investment tools that are held by an individual, a
                     financial institution or an investment firm. To develop a profitable

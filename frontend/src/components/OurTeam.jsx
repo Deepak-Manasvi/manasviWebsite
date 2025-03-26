@@ -118,7 +118,9 @@ const OurTeam = () => {
         <div className="flex flex-col md:flex-row items-start justify-center gap-8 bg-white py-10 px-6 mt-12 rounded-lg shadow-lg">
           {/* Contact Form */}
           <div className="bg-gray-100 shadow-md rounded-lg p-6 md:p-8 w-full md:w-2/3">
-            <h2 className="text-xl font-semibold mb-4">Contact Our Sales Team</h2>
+            <h2 className="text-xl font-semibold mb-4">
+              Contact Our Sales Team
+            </h2>
             <form className="space-y-4">
               <div className="flex gap-3">
                 <input
@@ -138,14 +140,17 @@ const OurTeam = () => {
                 className="w-full px-4 py-2 border rounded-lg outline-none"
               />
               <div className="flex">
-                <select className="px-4 py-2 border rounded-l-lg bg-gray-100">
+                <select
+                  className="px-4 py-2 border rounded-l-lg bg-gray-100 transition-all duration-300"
+                  defaultValue="IN"
+                >
                   <option>AU</option>
                   <option>US</option>
                   <option>IN</option>
                 </select>
                 <input
                   type="tel"
-                  placeholder="+61 400 000 000"
+                  placeholder="+91 90000 00000"
                   className="w-full px-4 py-2 border rounded-r-lg outline-none"
                 />
               </div>
@@ -159,21 +164,31 @@ const OurTeam = () => {
           <div className="w-full md:w-1/3 space-y-4">
             <div>
               <h3 className="text-lg font-semibold">Chat to Sales</h3>
-              <p className="text-gray-600 text-sm">Speak to our friendly team.</p>
-              <a href="mailto:sales@untitledui.com" className="text-indigo-600 font-medium">
+              <p className="text-gray-600 text-sm">
+                Speak to our friendly team.
+              </p>
+              <a
+                href="mailto:sales@untitledui.com"
+                className="text-indigo-600 font-medium"
+              >
                 sales@untitledui.com
               </a>
             </div>
             <div>
               <h3 className="text-lg font-semibold">Email Support</h3>
               <p className="text-gray-600 text-sm">Get back within 24 hours.</p>
-              <a href="mailto:support@untitledui.com" className="text-indigo-600 font-medium">
+              <a
+                href="mailto:support@untitledui.com"
+                className="text-indigo-600 font-medium"
+              >
                 support@untitledui.com
               </a>
             </div>
             <div>
               <h3 className="text-lg font-semibold">Live Chat</h3>
-              <p className="text-gray-600 text-sm">24/7 instant support available.</p>
+              <p className="text-gray-600 text-sm">
+                24/7 instant support available.
+              </p>
             </div>
           </div>
         </div>

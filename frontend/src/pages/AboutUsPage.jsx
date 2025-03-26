@@ -63,8 +63,8 @@ const AboutUsPage = () => {
                 <img src={mission} className="" />
               </div>
             </div>
-            <div className="flex w-full lg:flex-row-reverse lg:justify-between sm:flex-col md:flex-col">
-              <div className="lg:w-[45%] space-y-3">
+            <div className="flex w-full lg:flex-row-reverse lg:justify-between items-center sm:flex-col md:flex-col">
+              <div className="lg:w-[50%] space-y-3">
                 <p className="text-3xl font-bold">Vision</p>
                 <p className="text-lg lg:mb-2  break-words lg:w-[95%] tracking-wider">
                   "To become a globally recognized leader in technology
@@ -76,8 +76,8 @@ const AboutUsPage = () => {
                 </p>
               </div>
 
-              <div className="md:mb-2 w-[60%] mx-auto mt-4 flex items-center justify-center bg-amber-50">
-                <img src={vision} className="w-[90%]" />
+              <div className="md:mb-2 w-[45%] mx-auto mt-4 flex items-center justify-center bg-amber-50">
+                <img src={vision} className="" />
               </div>
             </div>
           </div>
