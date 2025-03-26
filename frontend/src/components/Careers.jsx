@@ -233,8 +233,8 @@ const CareersComponent = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12">
             {/* Integrity */}
             <div className="flex items-start">
-              <div className="mr-6">
-                <FaUsers className="text-4xl text-indigo-400" />
+              <div className="mr-6 mt-2">
+                <FaUsers className="text-6xl text-indigo-400 " />
               </div>
               <div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-800">
@@ -249,8 +249,8 @@ const CareersComponent = () => {
 
             {/* Innovation */}
             <div className="flex items-start">
-              <div className="mr-6">
-                <FaLightbulb className="text-4xl text-indigo-400" />
+              <div className="mr-6 mt-2">
+                <FaLightbulb className="text-6xl text-indigo-400 " />
               </div>
               <div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-800">
@@ -265,8 +265,8 @@ const CareersComponent = () => {
 
             {/* Respect & Diversity */}
             <div className="flex items-start">
-              <div className="mr-6">
-                <RiTeamLine className="text-4xl text-indigo-400" />
+              <div className="mr-6 mt-2">
+                <RiTeamLine className="text-6xl text-indigo-400" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-800">
@@ -282,8 +282,8 @@ const CareersComponent = () => {
 
             {/* Healthy Work Relationships */}
             <div className="flex items-start">
-              <div className="mr-6">
-                <FaHandshake className="text-4xl text-indigo-400" />
+              <div className="mr-6 mt-2">
+                <FaHandshake className="text-6xl text-indigo-400" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold mb-3 text-gray-800">
@@ -313,8 +313,8 @@ const CareersComponent = () => {
                 <div className="text-pink-500 mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="50"
+                    height="50"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -325,10 +325,10 @@ const CareersComponent = () => {
                     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Create Value to Get Value
-                </h3>
               </div>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Create Value to Get Value
+              </h3>
               <p className="text-gray-600">
                 Take ownership and drive your work with passion to create value
                 for the organisation and for your own self.
@@ -340,8 +340,8 @@ const CareersComponent = () => {
                 <div className="text-green-500 mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="50"
+                    height="50"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -354,10 +354,10 @@ const CareersComponent = () => {
                     <path d="M2 12l10 5 10-5"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Grow Your Career
-                </h3>
               </div>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Grow Your Career
+              </h3>
               <p className="text-gray-600">
                 We work in a fast-paced collaborative environment where
                 employees have the opportunity to take on more responsibilities.
@@ -369,8 +369,8 @@ const CareersComponent = () => {
                 <div className="text-orange-500 mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="50"
+                    height="50"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -382,10 +382,10 @@ const CareersComponent = () => {
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Holistic Work Environment
-                </h3>
               </div>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Holistic Work Environment
+              </h3>
               <p className="text-gray-600">
                 We at SupplyMint, care for all our employees equally and ensure
                 that our entire team is well supported to work productively.
@@ -397,8 +397,8 @@ const CareersComponent = () => {
                 <div className="text-blue-500 mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="50"
+                    height="50"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -410,10 +410,8 @@ const CareersComponent = () => {
                     <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Learning
-                </h3>
               </div>
+              <h3 className="text-xl font-semibold text-gray-800">Learning</h3>
               <p className="text-gray-600">
                 If there's anything new our employees wish to learn, we're
                 always there to help.
@@ -425,8 +423,8 @@ const CareersComponent = () => {
                 <div className="text-yellow-500 mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="50"
+                    height="50"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -438,10 +436,10 @@ const CareersComponent = () => {
                     <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
                   </svg>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Advancement Opportunities
-                </h3>
               </div>
+              <h3 className="text-xl font-semibold text-gray-800">
+                Advancement Opportunities
+              </h3>
               <p className="text-gray-600">
                 We encourage internal advancement for all employees when work is
                 diligent.
