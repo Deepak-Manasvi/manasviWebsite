@@ -1,10 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
-import OurTeam from "../components/OurTeam";
-import Marquee from "./../components/Marquee";
-import ball from "../assets/Images/ball.png";
-import { FaPlus } from "react-icons/fa6";
 import mission from "../assets/mission.svg";
 import vision from "../assets/vision.svg";
 

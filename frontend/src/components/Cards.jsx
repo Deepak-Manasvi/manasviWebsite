@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import { useTransform, motion, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useTransform, motion,  } from "framer-motion";
 import { IoIosArrowDropright } from "react-icons/io";
 import { TiTick } from "react-icons/ti";
 import React from "react";

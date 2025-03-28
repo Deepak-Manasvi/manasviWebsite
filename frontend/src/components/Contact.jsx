@@ -1,5 +1,4 @@
 import React from 'react'
-import ContactForm from './ContactForm'
 import ContactR from './ContactR'
 import backgroundImage from '../assets/Images/Footer.jpg';
 

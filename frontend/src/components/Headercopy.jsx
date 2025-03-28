@@ -73,13 +73,6 @@ const Header = () => {
     setIsLoggedIn(!!token);
   }, [role, token]);
 
-  // Example: Get user role from context or state
-  // const userRole = "admin"; // Replace with actual logic to get user role
-
-  // ${isHeaderVisible
-  //   ? "transform translate-y-0"
-  //   : "transform -translate-y-full"
-  // }
   return (
     <div>
       <nav

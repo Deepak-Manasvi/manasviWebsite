@@ -7,8 +7,6 @@ import image2 from '../assets/digitalMarketing/how-to-choose-a-digital-marketing
 import image3 from '../assets/digitalMarketing/download.jpeg';
 import image4 from '../assets/digitalMarketing/premium_photo-1661693870771-dbbd8b95b2b1.jpeg';
 import image5 from '../assets/digitalMarketing/1708433841540.jpeg';
-
-import ServicesPage from '../components/ServicesPage';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -25,12 +23,12 @@ const DigitalServices = () => {
 
   const settings = {
     infinite: true,
-    speed: 5000, // Adjust speed for smooth scrolling
-    slidesToShow: 5, // Number of visible slides
+    speed: 5000, 
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0, // Makes it continuous
-    cssEase: "linear", // Makes scrolling smooth
+    autoplaySpeed: 0,
+    cssEase: "linear",
     pauseOnHover: false,
   };
 
@@ -85,7 +83,7 @@ const DigitalServices = () => {
         </div>
       </div>
       <div className="w-full overflow-x-hidden ">
-      <div className="flex flex-col md:flex-row bg-white py-30 rounded-lg shadow-lg">
+      <div className="flex flex-col md:flex-row bg-white py-10 rounded-lg shadow-lg">
   {/* Text Section */}
   <div className="md:w-1/2 text-left space-y-4 ml-10 mt-20">
     <h3 className="text-xl font-semibold text-[#a6adb9]">

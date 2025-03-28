@@ -1,7 +1,7 @@
 import React from "react";
 
  import bgvideo from "../assets/Services.mp4";
-import Header from "./Headercopy";
+
 
 const FrontPage = () => {
   return (

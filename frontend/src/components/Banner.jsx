@@ -35,16 +35,6 @@ const Banner = () => {
               />
             </div>
           </div>
-          {/* <div className="flex justify-center items-center h-screen bg-gray-100">
-      <a
-        href="../src/assets/pdf/PITCH DECK CLINIC MANAGEMENT.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-700"
-      >
-        Open PDF
-      </a>
-    </div> */}
         </div>
       </div>
     </div>

@@ -2,11 +2,11 @@
 
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
-import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+
 import Lenis from "lenis";
 import { useScroll } from "framer-motion";
 import { serviceData } from "../data";

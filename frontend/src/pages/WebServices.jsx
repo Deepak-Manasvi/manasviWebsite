@@ -112,7 +112,7 @@ const WebServices = () => {
         </div>
       </div>
       <div className="w-full overflow-x-hidden ">
-        <div className="flex flex-col md:flex-row bg-white py-20 rounded-lg shadow-lg">
+        <div className="flex flex-col md:flex-row bg-white py-10 rounded-lg shadow-lg">
           {/* Text Section */}
           <div className="md:w-1/2 text-left space-y-4 ml-10 mt-10">
             <h3 className="text-xl font-semibold text-[#a6adb9]">

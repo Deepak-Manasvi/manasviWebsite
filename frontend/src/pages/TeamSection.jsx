@@ -5,7 +5,7 @@ import Director from "../assets/Images/arpit jain.jpg";
 import back2 from "../assets/Images/backimg2.png";
 import OurTeam from "../components/OurTeam";
 3;
-import Marquee from "./../components/Marquee";
+
 
 const TeamSection = () => {
   return (
@@ -45,6 +45,7 @@ const TeamSection = () => {
                 alt="Team Member"
               />
             </div>
+
             <div className="w-full md:w-1/2 p-6 md:p-8">
               <h3 className="text-3xl font-bold text-gray-800">Arpit Jain</h3>
               <span className="block bg-purple-100 text-purple-800 text-sm font-semibold py-1 px-2 rounded-full mb-4 inline-block">

@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import mlogo from "../assets/Images/manasvilogo.png";
 import { FaAngleDown } from "react-icons/fa";
-// import Review from './../../../models/reviewModel';
-// import { Reviews } from './Reviews';
+
 
 const Header = () => {
   const [isBottomBarVisible, setBottomBarVisible] = useState(false);

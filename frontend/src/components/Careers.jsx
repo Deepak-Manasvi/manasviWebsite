@@ -458,14 +458,16 @@ const CareersComponent = () => {
             {galleryImages.map((image, index) => (
               <div
                 key={image.id}
-                className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
+                className="bg-white shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
                 onClick={() => openLightbox(index)}
               >
-                <img
-                  src={image.src}
-                  alt={image.alt}
-                  className="w-full h-64 object-cover"
-                />
+                <div className="w-70 h-60 flex items-center justify-center bg-gray-50">
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             ))}
           </div>

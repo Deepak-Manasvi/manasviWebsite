@@ -91,7 +91,7 @@ const AppServices = () => {
         </div>
       </div>
       <div className="w-full overflow-x-hidden ">
-        <div className="flex flex-col md:flex-row bg-white py-30 rounded-lg shadow-lg">
+        <div className="flex flex-col md:flex-row bg-white py-10 rounded-lg shadow-lg">
           <div className="flex-1 text-left space-y-4 ml-10 mr-10 mt-10">
             <h3 className="text-xl font-semibold text-[#a6adb9]">🚀 App Development Services </h3>
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">

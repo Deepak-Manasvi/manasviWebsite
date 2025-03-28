@@ -1,11 +1,9 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import Blog1 from "../assets/image/ProductTwo.jpeg";
 import Blog2 from "../assets/image/ProductOne.jpeg";

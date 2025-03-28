@@ -22,12 +22,12 @@ const SoftwareServices = () => {
 
   const settings = {
     infinite: true,
-    speed: 5000, // Adjust speed for smooth scrolling
-    slidesToShow: 5, // Number of visible slides
+    speed: 5000, 
+    slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 0, // Makes it continuous
-    cssEase: "linear", // Makes scrolling smooth
+    autoplaySpeed: 0,
+    cssEase: "linear", 
     pauseOnHover: false,
   };
 
@@ -94,7 +94,7 @@ const SoftwareServices = () => {
         </div>
       </div>
       <div className="w-full overflow-x-hidden ">
-        <div className="flex flex-col md:flex-row bg-white py-30 rounded-lg shadow-lg">
+        <div className="flex flex-col md:flex-row bg-white py-10 rounded-lg shadow-lg">
           <div className="flex-1 text-left space-y-4 ml-10 mt-20">
             <h3 className="text-xl font-semibold text-[#a6adb9]">Software Development Services</h3>
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
