@@ -436,14 +436,10 @@ const showAllCategories = async() => {
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-2">
             Current Openings
           </h1>
-          <p className="text-center text-gray-500 mb-8">
-            {/* Total openings: {totalOpenings} */}
-          </p>
 
-          {/* Category tabs */}
-
-           <div className="flex justify-start mb-12">
-            <div className="flex  gap-2 rounded-sm overflow-hidden">
+         {/* Category tabs */}
+          <div className="flex justify-start mb-12">
+            <div className="flex mx-auto mt-8 gap-x-8 rounded-sm overflow-hidden">
               {categories.map((category, i) => (
                 <button
                   key={i}
