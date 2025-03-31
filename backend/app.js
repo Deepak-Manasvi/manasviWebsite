@@ -9,6 +9,7 @@ import teamRoutes from './routes/teamRoutes.js';
 import portfolioRoutes from './routes/portfolioRoutes.js';
 import contactRoutes from './routes/contactRoutes.js';
 import serviceRoutes from './routes/serviceRoutes.js'; 
+import careerRoutes from './routes/careerRoutes.js';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
@@ -51,6 +52,7 @@ app.use('/api/team', teamRoutes);
 app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/contacts', contactRoutes);
 app.use('/api/services', serviceRoutes); // Use service routes here
+app.use('/api/career', careerRoutes);
 
 // Error handling
 app.all('*', (req, res, next) => {

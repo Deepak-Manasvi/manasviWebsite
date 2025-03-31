@@ -6,7 +6,11 @@ const portfolioSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    description: {
+    category: {
+      type: String,
+      required: true,
+    },
+    company: {
       type: String,
       required: true,
     },
