@@ -28,7 +28,7 @@ const CreateTeam = () => {
     data.append('image', formData.image);
 
     try {
-      const response = await axios.post('/api/team/create', data, {
+      const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}/api/team/create`, data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

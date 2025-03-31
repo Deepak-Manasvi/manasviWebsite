@@ -3,7 +3,7 @@ import axios from 'axios';
 import Admin from './Admin';
 
 const CreateProducts = () => {
-  const [product, setProduct] = useState({ name: '', description: '', image: null, link: '' });
+  const [product, setProduct] = useState({ name: '', description: '', image: '', link: '' });
   const [submittedProduct, setSubmittedProduct] = useState(null);
   const [error, setError] = useState('');
 
@@ -19,16 +19,18 @@ const CreateProducts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const formData = new FormData();
-      formData.append('name', product.name);
-      formData.append('description', product.description);
-      formData.append('image', product.image);
-      formData.append('link', product.link);
+    const formData = new FormData();
+    formData.append('name', product.name);
+    formData.append('description', product.description);
+    formData.append('image', product.image);
+    formData.append('link', product.link);
 
-      const response = await axios.post('/api/projects/create', formData, {
+    try {
+
+      const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}/api/projects/create`, formData, {
         headers: {
-          'Content-Type': 'multipart/form-data'
+          'Content-Type': 'multipart/form-data',
+          Authorization: `Bearer ${localStorage.getItem('token')}`,
         }
       });
 
@@ -45,9 +47,9 @@ const CreateProducts = () => {
     <Admin>
       <div className="container mx-auto p-4 items-center justify-center flex">
         <form onSubmit={handleSubmit} className="bg-white w-full  max-w-2xl p-6 rounded-lg shadow-lg">
-        <h1 className="text-xl mt-4 mb-5 text-center font-extrabold text-black bg-white px-12 py-2  rounded-xl shadow-lg">
-        Create Product
-      </h1>
+          <h1 className="text-xl mt-4 mb-5 text-center font-extrabold text-black bg-white px-12 py-2  rounded-xl shadow-lg">
+            Create Product
+          </h1>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">Product Name</label>
             <input

@@ -18,8 +18,8 @@ const ProjectManagement = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await axios.get("/api/projects/all");
-      console.log(response, "/api/projects/all  proejctmanagement");
+      const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URL}/api/projects/all`);
+      console.log(response, "proejctmanagement");
       setProjects(response.data);
     } catch (error) {
       console.error("Error fetching projects:", error);
@@ -37,11 +37,12 @@ const ProjectManagement = () => {
         formData.append("image", image);
       }
 
-      await axios.put(`/api/projects/update/${selectedProject._id}`, formData, {
+      const response = await axios.put(`${import.meta.env.VITE_APP_BASE_URL}/api/projects/update/${selectedProject._id}`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
       });
+      console.log(response, "handleUpdate")
 
       fetchProjects();
       setSelectedProject(null);
@@ -52,7 +53,8 @@ const ProjectManagement = () => {
 
   const handleDelete = async (projectId) => {
     try {
-      await axios.delete(`/api/projects/delete/${projectId}`);
+      const response = await axios.delete(`${import.meta.env.VITE_APP_BASE_URL}/api/projects/delete/${projectId}`);
+      console.log(response, "handleDelete")
       fetchProjects();
     } catch (error) {
       console.error("Error deleting project:", error);

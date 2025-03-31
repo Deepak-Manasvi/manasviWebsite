@@ -15,8 +15,7 @@ const TeamManagement = () => {
 
   const fetchTeamMembers = async () => {
     try {
-      const response = await axios.get('/api/team/all');
-      console.log(response,"team managerment ")
+      const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URL}/api/team/all`);
       setTeamMembers(response.data);
     } catch (error) {
       console.error('Error fetching team members:', error);
@@ -33,7 +32,7 @@ const TeamManagement = () => {
         formData.append('image', image);
       }
 
-      await axios.put(`/api/team/update/${selectedTeamMember._id}`, formData, {
+      await axios.put(`${import.meta.env.VITE_APP_BASE_URL}/api/team/update/${selectedTeamMember._id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -48,7 +47,7 @@ const TeamManagement = () => {
 
   const handleDelete = async (teamMemberId) => {
     try {
-      await axios.delete(`/api/team/delete/${teamMemberId}`);
+      await axios.delete(`${import.meta.env.VITE_APP_BASE_URL}/api/team/delete/${teamMemberId}`);
       fetchTeamMembers();
     } catch (error) {
       console.error('Error deleting team member:', error);

@@ -16,7 +16,7 @@ const Logout = () => {
     // Call the logout API
     const logout = async () => {
       try {
-        await axios.get('/api/admins/logout', {
+        await axios.get(`${import.meta.env.VITE_APP_BASE_URL}/api/admins/logout`, {
           headers: {
             Authorization: `Bearer ${token}`
           }
