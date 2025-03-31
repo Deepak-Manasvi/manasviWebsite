@@ -76,10 +76,10 @@ export default function Portfolio() {
                 className="group perspective"
                 onClick={() => navigate(`/portfolio/${portfolio._id}`)}
               >
-                <div className="relative w-full h-80 transition-transform duration-700 transform-style-3d group-hover:rotate-y-180 cursor-pointer">
+                <div className="relative w-full h-60 transition-transform duration-700 transform-style-3d group-hover:rotate-y-180 cursor-pointer">
                   {/* Front Side */}
                   <div className="absolute inset-0 backface-hidden">
-                    <img
+                    {/* <img
                       src={
                         portfolio.image.startsWith("data:image") 
                           ? portfolio.image 
@@ -88,7 +88,12 @@ export default function Portfolio() {
                       alt={portfolio.title}
                       className="w-full h-full rounded-lg object-cover"
                       onError={(e) => { e.target.src = "/fallback-image.jpg"; }} // Prevent broken images
-                    />
+                    /> */}
+                     <img
+                src={`data:image/jpeg;base64,${portfolio.image}`}
+                
+                className="max-w-xs h-auto rounded"
+              />
                   </div>
 
                   {/* Back Side (Flip Effect) */}
