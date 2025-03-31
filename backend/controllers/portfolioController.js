@@ -36,10 +36,8 @@ export const createPortfolio = async (req, res) => {
 export const getAllPortfolios = async (req, res) => {
   try {
     // Fetch all portfolio members
-    const Portfolio = await Portfolio.find();
-    console.log(Portfolio, "hhhhhhh");
-
-    return res.status(200).json(Portfolio);
+    const PortfolioData = await Portfolio.find();
+    return res.status(200).json(PortfolioData);
   } catch (error) {
     console.error(error);
     return res
