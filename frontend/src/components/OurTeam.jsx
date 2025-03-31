@@ -15,15 +15,14 @@ import TeamMember3 from "../assets/image/shraddha.png";
 import TeamMember4 from "../assets/image/anil.jpg";
 import TeamMember5 from "../assets/image/shruti.png";
 
-
-const experts = [
-  { name: "Natalie Carter", role: "Developer", image: TeamMember1 },
-  { name: "Vishal Yadav", role: "MERN Developer", image: TeamMember2 },
-  { name: "Shailja Tomer", role: "Developer", image: TeamMember1 },
-  { name: "Anil Patidar", role: "Python Developer", image: TeamMember4 },
-  { name: "Shruti Kamboj", role: "MERN Developer", image: TeamMember5 },
-  { name: "Shraddha Palotra", role: "MERN Developer", image: TeamMember3 },
-];
+// const experts = [
+//   { name: "Natalie Carter", role: "Developer", image: TeamMember1 },
+//   { name: "Vishal Yadav", role: "MERN Developer", image: TeamMember2 },
+//   { name: "Shailja Tomer", role: "Developer", image: TeamMember1 },
+//   { name: "Anil Patidar", role: "Python Developer", image: TeamMember4 },
+//   { name: "Shruti Kamboj", role: "MERN Developer", image: TeamMember5 },
+//   { name: "Shraddha Palotra", role: "MERN Developer", image: TeamMember3 },
+// ];
 
 const OurTeam = () => {
   const [teams, setTeams] = useState([]);
@@ -32,6 +31,7 @@ const OurTeam = () => {
     const fetchTeams = async () => {
       try {
         const response = await axios.get("/api/team/all");
+        console.log(response.data)
         if (Array.isArray(response.data)) {
           setTeams(response.data);
         } else {
@@ -94,7 +94,7 @@ const OurTeam = () => {
               1024: { slidesPerView: 4, spaceBetween: 50 },
             }}
           >
-            {experts.map((expert, index) => (
+            {teams.map((expert, index) => (
               <SwiperSlide key={index} className="group">
                 <div className="relative w-48 h-60 bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 group-hover:scale-105">
                   <img
