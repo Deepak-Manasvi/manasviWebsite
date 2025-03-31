@@ -2,17 +2,18 @@ import Portfolio from '../models/portfolioModel.js';
 
 export const createPortfolio = async (req, res) => {
   try {
-    const { name, description } = req.body;
+    const { title, category, company } = req.body;
     const image = req.file;
     // Validate required fields
-    if (!name || !description || !image) {
+    if (!title || !category || !company || !image) {
       return res.status(400).json({ message: 'All fields are required' });
     }
 
     // Create a new portfolio member instance
     const newPortfolio = new Portfolio({
-      name,
-      description,
+      title,
+      category,
+      company,
       image: image.buffer.toString('base64'),
     });
 
@@ -45,7 +46,7 @@ export const getAllPortfolios = async (req, res) => {
 export const updatePortfolio = async (req, res) => {
   try {
     const { id } = req.params;
-    const { name, description } = req.body;
+    const { title, category, company } = req.body;
     const image = req.file;
 
     // Check if portfolio member exists
@@ -55,8 +56,9 @@ export const updatePortfolio = async (req, res) => {
     }
 
     // Update portfolio member fields
-    portfolio.name = name;
-    portfolio.description = description;
+    portfolio.title = title;
+    portfolio.category = category;
+    portfolio.company = company;
     if (image) {
       portfolio.image = image.buffer.toString('base64');
     }

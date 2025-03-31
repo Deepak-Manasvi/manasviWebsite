@@ -30,7 +30,7 @@ const OurTeam = () => {
   useEffect(() => {
     const fetchTeams = async () => {
       try {
-        const response = await axios.get("/api/team/all");
+        const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URL}/api/team/all`);
         console.log(response.data)
         if (Array.isArray(response.data)) {
           setTeams(response.data);
@@ -70,12 +70,21 @@ const OurTeam = () => {
 
         {/* Buttons */}
         <div className="mt-6 flex flex-wrap justify-center gap-4">
-          <button className="px-6 py-3 flex items-center gap-2 bg-gray-200 rounded-full text-black text-sm md:text-base shadow-md hover:bg-gray-300 transition">
-            <Phone className="w-5 h-5" /> Book a Call
-          </button>
-          <button className="px-6 py-3 flex items-center gap-2 bg-indigo-600 text-white rounded-full text-sm md:text-base shadow-md hover:bg-indigo-700 transition">
-            Book a Demo
-          </button>
+          <a href="tel:8319955741">
+            <button className="px-6 py-3 flex items-center gap-2 bg-gray-200 rounded-full text-black text-sm md:text-base shadow-md hover:bg-gray-300 transition">
+              <Phone className="w-5 h-5" /> Book a Call
+            </button>
+          </a>
+          <a
+            href="https://wa.me/918319955741?text=Hello"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button className="px-6 py-3 flex items-center gap-2 bg-indigo-600 text-white rounded-full text-sm md:text-base shadow-md hover:bg-indigo-700 transition">
+              Book a Demo
+            </button>
+          </a>
+
         </div>
 
         {/* Swiper Slider for Team Cards */}
@@ -98,7 +107,7 @@ const OurTeam = () => {
               <SwiperSlide key={index} className="group">
                 <div className="relative w-48 h-60 bg-white rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 group-hover:scale-105">
                   <img
-                    src={expert.image}
+                    src={`data:image/png;base64,${expert.image}`}
                     alt={expert.name}
                     className="w-full h-full object-cover"
                   />
