@@ -9,44 +9,34 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [formData, setFormData] = useState({
-    email: '',
-    password: '',
-  });
   const [loginMethod, setLoginMethod] = useState("password");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [mobile, setMobile] = useState("");
   const [showPassword, setShowPassword] = useState(false);
-
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/admins/login', formData);
+      const payload =
+        loginMethod === "password"
+          ? { email, password }
+          : { mobile };
+      const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}/api/admins/login`, payload);
+      console.log("Login Response:", response);
       setSuccess('Login successful');
-      console.log(response.data);
-
       const { token, role } = response.data;
-
       if (token) {
         localStorage.setItem('role', role);
         localStorage.setItem('token', token);
       }
-
       if (role && role === 'admin') {
         navigate('/admin/welcome');
       } else {
         navigate('/');
       }
-
       setError('');
     } catch (error) {
       setError(error.response?.data?.message || 'Login failed');

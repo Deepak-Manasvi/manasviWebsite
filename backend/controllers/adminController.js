@@ -99,7 +99,7 @@ export const logout = (req, res) => {
 
 export const getAllAdmins = async (req, res) => {
     try {
-        const admins = await Admin.find().select('-password'); // Excluding the password field
+        const admins = await Admin.find().select('-password'); 
         res.status(200).json(admins);
     } catch (error) {
         console.error(error);
