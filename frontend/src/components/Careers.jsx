@@ -18,8 +18,7 @@ const CareersComponent = () => {
 const showAllCategories = async() => {
   try{
     const res = await axios.get( `${import.meta.env.VITE_APP_BASE_URL}/api/career/showAllCategories`) 
-    console.log(res)
-    setCategories(res.data) 
+    setCategories(res.data.categories)
   }catch(error) {
     console.log("Error in fetching categories", error)
   }
@@ -461,31 +460,35 @@ const showAllCategories = async() => {
             </div>
           </div>
           
-          {activeTab}
-          {/* Job cards */}
-          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center ">
-            {filteredJobs.map((job) => (
-              <div
-                key={job.id}
-                className="bg-white  rounded-lg overflow-hidden shadow-sm border border-gray-200"
-              >
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{job.title}</h3>
-                  <p className="text-gray-600 mb-1">{job.location}</p>
-                  <p className="text-gray-600 mb-4">{job.experience}</p>
-                  <div className="bg-gray-200 inline-block px-3 py-1 rounded-full text-sm text-gray-700 mb-6">
-                    {job.openings} OPENINGS
-                  </div>
-                  <button
-                    onClick={() => handleApply(job.applyLink)}
-                    className="w-full py-2 cursor-pointer border border-gray-300 text-gray-700 font-medium rounded hover:bg-gray-100 transition-colors"
-                  >
-                    Apply Now
-                  </button>
+          {activeTab && (
+  <div>
+    {categories
+      .filter((category) => category.categoryName === activeTab) // Filter the selected category
+      .map((category) => (
+        <div key={category.categoryName} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+          {category.careers.map((job) => (
+            <div
+              key={job.id}
+              className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200"
+            >
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-2">{job.title}</h3>
+                <p className="text-gray-600 mb-1">{job.location}</p>
+                <p className="text-gray-600 mb-4">{job.experience}</p>
+                <div className="bg-gray-200 inline-block px-3 py-1 rounded-full text-sm text-gray-700 mb-6">
+                  {job.openings} OPENINGS
                 </div>
+                <button className="w-full py-2 cursor-pointer border border-gray-300 text-gray-700 font-medium rounded hover:bg-gray-100 transition-colors">
+                  Apply Now
+                </button>
               </div>
-            ))}
-          </div> */}
+            </div>
+          ))}
+        </div>
+      ))}
+  </div>
+)}
+
         </div> 
       </section> 
     </div>
