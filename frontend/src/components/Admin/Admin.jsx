@@ -96,10 +96,15 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
                 </Link>
               </div>
             )}
+            
+          </li>
+          <li className="p-4 hover:bg-gray-700">
+            <Link to="/admin/CreatePortfolio">Create Portfolio</Link>
           </li>
           <li className="p-4 hover:bg-gray-700">
             <Link to="/admin/services">Manage Services</Link>
           </li>
+
           <li className="p-4 hover:bg-gray-700">
             <Link to="/admin/ManageTeam">Team Management</Link>
           </li>

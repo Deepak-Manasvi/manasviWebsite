@@ -4,6 +4,7 @@ import Home from "./Home";
 import Login from "./Admin/Login";
 import Register from "./Admin/Register";
 import CreateProducts from "./Admin/CreateProducts";
+import CreatePortfolio from "./Admin/CreatePortifolio.jsx";
 import CreateTeam from "./Admin/CreateTeam";
 import CreateReview from "./CreateReview";
 import AboutUsPage from "../pages/AboutUsPage";
@@ -49,6 +50,7 @@ function Routess() {
           <Route path="/admin/welcome" element={<Welcome />} />
           <Route path="/admin/CreateTeam" element={<CreateTeam />} />
           <Route path="/admin/CreateProducts" element={<CreateProducts />} />
+          <Route path="/admin/CreatePortfolio" element={<CreatePortfolio />} />
           <Route path="/admin/CreateReview" element={<CreateReview />} />
           <Route path="/admin/services" element={<ServiceManagement />} />
           <Route path="/admin/ManageProducts" element={<ProjectManagement />} />
@@ -68,6 +70,7 @@ function Routess() {
         <Route path="/services/app" element={<AppServices />} />
         <Route path="/services/software" element={<SoftwareServices />} />
         <Route path="/products" element={<ProductPage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/team" element={<TeamSection />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/feature" element={<FeatureSection />} />
