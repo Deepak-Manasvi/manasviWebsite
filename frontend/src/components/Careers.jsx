@@ -197,7 +197,7 @@ const CareersComponent = () => {
         className="h-[40vh] p-4 flex justify-center items-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="container mx-auto text-center">
+        <div className="container  mx-auto text-center">
           <h1 className="text-4xl lg:text-5xl text-white font-extrabold">
             Career
           </h1>
@@ -450,7 +450,7 @@ const CareersComponent = () => {
       </section>
 
       {/*gallery */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 lg:bg-gray-50 ">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Gallery</h2>
 
@@ -461,7 +461,7 @@ const CareersComponent = () => {
                 className="bg-white shadow-md overflow-hidden cursor-pointer transform transition-transform hover:scale-105"
                 onClick={() => openLightbox(index)}
               >
-                <div className="w-70 h-60 flex items-center justify-center bg-gray-50">
+                <div className="w-70 h-80 flex items-center justify-center bg-gray-50">
                   <img
                     src={image.src}
                     alt={image.alt}
@@ -572,7 +572,7 @@ const CareersComponent = () => {
               {categories.map((category) => (
                 <button
                   key={category}
-                  className={`px-8 py-3 font-medium gap-2 border border-solid-black  hover:bg-gray-200 ${
+                  className={`px-8 py-3 cursor-pointer font-medium gap-2 border border-solid-black  hover:bg-gray-200 ${
                     activeTab === category
                       ? "bg-gray-800 text-white"
                       : "bg-white text-gray-700"
@@ -601,7 +601,7 @@ const CareersComponent = () => {
                   </div>
                   <button
                     onClick={() => handleApply(job.applyLink)}
-                    className="w-full py-2 border border-gray-300 text-gray-700 font-medium rounded hover:bg-gray-100 transition-colors"
+                    className="w-full py-2 cursor-pointer border border-gray-300 text-gray-700 font-medium rounded hover:bg-gray-100 transition-colors"
                   >
                     Apply Now
                   </button>

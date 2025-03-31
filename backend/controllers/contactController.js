@@ -5,7 +5,7 @@ export const createContact = async (req, res) => {
     const { name, address, phoneNumber, email, message } = req.body;
 
     // Validate required fields
-    if (!name || !address || !phoneNumber || !email || !message) {
+    if (!name || address || !phoneNumber || !email || !message) {
       return res.status(400).json({ message: 'All fields are required' });
     }
 

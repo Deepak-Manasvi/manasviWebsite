@@ -36,9 +36,10 @@ const ContactR = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formData)
     try {
       const response = await axios.post(
-        "/api/contacts/create",
+        `${import.meta.env.VITE_APP_BASE_URL}/api/contacts/create`,
         formData
       );
       setSuccess("Message sent successfully");
@@ -141,6 +142,7 @@ const ContactR = () => {
                 <input
                   type="text"
                   name="name"
+                  required
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Name"
@@ -157,6 +159,7 @@ const ContactR = () => {
                 <input
                   type="text"
                   name="phoneNumber"
+                  required
                   value={formData.phoneNumber}
                   onChange={handleChange}
                   placeholder="Phone No."
@@ -165,6 +168,7 @@ const ContactR = () => {
                 <input
                   type="email"
                   name="email"
+                  required
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Email"
@@ -175,12 +179,13 @@ const ContactR = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Message"
+                  required
                   rows="6"
                   className="w-full bg-gray-100 rounded-lg px-6 text-sm pt-3 outline-none"
                 ></textarea>
                 <button
                   type="submit"
-                  className=" w-full relative text-white bg-[#05102C] hover:bg-white hover:text-black font-semibold rounded-lg text-sm px-6 py-3 !mt-6"
+                  className=" w-full cursor-pointer relative text-white bg-[#05102C] hover:bg-white hover:text-black font-semibold rounded-lg text-sm px-6 py-3 !mt-6"
                 >
                   <BsFillSendFill
                     className="mr-2 inline"
