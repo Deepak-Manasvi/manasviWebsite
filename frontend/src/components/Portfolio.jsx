@@ -92,7 +92,7 @@ export default function Portfolio() {
                      <img
                 src={`data:image/jpeg;base64,${portfolio.image}`}
                 
-                className="max-w-xs h-auto rounded"
+                className="max-w-xs h-60 rounded"
               />
                   </div>
 
