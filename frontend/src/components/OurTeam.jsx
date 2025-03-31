@@ -115,7 +115,7 @@ const OurTeam = () => {
                     <h3 className="text-white font-semibold text-lg">
                       {expert.name}
                     </h3>
-                    <p className="text-gray-300 text-sm">{expert.role}</p>
+                    <p className="text-gray-300 text-sm">{expert. designation}</p>
                   </div>
                 </div>
               </SwiperSlide>
