@@ -7,143 +7,29 @@ import TeamMember3 from "../assets/image/shraddha.png";
 import TeamMember4 from "../assets/image/anil.jpg";
 import TeamMember5 from "../assets/image/shruti.png";
 import backgroundImage from "../assets/Images/Footer.jpg";
+import axios from "axios";
 
 const CareersComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState();
+  const [categories, setCategories] = useState([])
+
+const showAllCategories = async() => {
+  try{
+    const res = await axios.get( `${import.meta.env.VITE_APP_BASE_URL}/api/career/showAllCategories`) 
+    console.log(res)
+    setCategories(res.data) 
+  }catch(error) {
+    console.log("Error in fetching categories", error)
+  }
+}
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    showAllCategories()
   }, []);
 
-  // Mock data for open positions
-  const jobs = [
-    {
-      id: 1,
-      title: "Sales & Pre-Sales",
-      location: "Gurugram",
-      experience: "Exp 1-3 Yrs",
-      openings: 1,
-      category: "Operations",
-      description:
-        "We're looking for a Sales professional to drive business growth.",
-      responsibilities: [
-        "Identify and pursue new business opportunities",
-        "Develop and maintain relationships with clients",
-        "Prepare and deliver sales presentations",
-      ],
-      requirements: [
-        "1-3 years of experience in sales",
-        "Excellent communication skills",
-        "Strong negotiation abilities",
-      ],
-      applyLink: "https://example.com/apply/sales",
-    },
-    {
-      id: 2,
-      title: "Project Manager",
-      location: "Gurugram",
-      experience: "Exp 1-3 Yrs",
-      openings: 1,
-      category: "Operations",
-      description: "We're seeking a talented Project Manager to join our team.",
-      responsibilities: [
-        "Lead project planning and execution",
-        "Manage resources and budgets",
-        "Communicate with stakeholders",
-      ],
-      requirements: [
-        "1-3 years of project management experience",
-        "PMP certification preferred",
-        "Strong organizational skills",
-      ],
-      applyLink: "https://example.com/apply/project-manager",
-    },
-    {
-      id: 3,
-      title: "Tech Support",
-      location: "Gurugram",
-      experience: "Exp 0-1 Yr",
-      openings: 1,
-      category: "Technology",
-      description:
-        "Join our Tech Support team to assist customers with technical issues.",
-      responsibilities: [
-        "Respond to customer inquiries",
-        "Troubleshoot technical problems",
-        "Document solutions for common issues",
-      ],
-      requirements: [
-        "0-1 year of technical support experience",
-        "Strong problem-solving skills",
-        "Patience and excellent communication",
-      ],
-      applyLink: "https://example.com/apply/tech-support",
-    },
-    {
-      id: 4,
-      title: "Product Designer",
-      location: "Gurugram",
-      experience: "Exp 2-5 Yrs",
-      openings: 1,
-      category: "Product",
-      description:
-        "We're looking for a creative Product Designer to help shape our products.",
-      responsibilities: [
-        "Create user-centered designs",
-        "Develop wireframes and prototypes",
-        "Collaborate with product and engineering teams",
-      ],
-      requirements: [
-        "2-5 years of product design experience",
-        "Proficiency in design tools like Figma",
-        "Portfolio demonstrating UX/UI skills",
-      ],
-      applyLink: "https://example.com/apply/product-designer",
-    },
-    {
-      id: 5,
-      title: "Full Stack Developer",
-      location: "Gurugram",
-      experience: "Exp 2-4 Yrs",
-      openings: 1,
-      category: "Technology",
-      description: "Join our engineering team as a Full Stack Developer.",
-      responsibilities: [
-        "Develop front-end and back-end components",
-        "Optimize application performance",
-        "Implement security and data protection measures",
-      ],
-      requirements: [
-        "2-4 years of full stack development experience",
-        "Proficiency in JavaScript, React, and Node.js",
-        "Experience with databases and API development",
-      ],
-      applyLink: "https://example.com/apply/developer",
-    },
-    {
-      id: 6,
-      title: "Operations Analyst",
-      location: "Gurugram",
-      experience: "Exp 1-2 Yrs",
-      openings: 1,
-      category: "Operations",
-      description:
-        "We're seeking an Operations Analyst to improve our processes.",
-      responsibilities: [
-        "Analyze operational data and metrics",
-        "Identify opportunities for improvement",
-        "Implement process optimizations",
-      ],
-      requirements: [
-        "1-2 years of operations experience",
-        "Strong analytical skills",
-        "Experience with data visualization tools",
-      ],
-      applyLink: "https://example.com/apply/operations-analyst",
-    },
-  ];
+
 
   // gallery data
   const galleryImages = [
@@ -177,19 +63,8 @@ const CareersComponent = () => {
     );
   };
 
-  // Get jobs for the active category
-  const filteredJobs = jobs.filter((job) => job.category === activeTab);
+ 
 
-  // Calculate total openings
-  const totalOpenings = jobs.length;
-
-  // Available categories
-  const categories = ["Technology", "Operations", "Product"];
-
-  // Handle Apply Now button click
-  const handleApply = (link) => {
-    window.open(link, "_blank");
-  };
 
   return (
     <div>
@@ -557,36 +432,38 @@ const CareersComponent = () => {
       </section>
 
       {/* Current Openings */}
-      <section className="py-12 bg-[#dedffc]">
+     <section className="py-12 bg-[#dedffc]">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-2">
             Current Openings
           </h1>
           <p className="text-center text-gray-500 mb-8">
-            Total openings: {totalOpenings}
+            {/* Total openings: {totalOpenings} */}
           </p>
 
           {/* Category tabs */}
-          <div className="flex justify-start mb-12">
+
+           <div className="flex justify-start mb-12">
             <div className="flex  gap-2 rounded-sm overflow-hidden">
-              {categories.map((category) => (
+              {categories.map((category, i) => (
                 <button
-                  key={category}
+                  key={i}
                   className={`px-8 py-3 cursor-pointer font-medium gap-2 border border-solid-black  hover:bg-gray-200 ${
-                    activeTab === category
+                    activeTab === category.categoryName
                       ? "bg-gray-800 text-white"
                       : "bg-white text-gray-700"
                   }`}
-                  onClick={() => setActiveTab(category)}
+                  onClick={() => setActiveTab(category.categoryName)}
                 >
-                  {category}
+                  {category.categoryName}
                 </button>
               ))}
             </div>
           </div>
-
+          
+          {activeTab}
           {/* Job cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center ">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center ">
             {filteredJobs.map((job) => (
               <div
                 key={job.id}
@@ -608,9 +485,9 @@ const CareersComponent = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+          </div> */}
+        </div> 
+      </section> 
     </div>
   );
 };
