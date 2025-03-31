@@ -17,7 +17,7 @@ const ReviewManagement = () => {
 
   const fetchReviews = async () => {
     try {
-      const response = await axios.get('/api/reviews/all');
+      const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URL}/api/reviews/all`);
       setReviews(response.data);
       console.log(response, "reviewmanagemrnt");
     } catch (error) {
@@ -37,7 +37,7 @@ const ReviewManagement = () => {
         formData.append('clientImage', clientImage);
       }
 
-      await axios.put(`/api/reviews/update/${selectedReview._id}`, formData, {
+      await axios.put(`${import.meta.env.VITE_APP_BASE_URL}/api/reviews/update/${selectedReview._id}`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -52,7 +52,7 @@ const ReviewManagement = () => {
 
   const handleDelete = async (reviewId) => {
     try {
-      await axios.delete(`/api/reviews/delete/${reviewId}`);
+      await axios.delete(`${import.meta.env.VITE_APP_BASE_URL}/api/reviews/delete/${reviewId}`);
       fetchReviews();
     } catch (error) {
       console.error('Error deleting review:', error);

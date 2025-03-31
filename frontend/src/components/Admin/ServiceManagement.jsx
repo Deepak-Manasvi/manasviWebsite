@@ -14,7 +14,7 @@ const ServiceManagement = () => {
 
   const fetchServices = async () => {
     try {
-      const response = await axios.get('/api/services/all');
+      const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URL}/api/services/all`);
       console.log(response,"servicemanagerment")
       setServices(response.data);
     } catch (error) {
@@ -31,9 +31,9 @@ const ServiceManagement = () => {
     e.preventDefault();
     try {
       if (editId) {
-        await axios.put(`/api/services/update/${editId}`, form);
+        await axios.put(`${import.meta.env.VITE_APP_BASE_URL}/api/services/update/${editId}`, form);
       } else {
-        await axios.post('/api/services/create', form);
+        await axios.post(`${import.meta.env.VITE_APP_BASE_URL}/api/services/create`, form);
       }
       setForm({ serviceName: '', description: '', serialNumber: '' });
       setEditId(null);
@@ -50,7 +50,7 @@ const ServiceManagement = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`/api/services/delete/${id}`);
+      await axios.delete(`${import.meta.env.VITE_APP_BASE_URL}/api/services/delete/${id}`);
       fetchServices();
     } catch (error) {
       console.error('Error deleting service:', error);
