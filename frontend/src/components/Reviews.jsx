@@ -8,7 +8,7 @@ export function Reviews() {
   useEffect(() => {
     const fetchReviews = async () => {
       try {
-        const response = await axios.get('http://localhost:4500/api/reviews/all');
+        const response = await axios.get(`${import.meta.env.VITE_APP_BASE_URL}/api/reviews/all`);
         if (Array.isArray(response.data)) {
           setReviews(response.data);
         } else {

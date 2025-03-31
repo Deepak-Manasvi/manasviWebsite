@@ -11,7 +11,7 @@ const ProjectCards = () => {
     const fetchProjects = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4500/api/projects/all"
+          `${import.meta.env.VITE_APP_BASE_URL}/api/projects/all`
         );
         setProjects(response.data);
         setLoading(false);

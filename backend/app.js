@@ -7,7 +7,7 @@ import projectRoutes from './routes/projectRoutes.js';
 import reviewRoutes from './routes/reviewRoutes.js';
 import teamRoutes from './routes/teamRoutes.js';
 import contactRoutes from './routes/contactRoutes.js';
-import serviceRoutes from './routes/serviceRoutes.js'; // Import service routes here
+import serviceRoutes from './routes/serviceRoutes.js'; 
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
@@ -61,4 +61,3 @@ connectDatabase().then(() => {
 }).catch(error => {
     console.error('Failed to connect to the database:', error);
 });
-// new 
