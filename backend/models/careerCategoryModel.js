@@ -6,11 +6,13 @@ const careerCategorySchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    careers:[{
+    careers: [
+      {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Career"    
-    }]
-   },
+        ref: "Career", 
+      },
+    ],
+  },
   { timestamps: true }
 );
 
