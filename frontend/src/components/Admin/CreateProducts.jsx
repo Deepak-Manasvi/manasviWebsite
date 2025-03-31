@@ -47,7 +47,7 @@ const CreateProducts = () => {
     <Admin>
       <div className="container mx-auto p-4 items-center justify-center flex">
         <form onSubmit={handleSubmit} className="bg-white w-full  max-w-2xl p-6 rounded-lg shadow-lg">
-          <h1 className="text-xl mt-4 mb-5 text-center font-extrabold text-black bg-white px-12 py-2  rounded-xl shadow-lg">
+          <h1 className="text-xl mt-4 mb-5 text-center font-extrabold text-black bg-white px-12 py-2  border rounded-xl shadow-lg">
             Create Product
           </h1>
           <div className="mb-4">

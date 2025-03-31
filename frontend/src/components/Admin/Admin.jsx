@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // src/components/Admin.js
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
@@ -13,9 +14,12 @@ const Admin = ({ children }) => {
   };
 
   return (
-    <div className="flex h-screen text-white bg-gradient-to-r from-[#4B0063] to-[#0E0019]">
+    <div
+      className="flex h-screen text-white bg-gray-100
+"
+    >
       <Sidebar isOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-      <div className="flex-1 mt-2 flex flex-col overflow-hidden">
+      <div className="flex-1  flex flex-col overflow-hidden">
         <Header toggleSidebar={toggleSidebar} />
         <div className="flex-1 overflow-auto p-4">
           <div>{children}</div>
@@ -38,7 +42,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         isOpen ? "translate-x-0 w-64 z-20" : "-translate-x-full w-0"
       }`}
     >
-      <div className="flex items-center justify-between p-4">
+      <div className="flex items-center justify-between pl-0 bg-white p-4">
         {isOpen && <img src={mlogo} alt="Logo" className="rounded-full " />}
         {/* <button onClick={toggleSidebar} className="text-white focus:outline-none">
           {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
@@ -122,9 +126,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
 const Header = ({ toggleSidebar }) => {
   return (
-    <div className="flex justify-between items-center bg-[#1F003A] p-4">
+    <div className="flex justify-between items-center bg-white p-4">
       <img src={mlogo} className="h-10" alt="" />
-      <h2 className="hidden md:block text-3xl font-bold font-poppins text-gray-800 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text shadow-md">
+      <h2 className="hidden md:block text-3xl font-bold font-poppins text-gray-800  bg-clip-text ">
         Admin Dashboard
       </h2>
       <button
