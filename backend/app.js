@@ -6,6 +6,7 @@ import adminRoutes from './routes/adminRoutes.js';
 import projectRoutes from './routes/projectRoutes.js';
 import reviewRoutes from './routes/reviewRoutes.js';
 import teamRoutes from './routes/teamRoutes.js';
+import portfolioRoutes from './routes/portfolioRoutes.js';
 import contactRoutes from './routes/contactRoutes.js';
 import serviceRoutes from './routes/serviceRoutes.js'; 
 import cookieParser from 'cookie-parser';
@@ -47,6 +48,7 @@ app.use('/api/admins', adminRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/reviews', reviewRoutes);
 app.use('/api/team', teamRoutes);
+app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/contacts', contactRoutes);
 app.use('/api/services', serviceRoutes); // Use service routes here
 
