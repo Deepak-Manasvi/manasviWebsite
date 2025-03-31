@@ -14,11 +14,10 @@ const careerSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    openings:{
-        type: Number,
-        required:true,
+    openings: {
+      type: Number,
+      required: true,
     },
-
   },
   { timestamps: true }
 );

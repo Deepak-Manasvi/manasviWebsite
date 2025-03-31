@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import backgroundImage from "../assets/Images/Footer.jpg";
-const baseAddress = import.meta.env.VITE_APP_BASE_URL;
 
+const baseAddress = import.meta.env.VITE_APP_BASE_URL;
 
 export default function Portfolio() {
   const navigate = useNavigate();
@@ -18,8 +18,12 @@ export default function Portfolio() {
       try {
         const response = await axios.get(`${baseAddress}/api/portfolio/all`);
         
-        if (Array.isArray(response.data)) {
-          setPortfolios(response.data);
+        console.log("API Response:", response.data); // Debugging log
+
+        const portfolioData = response.data.portfolios || response.data; // Adjust if API wraps in { portfolios: [...] }
+        
+        if (Array.isArray(portfolioData)) {
+          setPortfolios(portfolioData);
         } else {
           throw new Error("Invalid response format");
         }
@@ -76,9 +80,14 @@ export default function Portfolio() {
                   {/* Front Side */}
                   <div className="absolute inset-0 backface-hidden">
                     <img
-                      src={portfolio.image}
-                      alt={portfolio.name}
+                      src={
+                        portfolio.image.startsWith("data:image") 
+                          ? portfolio.image 
+                          : `${baseAddress}/uploads/${portfolio.image}` // Adjusted for stored filenames
+                      }
+                      alt={portfolio.title}
                       className="w-full h-full rounded-lg object-cover"
+                      onError={(e) => { e.target.src = "/fallback-image.jpg"; }} // Prevent broken images
                     />
                   </div>
 
@@ -90,7 +99,7 @@ export default function Portfolio() {
 
                 {/* Text Below Image */}
                 <div className="text-center mt-4">
-                  <h3 className="text-lg font-bold text-black">{portfolio.name}</h3>
+                  <h3 className="text-lg font-bold text-black">{portfolio.title}</h3>
                   <p className="text-sm text-gray-600">{portfolio.company} — {portfolio.category}</p>
                 </div>
               </div>
@@ -101,4 +110,3 @@ export default function Portfolio() {
     </div>
   );
 }
-  

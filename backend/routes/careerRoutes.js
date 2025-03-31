@@ -1,5 +1,5 @@
 import express from 'express';
-import { createCareer, createCategory, showAllCategories } from '../controllers/careerController.js';
+import { createCareer, createCategory, showAllCategories} from '../controllers/careerController.js';
 const router = express.Router();
 
 router.post('/createCategory', createCategory)

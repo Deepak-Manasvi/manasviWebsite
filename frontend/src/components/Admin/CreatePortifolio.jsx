@@ -25,20 +25,12 @@ const CreatePortfolio = () => {
     formData.append('company', portfolio.company);
     formData.append('image', portfolio.image);
 
-    // Debugging
-    for (let [key, value] of formData.entries()) {
-      console.log(key, value);
-    }
-
     try {
       const response = await axios.post(
         `${import.meta.env.VITE_APP_BASE_URL}/api/portfolio/create`,
         formData,
         {
-          headers: {
-            'Content-Type': 'multipart/form-data',
-            Authorization: `Bearer ${localStorage.getItem('token')}`,
-          },
+          headers: { 'Content-Type': 'multipart/form-data' },
         }
       );
 
@@ -122,13 +114,13 @@ const CreatePortfolio = () => {
         {error && <div className="mt-4 p-2 bg-red-100 text-red-600 rounded-lg">{error}</div>}
 
         {submittedPortfolio && (
-          <div className="mt-8 p-4 bg-white rounded-lg shadow-lg">
+          <div className="mt-8 p-4 bg-white text-black rounded-lg shadow-lg">
             <h2 className="text-xl font-bold mb-2">{submittedPortfolio.title}</h2>
             <p className="mb-2">Category: {submittedPortfolio.category}</p>
             <p className="mb-2">Company: {submittedPortfolio.company}</p>
             {submittedPortfolio.image && (
               <img
-                src={submittedPortfolio.image} 
+                src={`data:image/jpeg;base64,${submittedPortfolio.image}`}
                 alt={submittedPortfolio.title}
                 className="max-w-xs h-auto rounded"
               />
