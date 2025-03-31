@@ -128,7 +128,7 @@ const CreatePortfolio = () => {
             <p className="mb-2">Company: {submittedPortfolio.company}</p>
             {submittedPortfolio.image && (
               <img
-                src={submittedPortfolio.image} // Use URL from backend
+                src={submittedPortfolio.image} 
                 alt={submittedPortfolio.title}
                 className="max-w-xs h-auto rounded"
               />
