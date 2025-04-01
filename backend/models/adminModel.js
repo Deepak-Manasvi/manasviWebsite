@@ -20,6 +20,14 @@ const adminModel = new mongoose.Schema(
       default: '',
       unique: true,
     },
+    otp: {
+      type: String,
+      default: null
+    },
+    otpExpires: {
+      type: Date,
+      default: null
+    },
     profilePhoto: {
       type: String,
       default: '',

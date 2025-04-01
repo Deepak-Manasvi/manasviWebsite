@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
 import connectDatabase from './config/database.js';
+// import authRoutes from './routes/authRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
 import projectRoutes from './routes/projectRoutes.js';
 import reviewRoutes from './routes/reviewRoutes.js';
@@ -45,6 +46,8 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 
 // Routes handling
+
+// app.use("/api/auth", authRoutes);
 app.use('/api/admins', adminRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/reviews', reviewRoutes);

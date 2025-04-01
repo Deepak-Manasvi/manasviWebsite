@@ -4,40 +4,91 @@ import logo from '../../assets/Images/manasvilogo.png';
 import backgroundImage from "../../assets/Images/Footer.jpg";
 import { useNavigate } from 'react-router-dom';
 import { FaUser, FaLock, FaShieldAlt } from "react-icons/fa";
-import { IoMdHelpCircle } from "react-icons/io";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [loginMethod, setLoginMethod] = useState("password");
+  const [loginMethod, setLoginMethod] = useState("password"); // Default login method is password
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [mobile, setMobile] = useState("");
+  const [otp, setOtp] = useState(""); // Store OTP for email OTP login
   const [showPassword, setShowPassword] = useState(false);
+  const [showOtpField, setShowOtpField] = useState(false); // Flag to show OTP input field
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-
+  
+  // Function to handle form submission for both password and OTP login methods
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
-      const payload =
-        loginMethod === "password"
-          ? { email, password }
-          : { mobile };
-      const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}/api/admins/login`, payload);
-      console.log("Login Response:", response);
-      setSuccess('Login successful');
-      const { token, role } = response.data;
-      if (token) {
-        localStorage.setItem('role', role);
-        localStorage.setItem('token', token);
+      let payload;
+
+      // Login with password method
+      if (loginMethod === "password") {
+        payload = { email, password };
+
+        const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}/api/admins/login`, payload);
+        console.log("Login Response:", response);
+        setSuccess('Login successful');
+        const { token, role } = response.data;
+        
+        if (token) {
+          localStorage.setItem('role', role);
+          localStorage.setItem('token', token);
+        }
+        
+        if (role && role === 'admin') {
+          navigate('/admin/welcome');
+        } else {
+          navigate('/');
+        }
+        setError('');
+
+      } 
+      
+      // If user chooses OTP method, send OTP
+      else if (loginMethod === "emailOtp") {
+        // First send OTP to the email
+        const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}/api/admins/sendOTP`, { email });
+
+        console.log(response.data.success)
+        if (response.data.success) {
+          setShowOtpField(true); // Show OTP input field
+          setSuccess('OTP sent to your email');
+          setLoginMethod("verifyOtp")
+          setError('');
+        } else {
+          setError('Failed to send OTP');
+          setSuccess('');
+        }
+      } 
+      
+      // If OTP is already sent and user submits the OTP, verify OTP
+      else if (loginMethod === "verifyOtp" && otp) {
+        const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}/api/admins/verifyOTP`, { email, otp });
+
+        if (response.data.success) {
+          setSuccess('OTP verified successfully');
+          const { token, role } = response.data;
+          
+          if (token) {
+            localStorage.setItem('role', role);
+            localStorage.setItem('token', token);
+          }
+
+          if (role && role === 'admin') {
+            navigate('/admin/welcome');
+          } else {
+            navigate('/');
+          }
+          setError('');
+        } else {
+          setError('Invalid OTP');
+          setSuccess('');
+        }
       }
-      if (role && role === 'admin') {
-        navigate('/admin/welcome');
-      } else {
-        navigate('/');
-      }
-      setError('');
+
     } catch (error) {
       setError(error.response?.data?.message || 'Login failed');
       setSuccess('');
@@ -62,7 +113,7 @@ const Login = () => {
 
           <div className="grid grid-cols-2 gap-2 mb-3 sm:mb-5">
             <button
-              className={`px-2 py-1 sm:px-3 sm:py-1.5  ml-10 border text-xs sm:text-sm border-indigo-600 rounded-lg
+              className={`px-2 py-1 sm:px-3 sm:py-1.5 ml-10 border text-xs sm:text-sm border-indigo-600 rounded-lg
       ${loginMethod === "password" ? "text-indigo-600" : "text-gray-700"}`}
               onClick={() => setLoginMethod("password")}
             >
@@ -70,13 +121,12 @@ const Login = () => {
             </button>
             <button
               className={`px-2 py-1 sm:px-3 sm:py-1.5 border mr-10 text-xs sm:text-sm border-indigo-600 rounded-lg
-      ${loginMethod === "mobile" ? "text-indigo-600" : "text-gray-700"}`}
-              onClick={() => setLoginMethod("mobile")}
+      ${loginMethod === "emailOtp" ? "text-indigo-600" : "text-gray-700"}`}
+              onClick={() => setLoginMethod("emailOtp")}
             >
-              Mobile OTP
+              Email OTP
             </button>
           </div>
-
 
           <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
             {loginMethod === "password" ? (
@@ -110,16 +160,30 @@ const Login = () => {
               </>
             ) : (
               <>
-                <label className="text-gray-500 text-xs sm:text-sm">Mobile No.</label>
+                <label className="text-gray-500 text-xs sm:text-sm">Email</label>
                 <div className="relative border rounded-lg flex items-center px-3 py-2 focus-within:ring-2 ring-indigo-400">
                   <input
-                    type="tel"
+                    type="email"
                     className="w-full outline-none text-gray-700 text-sm"
-                    placeholder="Enter your mobile number"
-                    value={mobile}
-                    onChange={(e) => setMobile(e.target.value)}
+                    placeholder="Enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
+                {showOtpField && (
+                  <>
+                    <label className="text-gray-500 text-xs sm:text-sm mb-2 block">OTP</label>
+                    <div className="relative border rounded-lg flex items-center px-3 py-2 focus-within:ring-2 ring-indigo-400">
+                      <input
+                        type="text"
+                        className="w-full outline-none text-gray-700 text-sm"
+                        placeholder="Enter OTP"
+                        value={otp}
+                        onChange={(e) => setOtp(e.target.value)}
+                      />
+                    </div>
+                  </>
+                )}
               </>
             )}
 
@@ -130,14 +194,17 @@ const Login = () => {
             <button
               type="submit"
               className={`w-full bg-indigo-600 text-white font-semibold py-2 rounded-lg hover:bg-indigo-700 transition
-              ${((loginMethod === "password" && email && password) || (loginMethod === "mobile" && mobile))
+              ${((loginMethod === "password" && email && password) || (loginMethod === "emailOtp" && email) || (loginMethod === "verifyOtp" && otp))
                   ? "bg-indigo-600 hover:bg-indigo-700"
                   : "bg-blue-300 cursor-not-allowed"}`}
-              disabled={!((loginMethod === "password" && email && password) || (loginMethod === "mobile" && mobile))}
+              disabled={!((loginMethod === "password" && email && password) || (loginMethod === "emailOtp" && email) || (loginMethod === "verifyOtp" && otp))}
             >
-              Log In
+              {loginMethod === "emailOtp" ? "Send OTP" : loginMethod === "verifyOtp" ? "Verify OTP & Login" : "Log In"}
             </button>
           </form>
+
+          {error && <p className="text-red-500 text-sm mt-2">{error}</p>}
+          {success && <p className="text-green-500 text-sm mt-2">{success}</p>}
 
           <div className="border-t border-gray-300 pt-4 sm:pt-5 flex flex-col items-center text-center">
             <div className="flex items-center gap-2 text-blue-600">
