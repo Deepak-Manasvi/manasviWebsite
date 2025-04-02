@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 import Login from "./Admin/Login";
+import Signup from "./Admin/Signup.jsx";
 import Register from "./Admin/Register";
 import CreateProducts from "./Admin/CreateProducts";
 import CreatePortfolio from "./Admin/CreatePortifolio.jsx";
@@ -63,6 +64,7 @@ function Routess() {
           <Route path="/forget-password" element={<ForgotPassword />} />
         <Route path="/reviews" element={<Reviews />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<AboutUsPage />} />
         <Route path="/services/web" element={<WebServices />} />

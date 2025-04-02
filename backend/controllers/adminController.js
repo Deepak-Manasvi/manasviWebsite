@@ -3,6 +3,41 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import nodemailer from "nodemailer";
 
+// export const register = async (req, res) => {
+//     try {
+//         const { name, password, email, mobileNumber } = req.body;
+//         if (!name || !password || !mobileNumber || !email) {
+//             return res.status(400).json({ message: 'All fields are required' });
+//         }
+
+//         const existingAdmin = await Admin.findOne({ email });
+//         if (existingAdmin) {
+//             return res.status(400).json({ message: 'Admin already exists. Try a different email.' });
+//         }
+
+//         const hashedPassword = await bcrypt.hash(password, 10);
+//         const profilePhoto = `https://avatar.iran.liara.run/public/boy?email=${email}`;
+
+//         const newAdmin = new Admin({
+//             name,
+//             email,
+//             password: hashedPassword,
+//             mobileNumber,
+//             profilePhoto,
+//         });
+
+//         await newAdmin.save();
+
+//         return res.status(201).json({
+//             message: 'Account created successfully.',
+//             success: true,
+//         });
+//     } catch (error) {
+//         console.error(error);
+//         return res.status(500).json({ message: 'Server error', error: error.message });
+//     }
+// };
+
 export const register = async (req, res) => {
     try {
         const { name, password, email, mobileNumber } = req.body;
@@ -15,21 +50,22 @@ export const register = async (req, res) => {
             return res.status(400).json({ message: 'Admin already exists. Try a different email.' });
         }
 
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const profilePhoto = `https://avatar.iran.liara.run/public/boy?email=${email}`;
+        // Generate OTP
+        const otp = generateOTP();
+        const otpExpiration = new Date(Date.now() + 10 * 60 * 1000);
 
-        const newAdmin = new Admin({
-            name,
-            email,
-            password: hashedPassword,
-            mobileNumber,
-            profilePhoto,
-        });
+        // Store OTP in a temporary collection or within the Admin schema
+        await Admin.updateOne(
+            { email }, 
+            { otp, otpExpires: otpExpiration }, 
+            { upsert: true } // If admin does not exist, create a new entry with OTP
+        );
 
-        await newAdmin.save();
+        // Send OTP to email
+        await sendOtpEmail(email, otp);
 
-        return res.status(201).json({
-            message: 'Account created successfully.',
+        return res.status(200).json({
+            message: 'OTP sent to email. Verify OTP to complete registration.',
             success: true,
         });
     } catch (error) {
@@ -37,6 +73,75 @@ export const register = async (req, res) => {
         return res.status(500).json({ message: 'Server error', error: error.message });
     }
 };
+
+export const verifyRegisterOTP = async (req, res) => {
+    try {
+        let { name, password, email, mobileNumber, otp } = req.body;
+        if (!email || !otp) return res.status(400).json({ message: "Email and OTP are required" });
+
+        email = email.trim().toLowerCase(); // Normalize email
+
+        const admin = await Admin.findOne({ email });
+        if (!admin) return res.status(400).json({ message: "Invalid credentials" });
+
+        if (!admin.otp || admin.otp !== otp) {
+            return res.status(400).json({ message: "Invalid OTP" });
+        }
+        if (new Date() > admin.otpExpires) {
+            return res.status(400).json({ message: "OTP expired" });
+        }
+
+        // Hash password
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const profilePhoto = `https://avatar.iran.liara.run/public/boy?email=${email}`;
+
+        // Create admin account
+        admin.name = name;
+        admin.password = hashedPassword;
+        admin.mobileNumber = mobileNumber;
+        admin.profilePhoto = profilePhoto;
+        admin.otp = null;
+        admin.otpExpires = null;
+        await admin.save();
+
+        return res.status(201).json({
+            message: 'Account created successfully.',
+            success: true,
+        });
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+};
+
+export const resendRegisterOTP = async (req, res) => {
+    let { email } = req.body;
+    if (!email) return res.status(400).json({ message: "Email is required" });
+
+    email = email.trim().toLowerCase();
+
+    try {
+        const existingUser = await Admin.findOne({ email });
+
+        if (!existingUser) {
+            return res.status(404).json({ message: "Admin not registered" });
+        }
+
+        // Generate new OTP
+        const otp = generateOTP();
+        const otpExpiration = new Date(Date.now() + 10 * 60 * 1000);
+        existingUser.otp = otp;
+        existingUser.otpExpires = otpExpiration;
+        await existingUser.save();
+
+        await sendOtpEmail(email, otp);
+
+        res.json({ message: "OTP resent to email", success: true });
+    } catch (error) {
+        console.error("OTP Error:", error);
+        res.status(500).json({ message: "Error sending OTP", success: false });
+    }
+};
+
 
 export const login = async (req, res) => {
     try {
@@ -250,10 +355,9 @@ export const sendOTP = async (req, res) => {
         const otp = generateOTP();
         const otpExpiration = new Date(Date.now() + 10 * 60 * 1000);
         existingUser.otp = otp;
-        existingUser.otpExpiresAt = otpExpiration;
+        existingUser.otpExpires = otpExpiration;
         await existingUser.save();
 
-        // Send OTP via Email
         await sendOtpEmail(email, otp);
 
         res.json({ message: "OTP sent to email", success: true });
@@ -265,55 +369,68 @@ export const sendOTP = async (req, res) => {
 
 // ✅ Verify OTP & Login
 export const verifyOTP = async (req, res) => {
-    const { email, otp } = req.body;
+    let { email, otp } = req.body;
+    if (!email || !otp) return res.status(400).json({ message: "Email and OTP are required" });
 
-    if (!email || !otp) {
-        return res.status(400).json({ message: "Email and OTP are required." });
-    }
+    email = email.trim().toLowerCase(); // Normalize email
     try {
-        const user = await Admin.findOne({ email });
-        if (!user) {
-            return res.status(404).json({ message: "User not found." });
+        const admin = await Admin.findOne({ email });
+        if (!admin) return res.status(400).json({ message: "Invalid credentials" });
+        console.log(!admin.otp || admin.otp !== otp)
+        if (!admin.otp || admin.otp !== otp) {
+            return res.status(400).json({ message: "Invalid OTP" });
         }
-        if (user.otp == otp) {
-            return res.status(400).json({ message: "Invalid OTP." });
+        if (new Date() > admin.otpExpires) {
+            return res.status(400).json({ message: "OTP expired" });
         }
+            admin.otp = null;
+            admin.otpExpires = null;
+            await admin.save();
 
-        user.isVerified = true;
-        user.otp = null;
-        await user.save();
-        const token = jwt.sign({ id: user._id, email: user.email, role: user.role, lastName: user.lastName, firstName: user.firstName, phone: user.phone }, "your_jwt_secret", { expiresIn: "1h" });
-        return res.status(200).cookie('token', token, options).json({
-            _id: user._id,
-            token: token,
-            email: user.email,
-            name: user.name,
-            mobileNumber: user.mobileNumber,
-            profilePhoto: user.profilePhoto,
-            role: user.role,
-            permissions: user.permissions,
-        });
-    } catch (error) {
-        res.status(500).json({ success: false, message: error.message });
-    }
-};
+            const tokenData = {
+                adminId: admin._id,
+            };
 
-export const logout = (req, res) => {
-    try {
-        return res.status(200).cookie('token', '', { maxAge: 0 }).json({
-            message: 'Logged out successfully.',
-        });
-    } catch (error) {
-        console.log(error);
-    }
-};
+            const token = await jwt.sign(tokenData, process.env.JWT_SECRET_KEY, {
+                expiresIn: '1d',
+            });
+            const options = {
+                maxAge: 1 * 24 * 60 * 60 * 1000,
+                httpOnly: true,
+                sameSite: 'strict',
+            };
+            return res.status(200).cookie('token', token, options).json({
+                success: "true",
+                _id: admin._id,
+                token: token,
+                email: admin.email,
+                name: admin.name,
+                mobileNumber: admin.mobileNumber,
+                profilePhoto: admin.profilePhoto,
+                role: admin.role,
+                permissions: admin.permissions,
+            });
+        } catch (error) {
+            res.status(500).json({ success: false, message: error.message });
+        }
+    };
 
-export const getAllAdmins = async (req, res) => {
-    try {
-        const admins = await Admin.find().select('-password');
-        res.status(200).json(admins);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Server error', error: error.message });
-    }
-};
+    export const logout = (req, res) => {
+        try {
+            return res.status(200).cookie('token', '', { maxAge: 0 }).json({
+                message: 'Logged out successfully.',
+            });
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+    export const getAllAdmins = async (req, res) => {
+        try {
+            const admins = await Admin.find().select('-password');
+            res.status(200).json(admins);
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ message: 'Server error', error: error.message });
+        }
+    };
