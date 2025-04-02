@@ -9,9 +9,9 @@ const TiffinManagementBlog = () => {
         <img
           src={Blog1}
           alt="Tiffin Management System"
-          className="w-full rounded-lg shadow-md"
+          className="w-full mt-20 rounded-lg shadow-md"
         />
-        <div className="absolute top-2 right-2 bg-green-400 text-white px-4 py-2 rounded-full text-sm flex items-center">
+        <div className="absolute top-2 right-2 bg-green-400 text-white mt-10 px-4 py-2 rounded-full text-sm flex items-center">
           15
         </div>
       </div>

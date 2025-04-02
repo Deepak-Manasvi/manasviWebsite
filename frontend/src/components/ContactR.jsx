@@ -93,7 +93,7 @@ const ContactR = () => {
             >
               <IoChatboxEllipsesOutline className="w-7 text-3xl fill-blue-600" />
               <h4 className="text-gray-800 text-base font-bold mt-4">
-                Chat to us
+                Chat with us
               </h4>
               {/* <p className="text-sm text-gray-600 mt-2">huaaaaaaa.com</p> */}
             </Link>

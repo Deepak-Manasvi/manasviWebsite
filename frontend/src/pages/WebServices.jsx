@@ -12,6 +12,18 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useLocation } from "react-router-dom";
 
+import clientImage1 from "../assets/Client Logo/BobbySkinClinic.png"
+import clientImage2 from "../assets/Client Logo/LogoRoShield.png"
+import clientImage3 from "../assets/Client Logo/MahamayaLogo.png"
+import clientImage4 from "../assets/Client Logo/ShivanshAssociates.png"
+import clientImage5 from "../assets/Client Logo/drtooth.png"
+import clientImage6 from "../assets/Client Logo/aaradhyahomeopathy.png"
+import clientImage7 from "../assets/Client Logo/anteriordesinrstudio.png"
+import clientImage8 from "../assets/Client Logo/bellissimointerior.png"
+import clientImage9 from "../assets/Client Logo/monuelectronics.jpg"
+import clientImage10 from "../assets/Client Logo/ROshield.png"
+
+
 const WebServices = () => {
   const [showMore, setShowMore] = useState(false);
  
@@ -34,15 +46,9 @@ const WebServices = () => {
   };
 
   const clientLogos = [
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
+    clientImage1, clientImage2, clientImage3, clientImage4,
+    clientImage5, clientImage6, clientImage7, clientImage8,
+    clientImage9, clientImage10,
   ];
   const cards = [
     {
@@ -149,18 +155,19 @@ const WebServices = () => {
             Trusted by 1k+ businesses
           </h2>
           <div className="w-full">
-            <Slider {...settings}>
-              {clientLogos.map((logo, index) => (
-                <div key={index} className="flex justify-center">
-                  <img
-                    src={logo}
-                    alt={`Client ${index + 1}`}
-                    className="w-50 mx-auto"
-                  />
-                </div>
-              ))}
-            </Slider>
-          </div>
+  <Slider {...settings}>
+    {clientLogos.map((logo, index) => (
+      <div key={index} className="flex items-center justify-center h-32"> 
+        <img
+          src={logo}
+          alt={`Client ${index + 1}`}
+          className="w-50 mx-auto max-h-full"
+        />
+      </div>
+    ))}
+  </Slider>
+</div>
+
           <button className="mt-10 bg-white text-black px-6 py-2 rounded-md hover:bg-gray-300 transition">
             View All Clients
           </button>

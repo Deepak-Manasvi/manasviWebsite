@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import ServicesPage from "../components/ServicesPage";
 import image from "../assets/appDevelopment/360_F_478083183_6CQZKaiML4lyTBKOx450KCRkU0aExkVH.jpg";
@@ -11,6 +11,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import clientImage1 from "../assets/Client Logo/BobbySkinClinic.png"
+import clientImage2 from "../assets/Client Logo/LogoRoShield.png"
+import clientImage3 from "../assets/Client Logo/MahamayaLogo.png"
+import clientImage4 from "../assets/Client Logo/ShivanshAssociates.png"
+import clientImage5 from "../assets/Client Logo/drtooth.png"
+import clientImage6 from "../assets/Client Logo/aaradhyahomeopathy.png"
+import clientImage7 from "../assets/Client Logo/anteriordesinrstudio.png"
+import clientImage8 from "../assets/Client Logo/bellissimointerior.png"
+import clientImage9 from "../assets/Client Logo/monuelectronics.jpg"
+import clientImage10 from "../assets/Client Logo/ROshield.png"
+
 const AppServices = () => {
   const [showMore, setShowMore] = useState(false);
 
@@ -18,9 +29,9 @@ const AppServices = () => {
     setShowMore(!showMore);
   };
 
-   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const settings = {
     infinite: true,
@@ -34,15 +45,9 @@ const AppServices = () => {
   };
 
   const clientLogos = [
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
+    clientImage1, clientImage2, clientImage3, clientImage4,
+    clientImage5, clientImage6, clientImage7, clientImage8,
+    clientImage9, clientImage10,
   ];
   const cards = [
     {
@@ -118,12 +123,17 @@ const AppServices = () => {
           <div className="w-full">
             <Slider {...settings}>
               {clientLogos.map((logo, index) => (
-                <div key={index} className="flex justify-center">
-                  <img src={logo} alt={`Client ${index + 1}`} className="w-50 mx-auto" />
+                <div key={index} className="flex items-center justify-center h-32">
+                  <img
+                    src={logo}
+                    alt={`Client ${index + 1}`}
+                    className="w-50 mx-auto max-h-full"
+                  />
                 </div>
               ))}
             </Slider>
           </div>
+
           <button className="mt-10 bg-white text-black px-6 py-2 rounded-md hover:bg-gray-300 transition">
             View All Clients
           </button>
@@ -136,7 +146,7 @@ const AppServices = () => {
             📱 Our App Development Services
           </h1>
           <p className="text-xl font-semibold text-[#a6adb9] mx-auto mt-20 mb-20">
-          We provide expert app development services to create innovative, high-performance mobile and web applications.
+            We provide expert app development services to create innovative, high-performance mobile and web applications.
           </p>
 
           {/* 6 cards */}

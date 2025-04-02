@@ -10,9 +10,9 @@ const InventoryManagementBlog = () => {
           <img
             src={Blog2}
             alt="Inventory Management Blog"
-            className="w-full rounded-lg shadow-md"
+            className="w-full rounded-lg mt-20 shadow-md"
           />
-          <div className="absolute top-2 right-2 bg-blue-400 text-white px-4 py-2 rounded-full text-sm flex items-center">
+          <div className="absolute top-2 right-2 bg-blue-400 text-white px-4 py-2 rounded-full mt-10 text-sm flex items-center">
             13
           </div>
         </div>

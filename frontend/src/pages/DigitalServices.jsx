@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import backgroundImage from '../assets/Images/Footer.jpg';
 import backgroundImage2 from '../assets/Images/backimg2.png';
 import image from '../assets/digitalMarketing/digital-marketing-with-icons-business-people_53876-94833.avif';
@@ -11,19 +11,31 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import clientImage1 from "../assets/Client Logo/BobbySkinClinic.png"
+import clientImage2 from "../assets/Client Logo/LogoRoShield.png"
+import clientImage3 from "../assets/Client Logo/MahamayaLogo.png"
+import clientImage4 from "../assets/Client Logo/ShivanshAssociates.png"
+import clientImage5 from "../assets/Client Logo/drtooth.png"
+import clientImage6 from "../assets/Client Logo/aaradhyahomeopathy.png"
+import clientImage7 from "../assets/Client Logo/anteriordesinrstudio.png"
+import clientImage8 from "../assets/Client Logo/bellissimointerior.png"
+import clientImage9 from "../assets/Client Logo/monuelectronics.jpg"
+import clientImage10 from "../assets/Client Logo/ROshield.png"
+
+
 const DigitalServices = () => {
   const [showMore, setShowMore] = useState(false);
 
   const toggleShowMore = () => {
     setShowMore(!showMore);
   };
-   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const settings = {
     infinite: true,
-    speed: 5000, 
+    speed: 5000,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
@@ -32,16 +44,11 @@ const DigitalServices = () => {
     pauseOnHover: false,
   };
 
+
   const clientLogos = [
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
-    "https://www.supplymint.com/_next/static/images/Kalki-7018965a9189f7f83be76a56d893604a.svg",
+    clientImage1, clientImage2, clientImage3, clientImage4,
+    clientImage5, clientImage6, clientImage7, clientImage8,
+    clientImage9, clientImage10
   ];
   const cards = [
     {
@@ -83,32 +90,32 @@ const DigitalServices = () => {
         </div>
       </div>
       <div className="w-full overflow-x-hidden ">
-      <div className="flex flex-col md:flex-row bg-white py-10 rounded-lg shadow-lg">
-  {/* Text Section */}
-  <div className="md:w-1/2 text-left space-y-4 ml-10 mt-20">
-    <h3 className="text-xl font-semibold text-[#a6adb9]">
-      Digital Marketing Services 🚀
-    </h3>
-    <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
-      Boost Your Brand with Our Expert Digital Marketing Services 🚀
-    </h1>
-    <h2 className="text-lg text-gray-700">
-      At Manasvi Technology, we specialize in data-driven digital marketing strategies that help businesses boost their online presence, brand awareness, and conversions. Whether you're a startup or an established business, our customized marketing solutions ensure that you reach the right audience and maximize your ROI.
-    </h2>
-    <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
-      Request a demo
-    </button>
-  </div>
+        <div className="flex flex-col md:flex-row bg-white py-10 rounded-lg shadow-lg">
+          {/* Text Section */}
+          <div className="md:w-1/2 text-left space-y-4 ml-10 mt-20">
+            <h3 className="text-xl font-semibold text-[#a6adb9]">
+              Digital Marketing Services 🚀
+            </h3>
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
+              Boost Your Brand with Our Expert Digital Marketing Services 🚀
+            </h1>
+            <h2 className="text-lg text-gray-700">
+              At Manasvi Technology, we specialize in data-driven digital marketing strategies that help businesses boost their online presence, brand awareness, and conversions. Whether you're a startup or an established business, our customized marketing solutions ensure that you reach the right audience and maximize your ROI.
+            </h2>
+            <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
+              Request a demo
+            </button>
+          </div>
 
-  {/* Image Section (Smaller but aligned) */}
-  <div className="md:w-2/4 flex justify-center md:justify-end">
-    <img
-      src={image}
-      alt="Demand Planning"
-      className="w-[700px] h-auto object-contain"
-    />
-  </div>
-</div>
+          {/* Image Section (Smaller but aligned) */}
+          <div className="md:w-2/4 flex justify-center md:justify-end">
+            <img
+              src={image}
+              alt="Demand Planning"
+              className="w-[700px] h-auto object-contain"
+            />
+          </div>
+        </div>
 
 
         {/* Client Slider */}
@@ -117,12 +124,17 @@ const DigitalServices = () => {
           <div className="w-full">
             <Slider {...settings}>
               {clientLogos.map((logo, index) => (
-                <div key={index} className="flex justify-center">
-                  <img src={logo} alt={`Client ${index + 1}`} className="w-50 mx-auto" />
+                <div key={index} className="flex items-center justify-center h-32">
+                  <img
+                    src={logo}
+                    alt={`Client ${index + 1}`}
+                    className="w-50 mx-auto max-h-full"
+                  />
                 </div>
               ))}
             </Slider>
           </div>
+
           <button className="mt-10 bg-white text-black px-6 py-2 rounded-md hover:bg-gray-300 transition">
             View All Clients
           </button>
@@ -135,7 +147,7 @@ const DigitalServices = () => {
             Our Digital Marketing Services
           </h1>
           <p className="text-xl font-semibold text-[#a6adb9] mx-auto mt-20 mb-20">
-          We offer result-driven digital marketing strategies to boost your online presence and grow your business.
+            We offer result-driven digital marketing strategies to boost your online presence and grow your business.
           </p>
 
           {/* 6 cards */}
