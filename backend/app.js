@@ -9,7 +9,7 @@ import reviewRoutes from './routes/reviewRoutes.js';
 import teamRoutes from './routes/teamRoutes.js';
 import portfolioRoutes from './routes/portfolioRoutes.js';
 import contactRoutes from './routes/contactRoutes.js';
-import serviceRoutes from './routes/serviceRoutes.js'; 
+import serviceRoutes from './routes/serviceRoutes.js';
 import careerRoutes from './routes/careerRoutes.js';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
@@ -29,8 +29,8 @@ app.use(logger('tiny'));
 // Network access
 const corsOptions = {
     origin: [
-    'http://localhost:5173',
-    'http://manasvitech.in',
+        'http://localhost:5173',
+        'https://manasvitech.in',
     ],
     credentials: true,
     optionSuccessStatus: 200,

@@ -1,8 +1,7 @@
 import Admin from '../models/adminModel.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import sendVerificationEmail from "../utils/sendEmail.js";
-import generateCode from "../utils/generateCode.js";
+import nodemailer from "nodemailer";
 
 export const register = async (req, res) => {
     try {
@@ -88,31 +87,175 @@ export const login = async (req, res) => {
         console.log(error);
     }
 };
+
+const generateOTP = () => {
+    return Math.floor(100000 + Math.random() * 900000).toString();
+};
+
+const sendOtpEmail = async (email, otp) => {
+    const transporter = nodemailer.createTransport({
+        service: "gmail",
+        host: "smtp.gmail.com",
+        port: 587,
+        secure: false,
+        auth: {
+            user: process.env.EMAIL_USERNAME,
+            pass: process.env.EMAIL_PASSWORD,
+        },
+    });
+
+    const htmlTemplate = `<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OTP Verification</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    .container {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .logo {
+      max-width: 180px;
+      height: auto;
+    }
+    h2 {
+      color: #2563eb;
+      font-size: 26px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .message {
+      text-align: center;
+      font-size: 16px;
+      color: #374151;
+      margin-bottom: 24px;
+    }
+    .otp-container {
+      background: linear-gradient(135deg, #3b82f6, #1e40af);
+      border-radius: 10px;
+      padding: 25px;
+      text-align: center;
+      color: #ffffff;
+      font-family: 'Courier New', monospace;
+      box-shadow: 0 3px 10px rgba(30, 58, 138, 0.2);
+      margin: 24px auto;
+      width: fit-content;
+    }
+    .otp-code {
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+    .otp-expiry {
+      font-size: 14px;
+      color: #dbeafe;
+      margin-top: 10px;
+    }
+    .warning {
+      background-color: #fef2f2;
+      border-left: 4px solid #dc2626;
+      padding: 16px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #b91c1c;
+    }
+    .footer {
+      text-align: center;
+      color: #6b7280;
+      font-size: 12px;
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px solid #e5e7eb;
+    }
+    @media (max-width: 640px) {
+      .container {
+        padding: 20px;
+      }
+      .otp-code {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="/logos/full.png" alt="Your Logo" class="logo">
+    </div>
+    <h2>Verify Your Identity</h2>
+    <p class="message">Use the OTP below to complete your verification. This code is valid for a limited time.</p>
+    <div class="otp-container">
+      <p class="otp-code">${otp}</p>
+      <p class="otp-expiry">⏳ This code expires in 10 minutes</p>
+    </div>
+    <p class="message">If you did not request this OTP, please ignore this email or contact support.</p>
+    <div class="warning">⚠️ Never share your OTP with anyone. We will never ask for it.</div>
+    <div class="footer">
+      <p>This is an automated message. Please do not reply.</p>
+      <p>&copy; ${new Date().getFullYear()}Manasvi Technologies (OPC) Pvt. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>`;
+    const mailOptions = {
+        from: process.env.EMAIL_USERNAME,
+        to: email,
+        subject: "Your Manasvi Technologies (OPC) Pvt Verification Code",
+        html: htmlTemplate,
+        text: `Your Manasvi Technologies (OPC) Pvt verification OTP is: ${otp}\n\nThis code will expire in 10 minutes.\n\nIf you didn't request this OTP, please ignore this email or contact our support team.`,
+    };
+
+    try {
+        const info = await transporter.sendMail(mailOptions);
+        return info;
+    } catch (error) {
+        console.error("Error sending OTP via email:", error.message || error);
+        throw new Error("Unable to send OTP via email.");
+    }
+};
+
 export const sendOTP = async (req, res) => {
     let { email } = req.body;
     if (!email) return res.status(400).json({ message: "Email is required" });
 
-    email = email.trim().toLowerCase(); // Normalize email
+    email = email.trim().toLowerCase();
 
     try {
-        const admin = await Admin.findOne({ email });
+        const existingUser = await Admin.findOne({ email });
 
-        if (!admin) {
+        if (!existingUser) {
             return res.status(404).json({ message: "Admin not registered" });
         }
 
-        const otp = generateCode();
-        const expiryTime = new Date(Date.now() + 10 * 60 * 1000); // OTP valid for 10 minutes
+        // Generate OTP
+        const otp = generateOTP();
+        const otpExpiration = new Date(Date.now() + 10 * 60 * 1000);
+        existingUser.otp = otp;
+        existingUser.otpExpiresAt = otpExpiration;
+        await existingUser.save();
 
-        // Update OTP in the database
-        admin.otp = otp;
-        admin.otpExpires = expiryTime;
-        console.log(admin.otp, admin.otpExpires);
+        // Send OTP via Email
+        await sendOtpEmail(email, otp);
 
-        await admin.save(); // ✅ Corrected this line
-
-        // Send OTP via email
-        await sendVerificationEmail(email, otp);
         res.json({ message: "OTP sent to email", success: true });
     } catch (error) {
         console.error("OTP Error:", error);
@@ -120,62 +263,32 @@ export const sendOTP = async (req, res) => {
     }
 };
 
-  
-  // ✅ Verify OTP & Login
-  export const verifyOTP = async (req, res) => {
-    let { email, otp } = req.body;
-    if (!email || !otp) return res.status(400).json({ message: "Email and OTP are required" });
-  
-    email = email.trim().toLowerCase(); // Normalize email
-  
-    try {
-      const admin = await Admin.findOne({ email });
-      if (!admin) return res.status(400).json({ message: "Invalid credentials" });
-      if (!admin.otp || admin.otp !== otp) {
-          return res.status(400).json({ message: "Invalid OTP" });
-         
-        }
-        
-        if (new Date() > admin.otpExpires) {
-            return res.status(400).json({ message: "OTP expired" });
-        }
-       
-  
-      // Clear OTP after successful login
-      admin.otp = null;
-      admin.otpExpires = null;
-      await admin.save();
-  
-      // Generate JWT token
-  
-      const tokenData = {
-        adminId: admin._id,
-    };
+// ✅ Verify OTP & Login
+export const verifyOTP = async (req, res) => {
+    const { email, otp } = req.body;
 
-    const token = await jwt.sign(tokenData, process.env.JWT_SECRET_KEY, {
-        expiresIn: '1d',
-    });
-    const options = {
-        maxAge: 1 * 24 * 60 * 60 * 1000,
-        httpOnly: true,
-        sameSite: 'strict',
-    };
-    return res.status(200).cookie('token', token, options).json({
-        success:"true",
-        _id: admin._id,
-        token: token,
-        email: admin.email,
-        name: admin.name,
-        mobileNumber: admin.mobileNumber,
-        profilePhoto: admin.profilePhoto,
-        role: admin.role,
-        permissions: admin.permissions,
-    });
-    } catch (error) {
-      console.error("OTP Verification Error:", error);
-      res.status(500).json({ message: "Error verifying OTP" });
+    if (!email || !otp) {
+        return res.status(400).json({ message: "Email and OTP are required." });
     }
-  };
+    try {
+        const user = await Admin.findOne({ email });
+        if (!user) {
+            return res.status(404).json({ message: "User not found." });
+        }
+        if (user.otp !== otp) {
+            return res.status(400).json({ message: "Invalid OTP." });
+        }
+
+        user.isVerified = true;
+        user.otp = null;
+        await user.save();
+        const token = jwt.sign({ id: user._id, email: user.email, role: user.role, lastName: user.lastName, firstName: user.firstName, phone: user.phone }, "your_jwt_secret", { expiresIn: "1h" });
+        res.status(200).json({ success: true, message: "OTP verified successfully.", token });
+
+    } catch (error) {
+        res.status(500).json({ success: false, message: error.message });
+    }
+};
 
 export const logout = (req, res) => {
     try {
@@ -189,7 +302,7 @@ export const logout = (req, res) => {
 
 export const getAllAdmins = async (req, res) => {
     try {
-        const admins = await Admin.find().select('-password'); 
+        const admins = await Admin.find().select('-password');
         res.status(200).json(admins);
     } catch (error) {
         console.error(error);
