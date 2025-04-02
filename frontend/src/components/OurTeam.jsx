@@ -258,8 +258,8 @@ const OurTeam = () => {
     <div>
       <h3 className="text-base font-semibold">Chat with Sales</h3>
       <p className="text-gray-600 text-xs">Speak to our friendly team.</p>
-      <a href="mailto:sales@manasvitech.in" className="text-indigo-600 font-medium text-sm">
-        sales@manasvitech.in
+      <a href="mailto:Arpit@manasvitech.in" className="text-indigo-600 font-medium text-sm">
+      Arpit@manasvitech.in
       </a>
     </div>
     <div>

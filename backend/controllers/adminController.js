@@ -275,7 +275,7 @@ export const verifyOTP = async (req, res) => {
         if (!user) {
             return res.status(404).json({ message: "User not found." });
         }
-        if (user.otp !== otp) {
+        if (user.otp == otp) {
             return res.status(400).json({ message: "Invalid OTP." });
         }
 
@@ -283,8 +283,16 @@ export const verifyOTP = async (req, res) => {
         user.otp = null;
         await user.save();
         const token = jwt.sign({ id: user._id, email: user.email, role: user.role, lastName: user.lastName, firstName: user.firstName, phone: user.phone }, "your_jwt_secret", { expiresIn: "1h" });
-        res.status(200).json({ success: true, message: "OTP verified successfully.", token });
-
+        return res.status(200).cookie('token', token, options).json({
+            _id: user._id,
+            token: token,
+            email: user.email,
+            name: user.name,
+            mobileNumber: user.mobileNumber,
+            profilePhoto: user.profilePhoto,
+            role: user.role,
+            permissions: user.permissions,
+        });
     } catch (error) {
         res.status(500).json({ success: false, message: error.message });
     }

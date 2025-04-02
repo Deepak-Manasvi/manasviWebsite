@@ -96,7 +96,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-cover bg-center px-4" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div className="min-h-screen flex items-center justify-center bg-cover bg-center px-4 mt-10 " style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="bg-white shadow-xl rounded-lg p-8 w-full max-w-md space-y-6">
 
         <div>
