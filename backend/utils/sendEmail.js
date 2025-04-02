@@ -5,14 +5,14 @@ import nodemailer from "nodemailer";
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, 
+    user: process.env.EMAIL_USERNAME,
+    pass: process.env.EMAIL_PASSWORD, 
   },
 });
 
 const sendVerificationEmail = async (email, code) => {
   const mailOptions = {
-    from: process.env.EMAIL_USER,
+    from: process.env.EMAIL_USERNAME,
     to: email,
     subject: "Verify Your Email",
     text: `Your verification code is: ${code}. This code expires in 10 minutes.`
