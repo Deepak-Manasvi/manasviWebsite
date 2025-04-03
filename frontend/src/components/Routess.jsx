@@ -41,6 +41,7 @@ import ProtectedAdminRoute from "../components/Admin/ProtectedAdminRoute";
 import CareersComponent from "./Careers";
 import Portfolio from "../components/Portfolio.jsx";
 import ForgotPassword from "./Admin/Forget_password.jsx";
+import ContactUsCards from "./Admin/ContactUsCards.jsx";
 
 function Routess() {
   return (
@@ -50,6 +51,7 @@ function Routess() {
           <Route path="/admin" element={<Admin />} />
           <Route path="/admin/welcome" element={<Welcome />} />
           <Route path="/admin/CreateTeam" element={<CreateTeam />} />
+          <Route path="/admin/contact-us-data" element={<ContactUsCards />} />
           <Route path="/admin/CreateProducts" element={<CreateProducts />} />
           <Route path="/admin/CreatePortfolio" element={<CreatePortfolio />} />
           <Route path="/admin/CreateReview" element={<CreateReview />} />

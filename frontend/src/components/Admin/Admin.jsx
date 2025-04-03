@@ -57,6 +57,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             <Link to="/admin/CreateTeam">Create Team</Link>
           </li>
           <li className="p-4 hover:bg-gray-700">
+            <Link to="/admin/contact-us-data">Contact Us Data</Link>
+          </li>
+          <li className="p-4 hover:bg-gray-700">
             <a
               href="#"
               onClick={toggleProductsMenu}
