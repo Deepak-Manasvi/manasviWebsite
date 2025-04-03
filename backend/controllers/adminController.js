@@ -220,13 +220,11 @@ const sendOtpEmail = async (email, otp) => {
       font-family: 'Arial', sans-serif;
       margin: 0;
       padding: 20px;
-      background-color: #f9fafb;
-      color: #1f2937;
+      color: black;
     }
     .container {
       max-width: 600px;
       margin: 20px auto;
-      background-color: #ffffff;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       padding: 40px;
@@ -240,7 +238,6 @@ const sendOtpEmail = async (email, otp) => {
       height: auto;
     }
     h2 {
-      color: #2563eb;
       font-size: 26px;
       margin-bottom: 20px;
       font-weight: bold;
@@ -249,15 +246,12 @@ const sendOtpEmail = async (email, otp) => {
     .message {
       text-align: center;
       font-size: 16px;
-      color: #374151;
       margin-bottom: 24px;
     }
     .otp-container {
-      background: linear-gradient(135deg, #3b82f6, #1e40af);
       border-radius: 10px;
       padding: 25px;
       text-align: center;
-      color: #ffffff;
       font-family: 'Courier New', monospace;
       box-shadow: 0 3px 10px rgba(30, 58, 138, 0.2);
       margin: 24px auto;
@@ -271,21 +265,18 @@ const sendOtpEmail = async (email, otp) => {
     }
     .otp-expiry {
       font-size: 14px;
-      color: #dbeafe;
       margin-top: 10px;
     }
     .warning {
-      background-color: #fef2f2;
-      border-left: 4px solid #dc2626;
+      border-left: 4px solid red;
       padding: 16px;
       border-radius: 8px;
       margin-top: 20px;
       font-size: 14px;
-      color: #b91c1c;
+      color: red;
     }
     .footer {
       text-align: center;
-      color: #6b7280;
       font-size: 12px;
       margin-top: 30px;
       padding-top: 15px;
@@ -304,7 +295,7 @@ const sendOtpEmail = async (email, otp) => {
 <body>
   <div class="container">
     <div class="header">
-      <img src="/logos/full.png" alt="Your Logo" class="logo">
+      <img src="https://manasvitech.in/assets/manasvilogo-DYhVbJnJ.png" alt="Your Logo" class="logo">
     </div>
     <h2>Verify Your Identity</h2>
     <p class="message">Use the OTP below to complete your verification. This code is valid for a limited time.</p>
@@ -316,11 +307,12 @@ const sendOtpEmail = async (email, otp) => {
     <div class="warning">⚠️ Never share your OTP with anyone. We will never ask for it.</div>
     <div class="footer">
       <p>This is an automated message. Please do not reply.</p>
-      <p>&copy; ${new Date().getFullYear()}Manasvi Technologies (OPC) Pvt. All rights reserved.</p>
+      <p>&copy; ${new Date().getFullYear()} Manasvi Technologies (OPC) Pvt. All rights reserved.</p>
     </div>
   </div>
 </body>
-</html>`;
+</html>
+`;
     const mailOptions = {
         from: process.env.EMAIL_USERNAME,
         to: email,
