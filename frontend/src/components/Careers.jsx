@@ -15,6 +15,13 @@ const CareersComponent = () => {
   const [activeTab, setActiveTab] = useState();
   const [categories, setCategories] = useState([]);
   const [applyModal, setApplyModal] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    experience: null,
+    resume: null,
+  });
 
   const showAllCategories = async () => {
     try {
@@ -29,14 +36,6 @@ const CareersComponent = () => {
   useEffect(() => {
     showAllCategories();
   }, []);
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    experience: null,
-    resume: null,
-  });
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
