@@ -12,6 +12,7 @@ import contactRoutes from './routes/contactRoutes.js';
 import serviceRoutes from './routes/serviceRoutes.js';
 import careerRoutes from './routes/careerRoutes.js';
 import subscriberRoutes from './routes/subscriberRoutes.js';
+import jobRoutes from './routes/jobRoutes.js';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 import logger from 'morgan';
@@ -45,10 +46,11 @@ app.use(bodyParser.json());
 
 // Create session
 app.use(cookieParser());
-
+app.use('/uploads', express.static('uploads'));
 // Routes handling
 
 // app.use("/api/auth", authRoutes);
+app.use('/api/jobs', jobRoutes);
 app.use('/api/admins', adminRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/reviews', reviewRoutes);
