@@ -13,22 +13,58 @@ const CareersComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeTab, setActiveTab] = useState();
-  const [categories, setCategories] = useState([])
+  const [categories, setCategories] = useState([]);
+  const [applyModal, setApplyModal] = useState(false);
 
-const showAllCategories = async() => {
-  try{
-    const res = await axios.get( `${import.meta.env.VITE_APP_BASE_URL}/api/career/showAllCategories`) 
-    setCategories(res.data.categories)
-  }catch(error) {
-    console.log("Error in fetching categories", error)
-  }
-}
-
+  const showAllCategories = async () => {
+    try {
+      const res = await axios.get(
+        `${import.meta.env.VITE_APP_BASE_URL}/api/career/showAllCategories`
+      );
+      setCategories(res.data.categories);
+    } catch (error) {
+      console.log("Error in fetching categories", error);
+    }
+  };
   useEffect(() => {
-    showAllCategories()
+    showAllCategories();
   }, []);
 
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    experience: null,
+    resume: null,
+  });
 
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    if (name === "resume") {
+      setFormData((prev) => ({
+        ...prev,
+        resume: files[0],
+      }));
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      experience: null,
+      resume: null,
+    });
+    setApplyModal(false);
+  };
 
   // gallery data
   const galleryImages = [
@@ -61,9 +97,6 @@ const showAllCategories = async() => {
       prevIndex === galleryImages.length - 1 ? 0 : prevIndex + 1
     );
   };
-
- 
-
 
   return (
     <div>
@@ -431,13 +464,13 @@ const showAllCategories = async() => {
       </section>
 
       {/* Current Openings */}
-     <section className="py-12 bg-[#dedffc]">
+      <section className="py-12 bg-[#dedffc]">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-2">
             Current Openings
           </h1>
 
-         {/* Category tabs */}
+          {/* Category tabs */}
           <div className="flex justify-start mb-12">
             <div className="flex mx-auto mt-8 gap-x-8 rounded-sm overflow-hidden">
               {categories.map((category, i) => (
@@ -455,38 +488,117 @@ const showAllCategories = async() => {
               ))}
             </div>
           </div>
-          
-          {activeTab && (
-  <div>
-    {categories
-      .filter((category) => category.categoryName === activeTab) // Filter the selected category
-      .map((category) => (
-        <div key={category.categoryName} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
-          {category.careers.map((job) => (
-            <div
-              key={job.id}
-              className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200"
-            >
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2">{job.title}</h3>
-                <p className="text-gray-600 mb-1">{job.location}</p>
-                <p className="text-gray-600 mb-4">{job.experience}</p>
-                <div className="bg-gray-200 inline-block px-3 py-1 rounded-full text-sm text-gray-700 mb-6">
-                  {job.openings} OPENINGS
-                </div>
-                <button className="w-full py-2 cursor-pointer border border-gray-300 text-gray-700 font-medium rounded hover:bg-gray-100 transition-colors">
-                  Apply Now
-                </button>
-              </div>
-            </div>
-          ))}
-        </div>
-      ))}
-  </div>
-)}
 
-        </div> 
-      </section> 
+          {activeTab && (
+            <div>
+              {categories
+                .filter((category) => category.categoryName === activeTab) // Filter the selected category
+                .map((category) => (
+                  <div
+                    key={category.categoryName}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center"
+                  >
+                    {category.careers.map((job) => (
+                      <div
+                        key={job.id}
+                        className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200"
+                      >
+                        <div className="p-6">
+                          <h3 className="text-xl font-semibold mb-2">
+                            {job.title}
+                          </h3>
+                          <p className="text-gray-600 mb-1">{job.location}</p>
+                          <p className="text-gray-600 mb-4">{job.experience}</p>
+                          <div className="bg-gray-200 inline-block px-3 py-1 rounded-full text-sm text-gray-700 mb-6">
+                            {job.openings} OPENINGS
+                          </div>
+                          <button
+                            onClick={() => setApplyModal(true)}
+                            className="w-full py-2 cursor-pointer border border-gray-300 text-gray-700 font-medium rounded hover:bg-gray-100 transition-colors"
+                          >
+                            Apply Now
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+            </div>
+          )}
+        </div>
+      </section>
+      {applyModal && (
+        <div className="fixed  inset-0 z-50 bg-black/30 backdrop-blur-sm flex items-center justify-center">
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white  p-6 border rounded-xl shadow-md"
+        >
+          <h3 className="text-2xl font-semibold mb-4">Application Form</h3>
+
+          <input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Full Name"
+            className="w-full p-2 mb-4 border rounded"
+            required
+          />
+
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Email"
+            className="w-full p-2 mb-4 border rounded"
+            required
+          />
+
+          <input
+            type="tel"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            placeholder="Phone Number"
+            className="w-full p-2 mb-4 border rounded"
+          />
+           <input
+            type="number"
+            name="experience"
+            value={formData.experience}
+            onChange={handleChange}
+            placeholder="Experience in yrs(0,1...)"
+            className="w-full p-2 mb-4 border rounded"
+          />
+
+            <input
+            type="file"
+            name="resume"
+            accept=".pdf,.doc,.docx"
+            onChange={handleChange}
+            className="w-full p-2 cursor-pointer mb-4 border rounded"
+            required
+          />
+
+          <div className="flex gap-4">
+            <button
+              type="submit"
+              className="px-4 py-2 cursor-pointer bg-green-600 text-white rounded hover:bg-green-700"
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              onClick={() => setApplyModal(false)}
+              className="px-4 py-2 cursor-pointer bg-gray-300 rounded hover:bg-gray-400"
+            >
+              Cancel
+            </button>
+          </div>
+        </form>
+        </div>
+      )}
     </div>
   );
 };
