@@ -53,8 +53,15 @@ const CareersComponent = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
+    // try {
+    //   await axios.post(
+    //     `${import.meta.env.VITE_APP_BASE_URL}/api`, formData
+    //   );
+    // } catch (error) {
+    //   console.log("Error in submiting form", error);
+    // }
     // Reset form
     setFormData({
       name: "",
