@@ -54,9 +54,19 @@ const CareersComponent = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault();
+    const payload = new FormData();
+    payload.append('name', formData.name);
+    payload.append('email', formData.email);
+    payload.append('phone', formData.phone);
+    payload.append('resume', formData.resume.name);
     try {
-      await axios.post(
-        `${import.meta.env.VITE_APP_BASE_URL}/api/jobs/apply`, formData
+      const res= await axios.post(
+        `${import.meta.env.VITE_APP_BASE_URL}/api/jobs/apply`, payload,
+        {
+          headers: {
+            'Content-Type': 'multipart/form-data', 
+          },
+        },  
       );
     } catch (error) {
       console.log("Error in submiting form", error);

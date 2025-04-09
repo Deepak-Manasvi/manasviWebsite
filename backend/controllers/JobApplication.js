@@ -3,7 +3,9 @@ import JobApplication from '../models/JobApplication.js';
 export const applyJob = async (req, res) => {
   try {
     const { name, email, phone, experience, coverLetter } = req.body;
+    console.log(req.body)
     const resume = req.file?.path;
+    console.log("resume", resume)
 
     const newApp = new JobApplication({
       name,
