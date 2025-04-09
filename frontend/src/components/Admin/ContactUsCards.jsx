@@ -54,7 +54,7 @@ const ContactUsData = () => {
           Contact Us Data
         </h1>
 
-        <div className="overflow-x-auto w-full max-w-6xl">
+        <div className="overflow-x-auto w-full max-w-9xl">
           {loading ? (
             <p className="text-center text-lg font-semibold">Loading...</p>
           ) : error ? (
