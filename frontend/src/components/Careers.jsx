@@ -40,6 +40,7 @@ const CareersComponent = () => {
   const handleChange = (e) => {
     const { name, value, files } = e.target;
     if (name === "resume") {
+      console.log(files)
       setFormData((prev) => ({
         ...prev,
         resume: files[0],
@@ -58,7 +59,8 @@ const CareersComponent = () => {
     payload.append('name', formData.name);
     payload.append('email', formData.email);
     payload.append('phone', formData.phone);
-    payload.append('resume', formData.resume.name);
+    payload.append('resume', formData.resume);
+
     try {
       const res= await axios.post(
         `${import.meta.env.VITE_APP_BASE_URL}/api/jobs/apply`, payload,

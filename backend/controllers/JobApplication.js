@@ -5,7 +5,7 @@ export const applyJob = async (req, res) => {
     const { name, email, phone, experience, coverLetter } = req.body;
     console.log(req.body)
     const resume = req.file?.path;
-    console.log("resume", resume)
+    console.log("resume via vishal", resume)
 
     const newApp = new JobApplication({
       name,

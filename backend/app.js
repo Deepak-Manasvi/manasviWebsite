@@ -1,6 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import fs from 'fs';
+import path from 'path';
 import connectDatabase from './config/database.js';
 // import authRoutes from './routes/authRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
@@ -21,6 +23,12 @@ import { generatedError } from './middleware/error.js';
 
 // Load environment variables from .env file
 dotenv.config();
+
+const uploadPath = path.join('uploads');
+if (!fs.existsSync(uploadPath)) {
+  fs.mkdirSync(uploadPath);
+}
+
 
 const app = express();
 const port = process.env.PORT || 5000;
