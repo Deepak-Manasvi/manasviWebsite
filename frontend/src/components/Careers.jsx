@@ -8,6 +8,9 @@ import TeamMember4 from "../assets/image/anil.jpg";
 import TeamMember5 from "../assets/image/shruti.png";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import axios from "axios";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 const CareersComponent = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,35 +56,44 @@ const CareersComponent = () => {
     }
   };
 
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const payload = new FormData();
-    payload.append('name', formData.name);
-    payload.append('email', formData.email);
-    payload.append('phone', formData.phone);
-    payload.append('resume', formData.resume);
+    payload.append("name", formData.name);
+    payload.append("email", formData.email);
+    payload.append("phone", formData.phone);
+    payload.append("resume", formData.resume);
 
     try {
-      const res= await axios.post(
-        `${import.meta.env.VITE_APP_BASE_URL}/api/jobs/apply`, payload,
+      const res = await axios.post(
+        `${import.meta.env.VITE_APP_BASE_URL}/api/jobs/apply`,
+        payload,
         {
           headers: {
-            'Content-Type': 'multipart/form-data', 
+            "Content-Type": "multipart/form-data",
           },
-        },  
+        }
       );
+
+      // ✅ Show success toast
+      toast.success("Application submitted! Our recruiter will reach out to you soon.");
+
+      // Optionally log or inspect response
+      console.log("Application Response:", res.data);
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        experience: null,
+        resume: null,
+      });
+      setApplyModal(false);
     } catch (error) {
-      console.log("Error in submiting form", error);
+      console.log("Error in submitting form", error);
+      toast.error("Failed to submit the application. Please try again.");
     }
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      experience: null,
-      resume: null,
-    });
-    setApplyModal(false);
   };
 
   // gallery data
@@ -96,12 +108,12 @@ const CareersComponent = () => {
   const openLightbox = (index) => {
     setCurrentImageIndex(index);
     setIsOpen(true);
-    document.body.style.overflow = "hidden"; // Prevent scrolling while lightbox is open
+    document.body.style.overflow = "hidden";
   };
 
   const closeLightbox = () => {
     setIsOpen(false);
-    document.body.style.overflow = "auto"; // Restore scrolling
+    document.body.style.overflow = "auto";
   };
 
   const goToPrevious = () => {
@@ -118,6 +130,7 @@ const CareersComponent = () => {
 
   return (
     <div>
+      <ToastContainer position="top-right" autoClose={3000} />
       <div
         className="h-[40vh] p-4 flex justify-center items-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
@@ -482,7 +495,7 @@ const CareersComponent = () => {
       </section>
 
       {/* Current Openings */}
-      <section className="py-12 bg-[#dedffc]">
+      <div className="py-12 bg-[#dedffc]">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl font-bold text-center text-gray-800 mb-2">
             Current Openings
@@ -494,11 +507,10 @@ const CareersComponent = () => {
               {categories.map((category, i) => (
                 <button
                   key={i}
-                  className={`px-8 py-3 cursor-pointer font-medium gap-2 border border-solid-black  hover:bg-gray-200 ${
-                    activeTab === category.categoryName
-                      ? "bg-gray-800 text-white"
-                      : "bg-white text-gray-700"
-                  }`}
+                  className={`px-8 py-3 cursor-pointer font-medium gap-2 border border-solid-black  hover:bg-gray-200 ${activeTab === category.categoryName
+                    ? "bg-gray-800 text-white"
+                    : "bg-white text-gray-700"
+                    }`}
                   onClick={() => setActiveTab(category.categoryName)}
                 >
                   {category.categoryName}
@@ -510,7 +522,7 @@ const CareersComponent = () => {
           {activeTab && (
             <div>
               {categories
-                .filter((category) => category.categoryName === activeTab) // Filter the selected category
+                .filter((category) => category.categoryName === activeTab)
                 .map((category) => (
                   <div
                     key={category.categoryName}
@@ -544,79 +556,82 @@ const CareersComponent = () => {
             </div>
           )}
         </div>
-      </section>
+      </div>
+
       {applyModal && (
-        <div className="fixed  inset-0 z-50 bg-black/30 backdrop-blur-sm flex items-center justify-center">
-        <form
-          onSubmit={handleSubmit}
-          className="bg-white  p-6 border rounded-xl shadow-md"
-        >
-          <h3 className="text-2xl font-semibold mb-4">Application Form</h3>
+        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4">
+          <form
+            onSubmit={handleSubmit}
+            className="bg-white w-full max-w-lg p-8 rounded-2xl shadow-2xl border border-gray-200 animate-fade-in"
+          >
+            <h3 className="text-3xl font-bold text-center text-gray-800 mb-6">
+              Join Our Team
+            </h3>
 
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Full Name"
-            className="w-full p-2 mb-4 border rounded"
-            required
-          />
+            <div className="space-y-4">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Full Name"
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email Address"
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone Number"
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+              <input
+                type="number"
+                name="experience"
+                value={formData.experience}
+                onChange={handleChange}
+                placeholder="Experience (in years)"
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+              />
+              <input
+                type="file"
+                name="resume"
+                accept=".pdf,.doc,.docx"
+                onChange={handleChange}
+                className="w-full px-4 py-3 border rounded-lg cursor-pointer bg-gray-50"
+                required
+              />
+            </div>
 
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Email"
-            className="w-full p-2 mb-4 border rounded"
-            required
-          />
-
-          <input
-            type="tel"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            placeholder="Phone Number"
-            className="w-full p-2 mb-4 border rounded"
-          />
-           <input
-            type="number"
-            name="experience"
-            value={formData.experience}
-            onChange={handleChange}
-            placeholder="Experience in yrs(0,1...)"
-            className="w-full p-2 mb-4 border rounded"
-          />
-
-            <input
-            type="file"
-            name="resume"
-            accept=".pdf,.doc,.docx"
-            onChange={handleChange}
-            className="w-full p-2 cursor-pointer mb-4 border rounded"
-            required
-          />
-
-          <div className="flex gap-4">
-            <button
-              type="submit"
-              className="px-4 py-2 cursor-pointer bg-green-600 text-white rounded hover:bg-green-700"
-            >
-              Submit
-            </button>
-            <button
-              type="button"
-              onClick={() => setApplyModal(false)}
-              className="px-4 py-2 cursor-pointer bg-gray-300 rounded hover:bg-gray-400"
-            >
-              Cancel
-            </button>
-          </div>
-        </form>
+            <div className="mt-6 flex justify-between">
+              <button
+                type="submit"
+                className="w-1/2 mr-2 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 transition-all"
+              >
+                Submit
+              </button>
+              <button
+                type="button"
+                onClick={() => setApplyModal(false)}
+                className="w-1/2 ml-2 py-3 bg-gray-200 text-gray-800 font-medium rounded-lg hover:bg-gray-300 transition-all"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
         </div>
       )}
+
     </div>
   );
 };
