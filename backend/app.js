@@ -67,7 +67,7 @@ app.use('/api/portfolio', portfolioRoutes);
 app.use('/api/contacts', contactRoutes);
 app.use('/api/services', serviceRoutes); // Use service routes here
 app.use('/api/career', careerRoutes);
-app.use('/api', subscriberRoutes);
+app.use('/api/subscriber', subscriberRoutes);
 
 // Error handling
 app.all('*', (req, res, next) => {
