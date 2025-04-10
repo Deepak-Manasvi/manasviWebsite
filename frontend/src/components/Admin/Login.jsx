@@ -28,7 +28,7 @@ const Login = () => {
       if (loginMethod === "password") {
         payload = { email, password };
 
-        const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}/api/admins/login`, payload);
+        const response = await axios.post(`${import.meta.env.VITE_APP_BASE_URL}/api/admins/login`, payload, { cache: "no-store" });
         console.log("Login Response:", response);
         setSuccess('Login successful');
         const { token, role } = response.data;

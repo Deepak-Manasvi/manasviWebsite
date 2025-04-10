@@ -35,7 +35,10 @@ export const getAllTeamMembers = async (req, res) => {
     // Fetch all team members
     const teamMembers = await Team.find();
 
-    return res.status(200).json(teamMembers);
+    return res.status(200).json({
+      success:true,
+      teamMember: teamMembers
+  });
   } catch (error) {
     console.error(error);
     return res.status(500).json({ message: 'Server error', error: error.message });
@@ -91,7 +94,7 @@ export const deleteTeamMember = async (req, res) => {
     return res.status(200).json({
       message: 'Team member deleted successfully.',
       success: true,
-      teamMember: teamMember,
+      teamMember,
     });
   } catch (error) {
     console.error(error);
