@@ -1,5 +1,5 @@
 import React from "react";
-import Blog3 from "../assets/image/ProductThree.jpeg";
+import Blog3 from "../assets/image/productThree.jpeg";
 
 const ECommerceWebsiteBlog = () => {
   return (

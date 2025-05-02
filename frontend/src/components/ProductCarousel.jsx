@@ -5,9 +5,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { useNavigate } from "react-router-dom";
-import Blog1 from "../assets/image/ProductTwo.jpeg";
-import Blog2 from "../assets/image/ProductOne.jpeg";
-import Blog3 from "../assets/image/ProductThree.jpeg";
+import Blog1 from "../assets/image/productTwo.jpeg";
+import Blog2 from "../assets/image/productOne.jpeg";
+import Blog3 from "../assets/image/productThree.jpeg";
 
 const ProductCarousel = () => {
   const [products, setProducts] = useState([]);

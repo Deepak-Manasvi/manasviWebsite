@@ -13,7 +13,7 @@ import TeamMember1 from "../assets/image/shailja.png";
 import TeamMember2 from "../assets/image/vishal.png";
 import TeamMember3 from "../assets/image/shraddha.png";
 import TeamMember4 from "../assets/image/anil.jpg";
-import TeamMember5 from "../assets/image/shruti.png";
+import TeamMember5 from "../assets/image/Shruti.png";
 
 // const experts = [
 //   { name: "Natalie Carter", role: "Developer", image: TeamMember1 },

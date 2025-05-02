@@ -1,5 +1,5 @@
 import React from "react";
-import Blog1 from "../assets/image/ProductTwo.jpeg";
+import Blog1 from "../assets/image/productTwo.jpeg";
 
 const TiffinManagementBlog = () => {
   return (
