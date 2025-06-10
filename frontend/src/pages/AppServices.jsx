@@ -103,7 +103,7 @@ const AppServices = () => {
               Transform Your Ideas into Powerful Mobile Apps
             </h1>
             <h2 className="text-lg text-gray-700">
-              At Manasvi Technology, we craft high-performance Android, iOS, and cross-platform apps that are user-friendly, scalable, and feature-rich. Whether you need a business app, e-commerce solution, or custom mobile application, we turn your vision into reality.
+              At Mansharp Technology, we craft high-performance Android, iOS, and cross-platform apps that are user-friendly, scalable, and feature-rich. Whether you need a business app, e-commerce solution, or custom mobile application, we turn your vision into reality.
             </h2>
             <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
               Request a demo
@@ -175,13 +175,13 @@ const AppServices = () => {
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
-                💡 Why Choose Manasvi Technology?
+                💡 Why Choose Mansharp Technology?
               </h1>
               <ul className="mt-10 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we deliver innovative, user-friendly app development solutions using the latest technologies to ensure robust performance and engaging design.</p>
+                    At Mansharp Technology, we deliver innovative, user-friendly app development solutions using the latest technologies to ensure robust performance and engaging design.</p>
                 </li>
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
@@ -203,7 +203,7 @@ const AppServices = () => {
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we transform your ideas into engaging mobile apps through a streamlined process—from consultation and design to development, testing, and launch—ensuring high performance and timely delivery.
+                    At Mansharp Technology, we transform your ideas into engaging mobile apps through a streamlined process—from consultation and design to development, testing, and launch—ensuring high performance and timely delivery.
                   </p>
                 </li>
               </ul>

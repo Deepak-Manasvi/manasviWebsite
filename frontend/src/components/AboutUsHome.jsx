@@ -60,12 +60,12 @@ const AboutUsPage = () => {
               <p className="mb-4">
                 Welcome to the heart of innovation, where every line of code we
                 write is a step towards transforming dreams into digital
-                realities. At Manasvi Technologies (OPC) Pvt. Ltd, we don't just
+                realities. At Mansharp Technologies Pvt. Ltd, we don't just
                 craft websites, applications, and software, we sculpt
                 experiences that resonate.
               </p>
               <p className="mb-4">
-                Welcome to Manasvi Technologies (OPC) Pvt. Ltd, where the
+                Welcome to Mansharp Technologies Pvt. Ltd, where the
                 journey of transformation begins. Our journey began with a
                 simple mission: to bridge the gap between technology and human
                 connection. From the moment you step into our digital world, you

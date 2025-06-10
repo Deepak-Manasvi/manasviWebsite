@@ -100,7 +100,7 @@ const DigitalServices = () => {
               Boost Your Brand with Our Expert Digital Marketing Services 🚀
             </h1>
             <h2 className="text-lg text-gray-700">
-              At Manasvi Technology, we specialize in data-driven digital marketing strategies that help businesses boost their online presence, brand awareness, and conversions. Whether you're a startup or an established business, our customized marketing solutions ensure that you reach the right audience and maximize your ROI.
+              At Mansharp Technology, we specialize in data-driven digital marketing strategies that help businesses boost their online presence, brand awareness, and conversions. Whether you're a startup or an established business, our customized marketing solutions ensure that you reach the right audience and maximize your ROI.
             </h2>
             <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
               Request a demo
@@ -176,14 +176,14 @@ const DigitalServices = () => {
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-4xl font-bold text-gray-800">
-                Why Choose Manasvi Technology for Digital Marketing? 🚀
+                Why Choose Mansharp Technology for Digital Marketing? 🚀
 
               </h1>
               <ul className="mt-10 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we craft smart digital strategies to boost your brand’s online presence and drive real growth. Our expert team uses SEO, social media, PPC, and content marketing to attract the right audience and increase conversions.
+                    At Mansharp Technology, we craft smart digital strategies to boost your brand’s online presence and drive real growth. Our expert team uses SEO, social media, PPC, and content marketing to attract the right audience and increase conversions.
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
@@ -206,7 +206,7 @@ const DigitalServices = () => {
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we craft tailored digital marketing strategies that align with your business goals. From in-depth research and planning to execution and continuous optimization, we ensure every campaign drives measurable results. With a data-driven approach, we help your brand grow and stay ahead in the digital world. 🚀
+                    At Mansharp Technology, we craft tailored digital marketing strategies that align with your business goals. From in-depth research and planning to execution and continuous optimization, we ensure every campaign drives measurable results. With a data-driven approach, we help your brand grow and stay ahead in the digital world. 🚀
                   </p>
                 </li>
               </ul>
@@ -235,7 +235,7 @@ const DigitalServices = () => {
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we leverage cutting-edge strategies like automation, data-driven insights, and emerging social media trends to help brands grow. Our expert team ensures your business stays ahead in the ever-changing digital landscape. 📈
+                    At Mansharp Technology, we leverage cutting-edge strategies like automation, data-driven insights, and emerging social media trends to help brands grow. Our expert team ensures your business stays ahead in the ever-changing digital landscape. 📈
                   </p>
                 </li>
               </ul>
@@ -252,7 +252,7 @@ const DigitalServices = () => {
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we analyze your website, SEO, and marketing performance to identify growth opportunities. Get expert insights and actionable strategies to improve your online presence—completely free! 💡
+                    At Mansharp Technology, we analyze your website, SEO, and marketing performance to identify growth opportunities. Get expert insights and actionable strategies to improve your online presence—completely free! 💡
                   </p>
                 </li>
               </ul>

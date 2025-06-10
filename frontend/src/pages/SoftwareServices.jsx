@@ -106,7 +106,7 @@ const SoftwareServices = () => {
               Transform Your Business with Innovative Software Development Solutions
             </h1>
             <h2 className="text-lg text-gray-700">
-              At Manasvi Technology, we create robust and scalable software solutions tailored to your business needs. Our experienced team leverages cutting-edge technology and agile methodologies to deliver custom applications that drive efficiency and growth.
+              At Mansharp Technology, we create robust and scalable software solutions tailored to your business needs. Our experienced team leverages cutting-edge technology and agile methodologies to deliver custom applications that drive efficiency and growth.
             </h2>
             <button className="bg-blue-600 text-white px-8 py-3 hover:bg-blue-700 transition">
               Request a demo
@@ -184,7 +184,7 @@ const SoftwareServices = () => {
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    At Manasvi Technology, our skilled team excels in delivering custom software solutions, SaaS applications, and seamless integrations that drive operational efficiency and business growth.
+                    At Mansharp Technology, our skilled team excels in delivering custom software solutions, SaaS applications, and seamless integrations that drive operational efficiency and business growth.
                   </p>
                 </li>
               </ul>
@@ -195,13 +195,13 @@ const SoftwareServices = () => {
           <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-6 lg:px-20 mt-20">
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-3xl md:text-5xl font-bold text-gray-800">
-                Why Partner with Manasvi Technology?
+                Why Partner with Mansharp Technology?
               </h1>
               <ul className="mt-4 space-y-3">
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we combine innovative approaches with technical expertise to deliver custom software solutions that help your business thrive.
+                    At Mansharp Technology, we combine innovative approaches with technical expertise to deliver custom software solutions that help your business thrive.
                   </p>
                 </li>
                 <li className="flex items-start gap-4">
@@ -259,7 +259,7 @@ const SoftwareServices = () => {
                 <li className="flex items-start gap-4">
                   <img className="h-6 w-6 mt-1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxNCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik05LjM5NiAwSDIuNzc1TDAgOS4wMjNoNC40M0wzLjUyIDE4bDkuNjc3LTEzLjE1aC01LjQxTDkuMzk4IDB6bTEuMDI2IDYuMjQ5LTQuOTkgNi44MDguNTYtNS40MUgxLjg5TDMuOCAxLjRoMy42NmwtMS42MDkgNC44NWg0LjU3eiIgZmlsbD0iIzY2NkFGNiIvPgo8L3N2Zz4K" alt="dot" />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we harness the latest tools and frameworks to build innovative, secure, and scalable software solutions. Our team stays ahead of industry trends to ensure your applications are future-ready.
+                    At Mansharp Technology, we harness the latest tools and frameworks to build innovative, secure, and scalable software solutions. Our team stays ahead of industry trends to ensure your applications are future-ready.
                   </p>
                 </li>
                 <li className="flex items-start gap-4">

@@ -17,13 +17,13 @@ const Footer = () => {
   const policyContent = {
     "🚀 Subscription Successful!":"🎉 Thank you for subscribing! You have successfully subscribed to our service for four users. Our sales team will reach out to you shortly with the next steps.",
     "Terms & Conditions": `
-      Welcome to Manasvi Tech. By using our website, you agree to our terms and conditions.
+      Welcome to Mansharp Tech. By using our website, you agree to our terms and conditions.
       - You must not misuse our services.
       - We own the intellectual property rights of our content.
       - Any violation may result in legal action.
     `,
     "Privacy Policy": `
-      At Manasvi Tech, we are committed to protecting your privacy.
+      At Mansharp Tech, we are committed to protecting your privacy.
       - We collect necessary information for improving our services.
       - We do not share your data with third parties without consent.
       - You have the right to request data deletion.
@@ -118,7 +118,7 @@ const Footer = () => {
           </div>
 
           <div>
-  <h2 className="text-lg md:text-xl font-semibold">Subscribe to Manasvi Tech</h2>
+  <h2 className="text-lg md:text-xl font-semibold">Subscribe to Mansharp Tech</h2>
   <form  onSubmit={handleSubmit} className="mt-4">
     <div className="flex flex-col md:flex-row items-center">
       <input
@@ -131,7 +131,7 @@ const Footer = () => {
       </button>
     </div>
     <p className="mt-4 text-sm md:text-base text-white-600">
-      Stay updated with the latest trends in app development, web solutions, and digital marketing from Manasvi Tech.
+      Stay updated with the latest trends in app development, web solutions, and digital marketing from Mansharp Tech.
     </p>
   </form>
 </div>
@@ -142,7 +142,7 @@ const Footer = () => {
           <div className="flex justify-center md:justify-start">
             <img src={mlogo} className="h-6 md:h-12" alt="Company Logo" />
           </div>
-          <p>&copy; {new Date().getFullYear()} Manasvi Tech</p>
+          <p>&copy; {new Date().getFullYear()} Mansharp Tech</p>
       <div className="mt-2 space-x-4">
         <button className="text-gray-400 hover:text-white" onClick={() => setPopup("Terms & Conditions")}>
           Terms & Conditions

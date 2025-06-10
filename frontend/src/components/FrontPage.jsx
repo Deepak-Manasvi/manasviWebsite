@@ -23,8 +23,8 @@ const FrontPage = () => {
       {/* Content Overlay */}
       <div className="bg-gradient-to-r from-[#070006] via-[#210136]  to-[#140149]">
         {/* <Header/> */}
-        {/* <img src={mlogo} alt="Manasvi Technologies Logo" className="w-40 md:w-60" /> */}
-        {/* <h1 className="text-center mt-4 md:text-5xl">Welcome to Manasvi Technologies</h1> */}
+        {/* <img src={mlogo} alt="Mansharp Technologies Logo" className="w-40 md:w-60" /> */}
+        {/* <h1 className="text-center mt-4 md:text-5xl">Welcome to Mansharp Technologies</h1> */}
       </div>
     </div>
   );

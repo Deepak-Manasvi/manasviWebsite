@@ -137,7 +137,7 @@ const Signup = () => {
             <FaShieldAlt size={18} />
             <p className="text-xs sm:text-sm font-light">We ensure the privacy of your data at all times.</p>
           </div>
-          <p className="text-xs sm:text-sm text-gray-500 mt-2">&copy; Manasvi Technology 2025 | All rights reserved</p>
+          <p className="text-xs sm:text-sm text-gray-500 mt-2">&copy; Mansharp Technology 2025 | All rights reserved</p>
         </div>
       </div>
     </div>

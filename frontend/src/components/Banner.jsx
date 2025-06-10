@@ -9,7 +9,7 @@ const Banner = () => {
         <div className="grid sm:grid-cols-2 items-center max-sm:gap-10 py-10 border-y-8 border-[#0d2666]">
           <div className="text-center px-6">
             <h3 className="font-extrabold text-5xl text-orange-500 leading-tight">
-              <span className="text-gray-800">Manasvi</span> Technologies
+              <span className="text-gray-800">Mansharp</span> Technologies
             </h3>
             <h6 className="text-2xl text-gray-800 mt-2">Limited Time Deal</h6>
             <p className="text-gray-800 text-base leading-relaxed mt-4">

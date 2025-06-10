@@ -122,13 +122,13 @@ const WebServices = () => {
           {/* Text Section */}
           <div className="md:w-1/2 text-left space-y-4 ml-10 mt-10">
             <h3 className="text-xl font-semibold text-[#a6adb9]">
-              Web Development Services | Manasvi Technology
+              Web Development Services | Mansharp Technology
             </h3>
             <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
-              Build, Innovate, and Scale with Manasvi Technology
+              Build, Innovate, and Scale with Mansharp Technology
             </h1>
             <h2 className="text-lg text-gray-700">
-              At Manasvi Technology, we specialize in crafting high-performance,
+              At Mansharp Technology, we specialize in crafting high-performance,
               scalable, and visually stunning websites that help businesses
               thrive in the digital world. Whether you're a startup, an
               enterprise, or an individual, our expert team delivers tailored
@@ -213,7 +213,7 @@ const WebServices = () => {
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
               <h1 className="text-2xl md:text-5xl font-bold text-gray-800">
-                Why Choose Manasvi Technology?
+                Why Choose Mansharp Technology?
               </h1>
               <ul className="mt-7 space-y-2">
                 <li className="flex items-start gap-4">
@@ -223,7 +223,7 @@ const WebServices = () => {
                     alt="dot"
                   />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we combine innovation, expertise, and
+                    At Mansharp Technology, we combine innovation, expertise, and
                     modern technology to deliver high-quality web solutions. Our
                     team focuses on performance, security, and user experience
                     to create websites that drive business growth.
@@ -272,7 +272,7 @@ const WebServices = () => {
                     alt="dot"
                   />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we follow a streamlined process from
+                    At Mansharp Technology, we follow a streamlined process from
                     planning and prototyping to development, testing, and
                     deployment. We ensure your website is fast, secure, and
                     scalable, delivering a seamless user experience. After
@@ -308,7 +308,7 @@ const WebServices = () => {
                     alt="dot"
                   />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we cater to a wide range of
+                    At Mansharp Technology, we cater to a wide range of
                     industries, providing custom web solutions tailored to
                     specific business needs. From corporate websites and
                     e-commerce platforms to real estate portals and healthcare
@@ -349,7 +349,7 @@ const WebServices = () => {
                     alt="dot"
                   />
                   <p className="text-gray-700">
-                    At Manasvi Technology, we utilize the latest technologies to
+                    At Mansharp Technology, we utilize the latest technologies to
                     build fast, secure, and scalable web solutions.
                   </p>
                 </li>

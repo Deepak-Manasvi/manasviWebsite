@@ -58,7 +58,7 @@ const Header = () => {
       >
         <div className="container mx-auto flex justify-between items-center filter drop-shadow-lg">
           <div>
-            <img src={mlogo} alt="Manasvi Logo" className="h-6 md:h-10" />
+            <img src={mlogo} alt="Mansharp Logo" className="h-6 md:h-10" />
           </div>
           <div className="hidden md:flex space-x-6">
             <NavLink

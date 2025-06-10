@@ -43,7 +43,7 @@ const AboutUsPage = () => {
               <div className="lg:w-[50%] space-y-3">
                 <p className="text-3xl font-bold">Mission</p>
                 <p className="text-lg break-words lg:w-[95%] tracking-wider">
-                  "At Manasvi Technologies (OPC) Pvt. Ltd., our mission is to
+                  "At Mansharp Technologies Pvt. Ltd., our mission is to
                   leverage cutting-edge technology and innovative solutions to
                   simplify business operations and drive growth. We aim to
                   empower organizations with smarter, more efficient tools that
@@ -66,9 +66,9 @@ const AboutUsPage = () => {
                   "To become a globally recognized leader in technology
                   solutions, enabling businesses of all sizes to navigate the
                   complexities of the digital world with ease. We envision a
-                  future where Manasvi Technologies empowers enterprises through
-                  transformative, agile, and scalable technology that drives
-                  efficiency, sustainability, and long-term success."
+                  future where Mansharp Technologies empowers enterprises
+                  through transformative, agile, and scalable technology that
+                  drives efficiency, sustainability, and long-term success."
                 </p>
               </div>
 
@@ -99,8 +99,8 @@ const AboutUsPage = () => {
                       Founded in <span className="font-medium">2023</span>
                     </h3>
                     <p className="text-gray-600 break-word">
-                      In 2023, Manasvi Technologies (OPC) Pvt. Ltd. was founded
-                      with a single vision: to revolutionize the way businesses
+                      In 2023, Mansharp Technologies Pvt. Ltd. was founded with
+                      a single vision: to revolutionize the way businesses
                       approach technology and operations. The company was born
                       out of a deep understanding of the challenges faced by
                       businesses in today’s rapidly evolving technological
@@ -131,7 +131,7 @@ const AboutUsPage = () => {
                       What began as a modest initiative has now evolved into a
                       company on a path to global recognition, driven by a
                       steadfast dedication to creating value through technology.
-                      The name Manasvi—meaning "intelligent" or "wise"—was
+                      The name Mansharp—meaning "intelligent" or "wise"—was
                       chosen to reflect the company’s core philosophy of
                       intelligent solutions that simplify complex problems.
                     </p>
@@ -144,14 +144,14 @@ const AboutUsPage = () => {
                 <div className="w-1/2 p-6">
                   <div className="bg-white shadow-lg rounded-lg p-6">
                     <h3 className="font-bold text-3xl mb-4">
-                      Deep Dive into Manasvi Technologies{" "}
+                      Deep Dive into Mansharp Technologies{" "}
                     </h3>
                     <p className="text-gray-600 break-words">
-                      Manasvi Technologies (OPC) Pvt. Ltd. is an Information
+                      Mansharp Technologies Pvt. Ltd. is an Information
                       Technology company based in Indore, Madhya Pradesh, India.
                       Established on January 6, 2023, it operates as a One
-                      Person Company (OPC) under the leadership of Director
-                      Arpit Jain.
+                      Person Company under the leadership of its Director, Arpit
+                      Jain.
                     </p>
                   </div>
                 </div>
@@ -172,16 +172,16 @@ const AboutUsPage = () => {
                 <div className="w-1/2 p-6">
                   <div className="bg-white shadow-lg rounded-lg p-6">
                     <h3 className="font-bold text-3xl mb-4">
-                      Manasvi Technologies to a Full-Fledged SAAS Product
+                      Mansharp Technologies to a Full-Fledged SAAS Product
                     </h3>
                     <p className="text-gray-600 break-words">
-                      Transforming Manasvi Technologies into a SaaS provider
+                      Transforming Mansharp Technologies into a SaaS provider
                       would leverage its existing skills in web development,
                       digital marketing, and UI/UX design, and provide a
                       scalable, subscription-based business model. By developing
                       a targeted product that solves customer problems,
                       integrating automated solutions, and scaling effectively,
-                      Manasvi could position itself as a key player in the SaaS
+                      Mansharp could position itself as a key player in the SaaS
                       market.
                     </p>
                   </div>
@@ -193,7 +193,7 @@ const AboutUsPage = () => {
                 <div className="w-1/2 p-6">
                   <div className="bg-white  shadow-lg rounded-lg p-6">
                     <h3 className="font-bold text-3xl mb-4">
-                      Scaled Manasavi Technologies to 400+ active users,{" "}
+                      Scaled Mansharp Technologies to 400+ active users,{" "}
                       <span className="font-medium">2024</span>
                     </h3>
 
@@ -248,6 +248,51 @@ const AboutUsPage = () => {
                       goal is probably to offer solutions that are not only
                       efficient but also transformative, positioning themselves
                       as leaders in innovation for the future.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              {/* AI Story*/}
+              {/* Timeline Item 5 */}
+              <div className="flex items-center w-full">
+                <div className="w-1/2 p-6">
+                  <div className="bg-white  shadow-lg rounded-lg p-6">
+                    <h3 className="font-bold text-3xl mb-4">
+                      Mansharp Technologies: Built on AI, Driven by Innovation
+                    </h3>
+                    <p className="text-gray-600 break-words">
+                      At Mansharp, AI isn't just a feature — it's our
+                      foundation. We build intelligent solutions that automate
+                      tasks, generate insights, and drive smarter decisions.
+                      From AI chatbots to predictive systems, our tools are
+                      designed to think, learn, and scale with your business.
+                    </p>
+                  </div>
+                </div>
+                {/* Dot */}
+                <div className="w-10 flex justify-center z-10">
+                  <div className="h-6 w-6 bg-blue-500 rounded-full border-4 border-white"></div>
+                </div>
+                <div className="w-1/2"></div>
+              </div>
+              {/* Fintech */}
+              {/* Timeline Item 6 */}
+              <div className="flex items-center w-full">
+                <div className="w-1/2"></div>
+                {/* Dot */}
+                <div className="w-10 flex justify-center z-10">
+                  <div className="h-6 w-6 ml-1 bg-blue-500 rounded-full border-4 border-white"></div>
+                </div>
+                <div className="w-1/2 p-6">
+                  <div className="bg-white shadow-lg rounded-lg p-6">
+                    <h3 className="font-bold text-3xl mb-4">
+                      Mansharp Technologies: AI-Driven FinTech Solutions
+                    </h3>
+                    <p className="text-gray-600 break-words">
+                      At Mansharp Technologies, we’re redefining finance with
+                      AI. From fraud detection to smart insights, our adaptive,
+                      scalable systems power faster, safer, and more intelligent
+                      FinTech experiences.
                     </p>
                   </div>
                 </div>
