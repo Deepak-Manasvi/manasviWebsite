@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import backgroundImage from "../assets/Images/Footer.jpg";
 import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
 import mlogo from "../assets/Images/manasvilogo.png";
+import Mansharp_Technologies_Logo_Blue from "../assets/Mansharp_Technologies_Logo_Blue.png";
+
 import { Link } from "react-router-dom";
 import { IoLogoFacebook, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io5";
 import PolicyPopup from "../components/PolicyPopup.jsx";
@@ -140,7 +142,7 @@ const Footer = () => {
 
         <div className="mt-8 flex flex-col md:flex-row items-center justify-between border-t border-gray-700 pt-4 text-center text-sm text-white md:text-base space-y-4 md:space-y-0">
           <div className="flex justify-center md:justify-start">
-            <img src={mlogo} className="h-6 md:h-12" alt="Company Logo" />
+            <img src={Mansharp_Technologies_Logo_Blue} className="h-8 md:h-20" alt="Company Logo" />
           </div>
           <p>&copy; {new Date().getFullYear()} Mansharp Tech</p>
       <div className="mt-2 space-x-4">

@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import mlogo from "../assets/Images/manasvilogo.png";
+import Mansharp_Technologies_Logo_Blue from "../assets/Mansharp_Technologies_Logo_Blue.png";
 import { FaAngleDown } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Reviews } from "./Reviews";
@@ -73,6 +74,30 @@ const Header = () => {
     setIsLoggedIn(!!token);
   }, [role, token]);
 
+  // 1️⃣ New State
+  const [isProductBarVisible, setProductBarVisible] = useState(false);
+  const productDropdownRef = useRef(null);
+
+  // 2️⃣ Close on outside click
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        productDropdownRef.current &&
+        !productDropdownRef.current.contains(event.target)
+      ) {
+        setProductBarVisible(false);
+      }
+    };
+
+    if (isProductBarVisible) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isProductBarVisible]);
+
   return (
     <div>
       <nav
@@ -81,9 +106,9 @@ const Header = () => {
         <div className="container mx-auto md:mx-0 flex justify-between items-center ">
           <div>
             <img
-              src={mlogo}
+              src={Mansharp_Technologies_Logo_Blue}
               alt="Manasvi Logo"
-              className="h-6 md:h-10 cursor-pointer md:mr-2  md:max-w-[250px] "
+              className="h-8 md:h-15 cursor-pointer md:mr-2  md:max-w-[250px] "
               onClick={() => navigate("/")}
             />
           </div>
@@ -171,15 +196,65 @@ const Header = () => {
                 </div>
               )}
             </NavLink>
+
+            {/* Products Dropdown */}
+
             <NavLink
-              to="/products"
-              className={({ isActive }) =>
-                isActive ? "text-black font-bold underline" : "text-black"
-              }
-              onClick={closeServiceBar}
+              ref={productDropdownRef}
+              className={`relative group cursor-pointer`}
             >
-              Products
+              <NavLink
+                to="#"
+                onClick={() => setProductBarVisible(!isProductBarVisible)}
+                className={({ isActive }) =>
+                  window.location.pathname.startsWith("/products")
+                    ? "text-black font-bold underline"
+                    : "text-black"
+                }
+              >
+                Products
+                <FaAngleDown className="inline-block ml-1" />
+              </NavLink>
+
+              {isProductBarVisible && (
+                <div className="absolute -left-20 text-center leading-none mt-2 w-56 bg-white text-black rounded-lg shadow-lg transition-opacity duration-300">
+                  <NavLink
+                    to="/products/erp"
+                    onClick={() => setProductBarVisible(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block px-4 py-2 font-bold underline"
+                        : "block px-4 py-2"
+                    }
+                  >
+                    ERP Solutions
+                  </NavLink>
+                  <NavLink
+                    to="/products/ai"
+                    onClick={() => setProductBarVisible(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block px-4 py-2 font-bold underline"
+                        : "block px-4 py-2"
+                    }
+                  >
+                    AI Solutions
+                  </NavLink>
+                  <NavLink
+                    to="/products/fintech"
+                    onClick={() => setProductBarVisible(false)}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "block px-4 py-2 font-bold underline"
+                        : "block px-4 py-2"
+                    }
+                  >
+                    Fintech Solutions
+                  </NavLink>
+                </div>
+              )}
             </NavLink>
+
             <NavLink
               // to="https://manasviportfolio.online/"
               to="/portfolio"

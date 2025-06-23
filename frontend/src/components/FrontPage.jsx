@@ -1,7 +1,7 @@
 import React from "react";
 
- import bgvideo from "../assets/Services.mp4";
-
+//  import bgvideo from "../assets/Services.mp4";
+import bgVideoMansharp from "../assets/Mansharp_Technologies_video.mp4";
 
 const FrontPage = () => {
   return (
@@ -11,12 +11,12 @@ const FrontPage = () => {
         autoPlay
         loop
         muted
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-center"
         style={{
           zIndex: -1,
         }}
       >
-        <source src={bgvideo} type="video/mp4" />
+        <source src={bgVideoMansharp} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
