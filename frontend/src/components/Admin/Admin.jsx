@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logout from "./Logout";
 import mlogo from "../../assets/Images/manasvilogo.png";
+import Mansharp_Technologies_Logo_Blue from "../../assets/Mansharp_Technologies_Logo_Blue.png";
+
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Admin = ({ children }) => {
@@ -43,7 +45,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       }`}
     >
       <div className="flex items-center justify-between pl-0 bg-white p-4">
-        {isOpen && <img src={mlogo} alt="Logo" className="rounded-full " />}
+        {isOpen && <img src={Mansharp_Technologies_Logo_Blue} alt="Logo" className="rounded-full " />}
         {/* <button onClick={toggleSidebar} className="text-white focus:outline-none">
           {isOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
         </button> */}
@@ -135,7 +137,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 const Header = ({ toggleSidebar }) => {
   return (
     <div className="flex justify-between items-center bg-white p-4">
-      <img src={mlogo} className="h-10" alt="" />
+      <img src={Mansharp_Technologies_Logo_Blue} className="h-10" alt="" />
       <h2 className="hidden md:block text-3xl font-bold font-poppins text-gray-800  bg-clip-text ">
         Admin Dashboard
       </h2>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import logo from '../../assets/Images/manasvilogo.png';
+import Mansharp_Technologies_Logo_Blue from "../../assets/Mansharp_Technologies_Logo_Blue.png";
+
 import backgroundImage from "../../assets/Images/Footer.jpg";
 import { useNavigate } from 'react-router-dom';
 import { FaUser, FaLock, FaEnvelope, FaShieldAlt } from "react-icons/fa";
@@ -53,7 +55,7 @@ const Signup = () => {
     <div className="min-h-screen flex items-center justify-center bg-cover bg-center px-4 mt-10" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="bg-white shadow-xl rounded-lg p-8 w-full max-w-md space-y-6">
         <div className="flex justify-center">
-          <img src={logo} alt="Manasvi Tech Logo" className="w-40 sm:w-48" />
+          <img src={Mansharp_Technologies_Logo_Blue} alt="Manasvi Tech Logo" className="w-40 sm:w-48" />
         </div>
 
         <h2 className="text-xl sm:text-2xl font-bold text-gray-700 flex items-center mt-3 sm:mt-5">Join Us 🚀</h2>

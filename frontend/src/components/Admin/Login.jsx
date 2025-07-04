@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import logo from '../../assets/Images/manasvilogo.png';
+import Mansharp_Technologies_Logo_Blue from "../../assets/Mansharp_Technologies_Logo_Blue.png";
 import backgroundImage from "../../assets/Images/Footer.jpg";
 import { useNavigate } from 'react-router-dom';
 import { FaUser, FaLock, FaShieldAlt } from "react-icons/fa";
@@ -101,7 +102,7 @@ const Login = () => {
 
         <div>
           <div className="flex justify-center">
-            <img src={logo} alt="Mansavi Tech Logo" className="w-40 sm:w-48" />
+            <img src={Mansharp_Technologies_Logo_Blue} alt="Mansavi Tech Logo" className="w-40 sm:w-48" />
           </div>
 
           <h2 className="text-xl sm:text-2xl font-bold text-gray-700 flex items-center mt-3 sm:mt-5 gap-">

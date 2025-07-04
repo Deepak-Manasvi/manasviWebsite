@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import logo from '../../assets/Images/manasvilogo.png';
+import Mansharp_Technologies_Logo_Blue from "../../assets/Mansharp_Technologies_Logo_Blue.png";
+
 import backgroundImage from "../../assets/Images/Footer.jpg";
 
 const Register = () => {
@@ -35,7 +37,7 @@ const Register = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
       <div className="bg-white shadow-md rounded-lg p-6 max-w-md w-full mx-4">
         <div className="flex justify-center mb-6">
-          <img src={logo} alt="Register" className="rounded-lg" style={{ width: '300px', height: '60px' }} />
+          <img src={Mansharp_Technologies_Logo_Blue} alt="Register" className="rounded-lg" style={{ width: '300px', height: '60px' }} />
         </div>
         <h2 className="text-2xl font-bold mb-6 text-center">Register</h2>
         <form onSubmit={handleSubmit}>

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import mlogo from "../assets/Images/manasvilogo.png";
+import Mansharp_Technologies_Logo_Blue from "../assets/Mansharp_Technologies_Logo_Blue.png";
+
 import { FaAngleDown } from "react-icons/fa";
 
 
@@ -58,7 +60,7 @@ const Header = () => {
       >
         <div className="container mx-auto flex justify-between items-center filter drop-shadow-lg">
           <div>
-            <img src={mlogo} alt="Mansharp Logo" className="h-6 md:h-10" />
+            <img src={Mansharp_Technologies_Logo_Blue} alt="Mansharp Logo" className="h-6 md:h-10" />
           </div>
           <div className="hidden md:flex space-x-6">
             <NavLink
