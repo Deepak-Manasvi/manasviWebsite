@@ -102,7 +102,7 @@ const Login = () => {
 
         <div>
           <div className="flex justify-center">
-            <img src={Mansharp_Technologies_Logo_Blue} alt="Mansavi Tech Logo" className="w-40 sm:w-48" />
+            <img src={Mansharp_Technologies_Logo_Blue} alt="Mansharp-Tech Logo" className="w-40 sm:w-48" />
           </div>
 
           <h2 className="text-xl sm:text-2xl font-bold text-gray-700 flex items-center mt-3 sm:mt-5 gap-">
@@ -212,7 +212,7 @@ const Login = () => {
               <FaShieldAlt size={18} />
               <p className="text-xs sm:text-sm font-light">We ensure the privacy of your data at all times.</p>
             </div>
-            <p className="text-xs sm:text-sm text-gray-500 mt-2">&copy; Mansavi Technology 2025 | All rights reserved</p>
+            <p className="text-xs sm:text-sm text-gray-500 mt-2">&copy; Mansharp Technologies 2025 | All rights reserved</p>
           </div>
         </div>
       </div>

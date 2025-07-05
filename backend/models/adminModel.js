@@ -19,6 +19,7 @@ const adminModel = new mongoose.Schema(
       type: String,
       default: '',
       unique: true,
+      sparse: true,
     },
     otp: {
       type: String,
@@ -36,6 +37,7 @@ const adminModel = new mongoose.Schema(
       type: String,
       default: 'admin',
     },
+
     permissions: {
       type: [String],
       default: ['read', 'write', 'delete'],
